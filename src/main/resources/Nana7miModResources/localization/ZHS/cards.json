@@ -24,6 +24,10 @@
     "NAME": "下播",
     "DESCRIPTION": "造成 !D! 点群伤。 NL 给予主目标 !M! 层 nana7mimod:失落 。"
   },
+  "Nana7miMod:Boomerang": {
+    "NAME": "回旋镖",
+    "DESCRIPTION": "nana7mimod:回响 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
+  },
   "Nana7miMod:Fault": {
     "NAME": "都有问题",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL nana7mimod:坐标之力 。"

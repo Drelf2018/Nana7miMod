@@ -1,0 +1,44 @@
+package nana7mimod.cards;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import nana7mimod.helpers.ModHelper;
+
+public class Boomerang extends Base {
+    public static final String ID = ModHelper.id(Boomerang.class);
+
+    public static final int actualBaseDamage = 5;
+
+    public static final int upgradeBaseDamage = 2;
+
+    public Boomerang() {
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.damage = this.baseDamage = actualBaseDamage;
+        this.magicNumber = this.baseMagicNumber = 5;
+        this.returnToHand = true;
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            this.upgradeName();
+            this.upgradeDamage(upgradeBaseDamage);
+            this.upgradeMagicNumber(2);
+        }
+    }
+
+    // 玩家回合结束重置伤害
+    public void triggerOnEndOfPlayerTurn() {
+        baseDamage = actualBaseDamage + (upgraded ? upgradeBaseDamage : 0);
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_DIAGONAL));
+        baseDamage += magicNumber;
+    }
+}
