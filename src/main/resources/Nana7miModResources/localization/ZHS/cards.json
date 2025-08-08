@@ -11,6 +11,10 @@
     "NAME": "没念到的也晚安",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
   },
+  "Nana7miMod:DropCoins": {
+    "NAME": "爆金币",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 nana7mimod:失落 状态， *心之壁 层数增加 !M! 并且获得 [E] 。"
+  },
   "Nana7miMod:SoWhat": {
     "NAME": "那咋啦",
     "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]25%[] 概率 nana7mimod:回响 。",
