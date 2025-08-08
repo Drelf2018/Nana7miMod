@@ -1,0 +1,90 @@
+{
+  "Nana7miMod:Strike": {
+    "NAME": "娜米打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Nana7miMod:Hate": {
+    "NAME": "仇恨",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL *心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
+  },
+  "Nana7miMod:NightStrike": {
+    "NAME": "没念到的也晚安",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
+  },
+  "Nana7miMod:SoWhat": {
+    "NAME": "那咋啦",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]25%[] 概率 nana7mimod:回响 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]50%[] 概率 nana7mimod:回响 。"
+  },
+  "Nana7miMod:StopStreaming": {
+    "NAME": "下播",
+    "DESCRIPTION": "造成 !D! 点群伤。 NL 给予主目标 !M! 层 nana7mimod:失落 。"
+  },
+  "Nana7miMod:Fault": {
+    "NAME": "都有问题",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL nana7mimod:坐标之力 。"
+  },
+  "Nana7miMod:Fault2": {
+    "NAME": "都有问题！",
+    "DESCRIPTION": "对每个敌人造成 !D! 点伤害并失去 !M! 点生命。 NL nana7mimod:发动地鸣 。 NL 消耗 。"
+  },
+  "Nana7miMod:Fault3": {
+    "NAME": "都有问题！！！",
+    "DESCRIPTION": "虚无 。 NL 失去 !M! 点生命。 NL 消耗 所有手牌。 NL 造成 !D! 点群伤。 NL 消耗 。"
+  },
+  "Nana7miMod:Scratch": {
+    "NAME": "养了挠挠",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "Nana7miMod:Defend": {
+    "NAME": "娜米防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Nana7miMod:Accept": {
+    "NAME": "和解",
+    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 [E] 。"
+  },
+  "Nana7miMod:MyBad": {
+    "NAME": "但确实是我的错哦",
+    "DESCRIPTION": "获得 !B! 点 格挡 !M! 次。"
+  },
+  "Nana7miMod:RestartStreaming": {
+    "NAME": "重新推流",
+    "DESCRIPTION": "结束你的回合。 NL 保留 你的手牌。 NL nana7mimod:保留 你的能量。"
+  },
+  "Nana7miMod:Silence": {
+    "NAME": "还能说话吗",
+    "DESCRIPTION": "虚无 。 NL 如果一名敌人的意图是攻击则将其 nana7mimod:禁言 。",
+    "UPGRADE_DESCRIPTION": "如果一名敌人的意图是攻击则将其 nana7mimod:禁言 。"
+  },
+  "Nana7miMod:Indulgence": {
+    "NAME": "赎罪券",
+    "DESCRIPTION": "如果一名敌人被 nana7mimod:禁言 ，获得 !M! 金币。 NL 消耗 。"
+  },
+  "Nana7miMod:LifeHoldsDreams": {
+    "NAME": "人生有梦",
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 下回合后 nana7mimod:休眠 。 NL 消耗 。"
+  },
+  "Nana7miMod:Smoke": {
+    "NAME": "薯条着火了",
+    "DESCRIPTION": "失去 [#FF6563]41%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去 [#FF6563]29%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。"
+  },
+  "Nana7miMod:NightNight": {
+    "NAME": "晚安晚安",
+    "DESCRIPTION": "在你的回合结束时给予所有敌人 !M! 层 nana7mimod:失落 。"
+  },
+  "Nana7miMod:IdolForm": {
+    "NAME": "偶像形态",
+    "DESCRIPTION": "不再需要 *心之壁 。 NL 消耗 所有攻击牌。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
+  },
+  "Nana7miMod:Slip": {
+    "NAME": "哎呀滑了",
+    "DESCRIPTION": "获得 !M! 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 点 敏捷 。"
+  },
+  "Nana7miMod:Back": {
+    "NAME": "我回来了",
+    "DESCRIPTION": "不能被打出 。 NL 抽到这张牌时移除你身上的 nana7mimod:休眠 效果。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "modid": "Nana7miMod",
+  "name": "Nana7mi Mod",
+  "author_list": [
+    "Drelf2018",
+    "Horiz0n_"
+  ],
+  "description": "虚拟主播七海Nana7mi的模组",
+  "version": "0.0.1-alpha.0",
+  "sts_version": "12-22-2020",
+  "mts_version": "3.23.2",
+  "dependencies": [
+    "basemod"
+  ]
+}
