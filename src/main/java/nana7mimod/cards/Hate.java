@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.ATFieldPower;
 
-public class Hate extends Base {
+public class Hate extends Base implements ATFieldPower.AmountAdder {
     public static final String ID = ModHelper.id(Hate.class);
 
     public Hate(int upgrades) {
-        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 1;
         this.timesUpgraded = upgrades;
@@ -34,6 +35,10 @@ public class Hate extends Base {
 
     public boolean canUpgrade() {
         return true;
+    }
+
+    public int afterUsingCard(ATFieldPower power) {
+        return magicNumber;
     }
 
     @Override
