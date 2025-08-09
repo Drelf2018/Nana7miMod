@@ -105,7 +105,7 @@ public class ATFieldPower extends AbstractPower {
     }
 
     public interface AmountAdder {
-        int afterUsingCard(ATFieldPower power);
+        int afterUsingCard(ATFieldPower power, UseCardAction action);
     }
 
     // 生气
@@ -114,7 +114,7 @@ public class ATFieldPower extends AbstractPower {
             addAmount(-1);
         }
         if (card instanceof AmountAdder) {
-            addAmount(((AmountAdder) card).afterUsingCard(this));
+            addAmount(((AmountAdder) card).afterUsingCard(this, action));
         }
     }
 

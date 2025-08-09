@@ -3,6 +3,7 @@ package nana7mimod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -13,7 +14,7 @@ import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.ATFieldPower;
 import nana7mimod.powers.LostPower;
 
-public class DropCoins extends Base {
+public class DropCoins extends Base implements ATFieldPower.AmountAdder {
     public static final String ID = ModHelper.id(DropCoins.class);
 
     public DropCoins() {
@@ -40,11 +41,14 @@ public class DropCoins extends Base {
         }
     }
 
+    public int afterUsingCard(ATFieldPower power, UseCardAction action) {
+        return action.target.hasPower(LostPower.POWER_ID) ? 1 : 0;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
         if (m.hasPower(LostPower.POWER_ID)) {
             addToBot(new GainEnergyAction(1));
-            ATFieldPower.addAmount(p, 1);
         }
     }
 }

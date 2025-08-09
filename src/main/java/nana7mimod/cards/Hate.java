@@ -2,6 +2,7 @@ package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,7 +37,7 @@ public class Hate extends Base implements ATFieldPower.AmountAdder {
         return true;
     }
 
-    public int afterUsingCard(ATFieldPower power) {
+    public int afterUsingCard(ATFieldPower power, UseCardAction action) {
         return magicNumber;
     }
 
