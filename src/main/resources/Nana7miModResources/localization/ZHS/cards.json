@@ -78,6 +78,10 @@
     "DESCRIPTION": "失去 [#FF6563]41%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "失去 [#FF6563]29%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。"
   },
+  "Nana7miMod:Devil": {
+    "NAME": "走火入魔",
+    "DESCRIPTION": "每当 *心之壁 层数改变时，抽 !M! 张牌。"
+  },
   "Nana7miMod:NightNight": {
     "NAME": "晚安晚安",
     "DESCRIPTION": "在你的回合结束时给予所有敌人 !M! 层 nana7mimod:失落 。"
