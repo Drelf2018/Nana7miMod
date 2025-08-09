@@ -31,7 +31,7 @@ public class Nana7mi extends Base {
 
     // 初始卡组的 ID
     public ArrayList<String> getStartingDeck() {
-        return list(Strike.ID, Strike.ID, Strike.ID, Hate.ID, NightStrike.ID, //
+        return list(Strike.ID, Strike.ID, Strike.ID, Strike.ID, NightStrike.ID, //
                 Defend.ID, Defend.ID, Defend.ID, Defend.ID, Accept.ID);
     }
 

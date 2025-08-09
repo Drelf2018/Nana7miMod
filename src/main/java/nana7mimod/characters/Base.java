@@ -139,7 +139,7 @@ public abstract class Base extends CustomPlayer {
 
     // 获取碰撞箱
     public float[] getHitbox() {
-        return new float[] {0.0F, -5.0F, 240.0F, 270.0F};
+        return new float[] {0.0F, -5.0F, 200.0F, 300.0F};
     }
 
     // 高进阶带来的生命值损失
