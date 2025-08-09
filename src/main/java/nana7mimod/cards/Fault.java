@@ -20,7 +20,6 @@ public class Fault extends Base {
 		this.cardsToPreview = new Fault2();
 	}
 
-	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
@@ -28,7 +27,6 @@ public class Fault extends Base {
 		}
 	}
 
-	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new LoseHPAction(p, p, magicNumber));
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_DIAGONAL));

@@ -15,7 +15,6 @@ public class Smoke extends Base {
         this.exhaust = true;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -24,9 +23,8 @@ public class Smoke extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, p.currentHealth * magicNumber / 100));
         addToBot(new SmokeAction());
+        addToBot(new LoseHPAction(p, p, p.maxHealth * magicNumber / 100));
     }
 }

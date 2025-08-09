@@ -14,7 +14,6 @@ public class Slip extends Base {
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -23,7 +22,6 @@ public class Slip extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
     }

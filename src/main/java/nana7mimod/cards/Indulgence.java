@@ -17,7 +17,6 @@ public class Indulgence extends Base {
         this.exhaust = true;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -25,7 +24,6 @@ public class Indulgence extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower strength = m.getPower(StrengthPower.POWER_ID);
         if (strength != null && strength.amount == -999) {

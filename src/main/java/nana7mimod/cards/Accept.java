@@ -13,7 +13,6 @@ public class Accept extends Base {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -21,7 +20,6 @@ public class Accept extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ATFieldPower power = ATFieldPower.from(p);
         if (power != null && power.amount > 0) {

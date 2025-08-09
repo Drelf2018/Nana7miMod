@@ -18,7 +18,6 @@ public class SoWhat extends Base {
         this.magicNumber = this.baseMagicNumber = 25;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -28,7 +27,6 @@ public class SoWhat extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.returnToHand = 100 * Math.random() < magicNumber;
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));

@@ -15,7 +15,6 @@ public class RestartStreaming extends Base {
         super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -23,7 +22,6 @@ public class RestartStreaming extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard c : p.hand.group) {
             if (!c.isEthereal && c != this)

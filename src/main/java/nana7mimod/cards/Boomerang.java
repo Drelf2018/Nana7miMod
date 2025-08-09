@@ -22,7 +22,6 @@ public class Boomerang extends Base {
         this.returnToHand = true;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -36,7 +35,6 @@ public class Boomerang extends Base {
         baseDamage = actualBaseDamage + (upgraded ? upgradeBaseDamage : 0);
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_DIAGONAL));
         baseDamage += magicNumber;

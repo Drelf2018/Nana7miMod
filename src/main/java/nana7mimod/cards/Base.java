@@ -10,7 +10,7 @@ import nana7mimod.characters.Nana7mi;
 import nana7mimod.helpers.ModHelper;
 
 @AutoAdd.Ignore
-public class Base extends CustomCard {
+public abstract class Base extends CustomCard {
     public enum CardCost {
         CN, CX, C0, C1, C2, C3, C4, C5, C6;
     }
@@ -39,11 +39,9 @@ public class Base extends CustomCard {
         return strings(id).DESCRIPTION;
     }
 
-    @Override
-    public void upgrade() {}
+    public abstract void upgrade();
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public abstract void use(AbstractPlayer p, AbstractMonster m);
 
     public void upgradeDescription() {
         this.rawDescription = strings(this.cardID).UPGRADE_DESCRIPTION;

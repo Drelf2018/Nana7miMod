@@ -24,7 +24,6 @@ public class Fault3 extends Base {
         this.isMultiDamage = true;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -32,7 +31,6 @@ public class Fault3 extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster n) {
         addToBot(new LoseHPAction(p, p, magicNumber));
         addToBot(new ExhaustAllAction(p.hand));

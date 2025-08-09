@@ -18,7 +18,6 @@ public class Strike extends Base {
         this.tags.add(CardTags.STRIKE);
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -26,7 +25,6 @@ public class Strike extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_DIAGONAL));
     }

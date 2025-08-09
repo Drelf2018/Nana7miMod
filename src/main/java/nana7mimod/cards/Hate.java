@@ -23,7 +23,6 @@ public class Hate extends Base implements ATFieldPower.AmountAdder {
         this(0);
     }
 
-    @Override
     public void upgrade() {
         upgradeDamage(1 + this.timesUpgraded);
         upgradeMagicNumber(1);
@@ -41,7 +40,6 @@ public class Hate extends Base implements ATFieldPower.AmountAdder {
         return magicNumber;
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
     }

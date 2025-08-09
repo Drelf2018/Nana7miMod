@@ -17,7 +17,6 @@ public class Scratch extends Base {
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -26,7 +25,6 @@ public class Scratch extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber / 2; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_HORIZONTAL));

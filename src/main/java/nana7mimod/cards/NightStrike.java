@@ -19,7 +19,6 @@ public class NightStrike extends Base {
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -28,7 +27,6 @@ public class NightStrike extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
         addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber), magicNumber));

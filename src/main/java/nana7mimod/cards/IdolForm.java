@@ -20,7 +20,6 @@ public class IdolForm extends Base {
         this.tags.add(BaseModCardTags.FORM);
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -28,7 +27,6 @@ public class IdolForm extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
         addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));

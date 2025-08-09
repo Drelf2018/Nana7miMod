@@ -23,7 +23,6 @@ public class Fault2 extends Base {
         this.cardsToPreview = new Fault3();
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -31,7 +30,6 @@ public class Fault2 extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
             addToBot(new DamageAction(mo, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_HORIZONTAL));

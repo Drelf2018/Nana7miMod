@@ -13,7 +13,6 @@ public class Silence extends Base {
         this.isEthereal = true;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -22,7 +21,6 @@ public class Silence extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SilenceAction(m));
     }

@@ -30,7 +30,6 @@ public class DropCoins extends Base {
         }
     }
 
-    @Override
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
@@ -41,7 +40,6 @@ public class DropCoins extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
         if (m.hasPower(LostPower.POWER_ID)) {

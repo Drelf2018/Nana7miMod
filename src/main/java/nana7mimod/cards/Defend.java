@@ -14,7 +14,6 @@ public class Defend extends Base {
         this.tags.add(CardTags.STARTER_DEFEND);
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -22,7 +21,6 @@ public class Defend extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
     }

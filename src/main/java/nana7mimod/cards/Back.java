@@ -18,9 +18,7 @@ public class Back extends Base {
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DormantPower.POWER_ID));
     }
 
-    @Override
     public void upgrade() {}
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {}
 }

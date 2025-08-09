@@ -14,7 +14,6 @@ public class MyBad extends Base {
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -22,7 +21,6 @@ public class MyBad extends Base {
         }
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new GainBlockAction(p, p, block));
