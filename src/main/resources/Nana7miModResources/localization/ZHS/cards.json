@@ -17,8 +17,8 @@
   },
   "Nana7miMod:SoWhat": {
     "NAME": "那咋啦",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]25%[] 概率 nana7mimod:回响 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]50%[] 概率 nana7mimod:回响 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]25%[] 概率 nana7mimod:无限 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]50%[] 概率 nana7mimod:无限 。"
   },
   "Nana7miMod:StopStreaming": {
     "NAME": "下播",
@@ -26,7 +26,7 @@
   },
   "Nana7miMod:Boomerang": {
     "NAME": "回旋镖",
-    "DESCRIPTION": "nana7mimod:回响 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
+    "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
   },
   "Nana7miMod:Fault": {
     "NAME": "都有问题",
@@ -75,8 +75,8 @@
   },
   "Nana7miMod:Smoke": {
     "NAME": "薯条着火了",
-    "DESCRIPTION": "失去 [#FF6563]41%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "失去 [#FF6563]29%[] 当前生命值。 NL 选择一张牌 nana7mimod:移除 。 NL 消耗 。"
+    "DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去最大生命值 [#FF6563]41%[] 的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去最大生命值 [#FF6563]29%[] 的生命。 NL 消耗 。"
   },
   "Nana7miMod:Devil": {
     "NAME": "走火入魔",
