@@ -38,7 +38,7 @@ public class ATField extends CustomRelic {
         AbstractPlayer owner = AbstractDungeon.player;
         addToBot(new RelicAboveCreatureAction(owner, this));
         addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, 1)));
-        addToBot(new ApplyPowerAction(owner, owner, new InjuredPower(owner, 2 + AbstractDungeon.ascensionLevel)));
+        addToBot(new ApplyPowerAction(owner, owner, new InjuredPower(owner, 10 + AbstractDungeon.ascensionLevel)));
     }
 
     // 宽恕

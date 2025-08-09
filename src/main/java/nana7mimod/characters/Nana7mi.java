@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import java.util.ArrayList;
 import nana7mimod.cards.Accept;
 import nana7mimod.cards.Defend;
-import nana7mimod.cards.Hate;
 import nana7mimod.cards.Strike;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.cards.NightStrike;
