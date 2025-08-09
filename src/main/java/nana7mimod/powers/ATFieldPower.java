@@ -1,6 +1,7 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -69,6 +70,7 @@ public class ATFieldPower extends AbstractPower {
         if (stackAmount < 0) {
             onFieldBroken();
         }
+        addToBot(new DrawCardAction(owner, DevilPower.getAmount(owner)));
     }
 
     // 添加层数动画
