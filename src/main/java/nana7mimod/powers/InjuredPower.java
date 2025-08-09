@@ -32,7 +32,7 @@ public class InjuredPower extends AbstractPower {
     public void wasHPLost(DamageInfo info, int damageAmount) {
         flashWithoutSound();
         int lostHP = lostHPLimit - amount + damageAmount;
-        ATFieldPower.addAmountNow(owner, lostHP / lostHPLimit);
+        ATFieldPower.addAmount(owner, lostHP / lostHPLimit);
         amount = lostHPLimit - (lostHP % lostHPLimit);
         updateDescription();
     }

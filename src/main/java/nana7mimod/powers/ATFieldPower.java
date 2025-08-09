@@ -62,14 +62,6 @@ public class ATFieldPower extends AbstractPower {
         }
     }
 
-    // 立即为拥有心之壁的角色增加层数
-    public static void addAmountNow(AbstractCreature target, int diffAmount) {
-        ATFieldPower power = ATFieldPower.from(target);
-        if (power != null) {
-            power.addAmountNow(diffAmount);
-        }
-    }
-
     // 更新能力层数
     public void stackPower(int stackAmount) {
         amount += stackAmount;
@@ -81,17 +73,21 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 添加层数动画
-    public void addAmount(int diffAmount) {
-        if (diffAmount != 0) {
-            addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
+    public void addAmount(int diffAmount, boolean now) {
+        if (diffAmount > 0) {
+            if (now) {
+                addToTop(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
+            } else {
+                addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
+            }
+        } else if (diffAmount < 0) {
+            stackPower(diffAmount);
         }
     }
 
-    // 立即添加层数动画
-    public void addAmountNow(int diffAmount) {
-        if (diffAmount != 0) {
-            addToTop(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
-        }
+    // 添加层数动画
+    public void addAmount(int diffAmount) {
+        addAmount(diffAmount, false);
     }
 
     // 回合开始重置层数

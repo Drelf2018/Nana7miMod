@@ -26,7 +26,7 @@ public class Accept extends Base {
         ATFieldPower power = ATFieldPower.from(p);
         if (power != null && power.amount > 0) {
             addToBot(new GainEnergyAction(power.amount));
-            power.addAmountNow(0 - power.amount);
+            power.addAmount(0 - power.amount, true);
         }
     }
 }
