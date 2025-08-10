@@ -12,13 +12,13 @@
         "basemod,Nana7miMod"
       ],
       // 杀戮尖塔根目录
-      "cwd": "D:\\Program Files\\Steam\\steamapps\\common\\SlayTheSpire",
+      "cwd": "D:\\SteamLibrary\\steamapps\\common\\SlayTheSpire",
       // Java8的路径
       "javaExec": "D:\\Program Files\\Java\\jre1.8.0_461\\bin\\java.exe",
       "preLaunchTask": "maven-package",
       // Steam的路径
       "classPaths": [
-        "D:\\Program Files\\Steam\\steamapps\\workshop\\content\\646570\\1605060445\\ModTheSpire.jar"
+        "D:\\SteamLibrary\\steamapps\\workshop\\content\\646570\\1605060445\\ModTheSpire.jar"
       ]
     }
   ]
