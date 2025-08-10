@@ -32,7 +32,7 @@ public class NightPower extends AbstractPower {
         if (isPlayer) {
             flashWithoutSound();
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                addToBot(new ApplyPowerAction(mo, owner, new LostPower(mo, 1), 1));
+                addToBot(new ApplyPowerAction(mo, owner, new LostPower(mo, 1)));
             }
         }
     }

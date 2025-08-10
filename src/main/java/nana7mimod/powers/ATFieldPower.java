@@ -77,9 +77,9 @@ public class ATFieldPower extends AbstractPower {
     public void addAmount(int diffAmount, boolean now) {
         if (diffAmount > 0) {
             if (now) {
-                addToTop(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
+                addToTop(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount)));
             } else {
-                addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount), diffAmount));
+                addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount)));
             }
         } else if (diffAmount < 0) {
             stackPower(diffAmount);
@@ -123,16 +123,16 @@ public class ATFieldPower extends AbstractPower {
         switch (amount) {
             case -2:
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    addToBot(new ApplyPowerAction(mo, owner, new WeakPower(mo, 1, false), 1));
+                    addToBot(new ApplyPowerAction(mo, owner, new WeakPower(mo, 1, false)));
                 }
                 break;
             case -4:
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    addToBot(new ApplyPowerAction(mo, owner, new LoseStrengthPower(mo, 2), 2));
+                    addToBot(new ApplyPowerAction(mo, owner, new LoseStrengthPower(mo, 2)));
                 }
                 break;
             case -6:
-                addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, 1), 1));
+                addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, 1)));
                 break;
             default:
                 if (amount < 0 && (amount & 1) == 1) {

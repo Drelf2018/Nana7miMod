@@ -33,6 +33,6 @@ public class StopStreaming extends Base {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
     }
 }

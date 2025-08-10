@@ -25,7 +25,7 @@ public class LifeHoldsDreams extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new DormantPower(p, 2)));
     }
 }

@@ -29,6 +29,6 @@ public class NightStrike extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
-        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
     }
 }

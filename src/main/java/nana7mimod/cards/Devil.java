@@ -22,6 +22,6 @@ public class Devil extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DevilPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DevilPower(p, magicNumber)));
     }
 }

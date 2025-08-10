@@ -26,11 +26,12 @@ public class SilenceAction extends AbstractGameAction {
     public void update() {
         int dmg = m.getIntentBaseDmg();
         if (dmg >= 0) {
-            addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, -999), -999));
+            addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, -999)));
             if (m != null && !m.hasPower("Artifact"))
-                addToBot(new ApplyPowerAction(m, m, new GainStrengthPower(m, 999), 999));
+                addToBot(new ApplyPowerAction(m, m, new GainStrengthPower(m, 999)));
         } else {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[0], true));
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX,
+                    AbstractDungeon.player.dialogY, 3.0F, TEXT[0], true));
         }
         this.isDone = true;
     }
