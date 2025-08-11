@@ -65,7 +65,7 @@
     "NAMES": [
       "禁言"
     ],
-    "DESCRIPTION": "在本回合内失去所有 #y力量 。"
+    "DESCRIPTION": "被禁言的敌人与玩家互相不能造成伤害。"
   },
   {
     "NAMES": [

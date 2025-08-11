@@ -9,7 +9,7 @@ public class Silence extends Base {
     public static final String ID = ModHelper.id(Silence.class);
 
     public Silence() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.isEthereal = true;
     }
 
