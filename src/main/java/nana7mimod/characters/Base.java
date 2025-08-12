@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -23,10 +24,10 @@ public abstract class Base extends CustomPlayer {
     // 人物类名小写
     private String charName;
 
-    public Base(String name, PlayerClass player, EnergyOrbInterface energyOrbInterface, String model, String animation) {
-        super(name, player, energyOrbInterface, model, animation);
+    public Base(String name, PlayerClass player, EnergyOrbInterface energy, String model, String animation) {
+        super(name, player, energy, model, animation);
         // 设置能量图标
-        if (energyOrbInterface == null) {
+        if (energy == null) {
             String[] orbTextures = Arrays.stream(this.getOrbTextures()).map(s -> image(s)).toArray(String[]::new);
             this.energyOrb = new CustomEnergyOrb(orbTextures, image(this.getOrbVfx()), this.getLayerSpeed());
         }
@@ -34,7 +35,7 @@ public abstract class Base extends CustomPlayer {
         String stand = this.getStandImage();
         float[] hitbox = this.getHitbox();
         this.initializeClass(//
-                stand == "" ? stand : image(stand), // 人物立绘
+                stand == "" ? "" : image(stand), // 人物立绘
                 image("shoulder2.png"), // 火堆后图像
                 image("shoulder1.png"), // 火堆前图像
                 image("corpse.png"), // 人物死亡图像
@@ -122,6 +123,11 @@ public abstract class Base extends CustomPlayer {
     // 战斗界面左下角能量图标的每个图层
     public abstract String[] getOrbTextures();
 
+    // 换皮肤
+    public void changeStand(String stand) {
+        this.img = ImageMaster.loadImage(image(stand));
+    }
+
     // 能量特效图层
     public String getOrbVfx() {
         return "orb/vfx.png";
@@ -139,7 +145,7 @@ public abstract class Base extends CustomPlayer {
 
     // 获取碰撞箱
     public float[] getHitbox() {
-        return new float[] {0.0F, -5.0F, 200.0F, 300.0F};
+        return new float[] { 0.0F, -5.0F, 200.0F, 300.0F };
     }
 
     // 高进阶带来的生命值损失
@@ -193,8 +199,10 @@ public abstract class Base extends CustomPlayer {
     // 第三章面对心脏造成伤害时的特效
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[] {AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
-                AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
+        return new AbstractGameAction.AttackEffect[] { AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL };
     }
 
     // 碎心图片
