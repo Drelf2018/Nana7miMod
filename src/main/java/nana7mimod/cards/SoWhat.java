@@ -15,7 +15,7 @@ public class SoWhat extends Base {
     public SoWhat() {
         super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 6;
-        this.magicNumber = this.baseMagicNumber = 25;
+        this.magicNumber = this.baseMagicNumber = 50;
     }
 
     public void upgrade() {
