@@ -60,6 +60,10 @@
     "NAME": "但确实是我的错哦",
     "DESCRIPTION": "获得 !B! 点 格挡 !M! 次。"
   },
+  "Nana7miMod:Frail": {
+    "NAME": "不要骂我我好脆弱",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 和2层 nana7mimod:失落 。 NL 消耗 。"
+  },
   "Nana7miMod:RestartStreaming": {
     "NAME": "重新推流",
     "DESCRIPTION": "结束你的回合。 NL 保留 你的手牌。 NL nana7mimod:保留 你的能量。"
