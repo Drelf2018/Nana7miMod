@@ -21,8 +21,8 @@
   },
   "Nana7miMod:SoWhat": {
     "NAME": "那咋啦",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]25%[] 概率 nana7mimod:无限 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]50%[] 概率 nana7mimod:无限 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。"
   },
   "Nana7miMod:StopStreaming": {
     "NAME": "下播",
@@ -62,7 +62,7 @@
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
-    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 nana7mimod:心之壁 增加 !M! 层。 NL 消耗 。"
+    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
   },
   "Nana7miMod:Frail": {
     "NAME": "不要骂我我好脆弱",

@@ -36,7 +36,6 @@ public class ModHelper {
     public static String cards(CardType type, String id) {
         String path = RESOURCES + "/image/cards/" + type.name().toLowerCase();
         String card = path + "/" + ModHelper.unwrap(id) + ".png";
-        System.out.println(card);
         if (Gdx.files.internal(card).exists()) {
             return card;
         }
