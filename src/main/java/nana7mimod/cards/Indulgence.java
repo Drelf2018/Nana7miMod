@@ -23,8 +23,7 @@ public class Indulgence extends Base {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(20);
-            this.textureImg = ModHelper.cards(CardType.SKILL, ModHelper.PRIFIX + "Indulgence_50");
-            this.loadCardImage(this.textureImg);
+            this.changeCardImage("Indulgence_50");
         }
     }
 

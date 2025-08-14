@@ -2,10 +2,8 @@ package nana7mimod.cards;
 
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.characters.Nana7mi;
 import nana7mimod.helpers.ModHelper;
 
@@ -24,7 +22,11 @@ public abstract class Base extends CustomCard {
     }
 
     public Base(String id, CardCost cost, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
-        super(id, getName(id), ModHelper.cards(type, id), cost.ordinal() - 2, getDesc(id), type, color, rarity, target);
+        super(id, getName(id), ModHelper.cards(type, id), cost.ordinal() - 2, getDescription(id), type, color, rarity, target);
+    }
+
+    public Base(String id, String name, String img) {
+        super(id, name, img, -2, getDescription(id), CardType.STATUS, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
     }
 
     public static CardStrings strings(String id) {
@@ -35,16 +37,17 @@ public abstract class Base extends CustomCard {
         return strings(id).NAME;
     }
 
-    public static String getDesc(String id) {
+    public static String getDescription(String id) {
         return strings(id).DESCRIPTION;
     }
-
-    public abstract void upgrade();
-
-    public abstract void use(AbstractPlayer p, AbstractMonster m);
 
     public void upgradeDescription() {
         this.rawDescription = strings(this.cardID).UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    public void changeCardImage(String img) {
+        textureImg = ModHelper.cards(type, img);
+        loadCardImage(textureImg);
     }
 }
