@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.InjuredPower;
 import nana7mimod.powers.ATFieldPower;
@@ -21,6 +22,8 @@ import nana7mimod.powers.ATFieldPower;
 
 public class ATField extends CustomRelic {
     public static final String ID = ModHelper.id(ATField.class);
+
+    private Boolean isFirstTimePlayGame = true;
 
     public ATField() {
         super(ID, "bank.png", RelicTier.STARTER, LandingSound.MAGICAL);
@@ -46,5 +49,18 @@ public class ATField extends CustomRelic {
     public int onPlayerGainedBlock(float blockAmount) {
         ATFieldPower.addAmount(AbstractDungeon.player, -1);
         return super.onPlayerGainedBlock(blockAmount);
+    }
+
+    public static Boolean getFirstTimePlayGame() {
+        AbstractRelic r = AbstractDungeon.player.getRelic(ID);
+        if (r == null || !(r instanceof ATField)) {
+            return false;
+        }
+        ATField a = (ATField) r;
+        if (a.isFirstTimePlayGame) {
+            a.isFirstTimePlayGame = false;
+            return true;
+        }
+        return false;
     }
 }
