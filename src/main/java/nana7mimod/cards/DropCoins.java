@@ -18,7 +18,7 @@ public class DropCoins extends Base implements ATFieldPower.AmountAdder {
     public static final String ID = ModHelper.id(DropCoins.class);
 
     public DropCoins() {
-        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 1;
     }
