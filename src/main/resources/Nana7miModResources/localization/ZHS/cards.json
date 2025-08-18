@@ -62,8 +62,8 @@
   },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
-    "DESCRIPTION": "选择1张 nana7mimod:游戏牌 打出。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:复读 。 NL 选择1张 nana7mimod:游戏牌 打出。"
+    "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏牌 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:复读 。 NL nana7mimod:抉择 nana7mimod:游戏牌 。"
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
