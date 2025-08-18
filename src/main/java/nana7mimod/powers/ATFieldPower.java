@@ -1,5 +1,6 @@
 package nana7mimod.powers;
 
+import java.util.ArrayList;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -24,6 +25,8 @@ public class ATFieldPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
+    private static ArrayList<AbstractCreature> attackedCreatures = new ArrayList<>();
 
     public ATFieldPower(AbstractCreature owner, int amount) {
         this.name = powerStrings.NAME;
@@ -94,12 +97,14 @@ public class ATFieldPower extends AbstractPower {
     // 回合开始重置层数
     public void atStartOfTurnPostDraw() {
         addAmount(Math.max(amount, 1) - amount);
+        attackedCreatures.clear();
     }
 
     // 受伤
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type == DamageType.NORMAL) {
+        if (info.type == DamageType.NORMAL && info.owner != owner && !attackedCreatures.contains(info.owner)) {
             addAmount(1);
+            attackedCreatures.add(info.owner);
         }
         return damageAmount;
     }
