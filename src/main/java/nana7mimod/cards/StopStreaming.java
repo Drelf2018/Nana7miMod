@@ -30,9 +30,9 @@ public class StopStreaming extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
     }
 }

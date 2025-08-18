@@ -26,7 +26,7 @@
   },
   "Nana7miMod:StopStreaming": {
     "NAME": "下播",
-    "DESCRIPTION": "造成 !D! 点群伤。 NL 给予主目标 !M! 层 nana7mimod:失落 。"
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "Nana7miMod:Boomerang": {
     "NAME": "回旋镖",
