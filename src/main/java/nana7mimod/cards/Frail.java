@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.powers.LostPower;
 
 public class Frail extends Base {
     public static final String ID = ModHelper.id(Frail.class);
@@ -26,8 +26,8 @@ public class Frail extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false)));
-            addToBot(new ApplyPowerAction(mo, p, new LostPower(mo, 2)));
+            addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -magicNumber)));
         }
+        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
     }
 }
