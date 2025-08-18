@@ -33,7 +33,7 @@ public class Game extends Base {
         super(ID, name, ModHelper.cards(CardType.STATUS, img));
         this.correct = !img.contains("incorrect");
         this.damage = this.baseDamage = 10;
-        this.exhaust = true;
+        this.purgeOnUse = true;
     }
 
     public static Game Correct(int index) {
