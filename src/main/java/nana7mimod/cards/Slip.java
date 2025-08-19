@@ -15,10 +15,10 @@ public class Slip extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDescription();
-            this.isInnate = true;
+        if (!upgraded) {
+            isInnate = true;
+            upgradeName();
+            upgradeDescription();
         }
     }
 

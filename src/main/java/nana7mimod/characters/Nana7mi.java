@@ -88,7 +88,7 @@ public class Nana7mi extends Base {
     // 创建人物实例
     @Override
     public AbstractPlayer newInstance() {
-        return new Nana7mi(this.name);
+        return new Nana7mi(name);
     }
 
     // 注意此处必须是在类内部的静态嵌套类中定义的新枚举值

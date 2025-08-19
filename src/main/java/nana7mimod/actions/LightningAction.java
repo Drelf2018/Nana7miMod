@@ -20,9 +20,9 @@ public class LightningAction extends AbstractGameAction {
     }
 
     public void update() {
-        this.addToTop(new DamageAction(target, info, AttackEffect.NONE, true));
-        this.addToTop(new VFXAction(new LightningEffect(target.drawX, target.drawY), Settings.FAST_MODE ? 0.0F : 0.2F));
-        this.addToTop(new SFXAction("ORB_LIGHTNING_EVOKE"));
-        this.isDone = true;
+        addToTop(new DamageAction(target, info, AttackEffect.NONE, true));
+        addToTop(new VFXAction(new LightningEffect(target.drawX, target.drawY), Settings.FAST_MODE ? 0.0F : 0.2F));
+        addToTop(new SFXAction("ORB_LIGHTNING_EVOKE"));
+        isDone = true;
     }
 }

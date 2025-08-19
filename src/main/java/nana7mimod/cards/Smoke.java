@@ -16,10 +16,10 @@ public class Smoke extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(-12);
-            this.upgradeDescription();
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(-12);
+            upgradeDescription();
         }
     }
 

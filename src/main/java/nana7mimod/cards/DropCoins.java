@@ -26,10 +26,10 @@ public class DropCoins extends Base {
 
     @Override
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDeadOrEscaped() && LostPower.has(m)) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }
         }
@@ -43,9 +43,9 @@ public class DropCoins extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(3);
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(3);
         }
     }
 

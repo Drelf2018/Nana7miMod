@@ -15,9 +15,9 @@ public class Defend extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBlock(3);
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(3);
         }
     }
 

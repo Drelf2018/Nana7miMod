@@ -23,10 +23,10 @@ public class Boomerang extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(upgradeBaseDamage);
-            this.upgradeMagicNumber(2);
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(upgradeBaseDamage);
+            upgradeMagicNumber(2);
         }
     }
 

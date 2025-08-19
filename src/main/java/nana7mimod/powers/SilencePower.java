@@ -37,11 +37,11 @@ public class SilencePower extends AbstractPower {
     }
 
     public void atEndOfRound() {
-        this.flash();
-        if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        flash();
+        if (amount == 0) {
+            addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
         } else {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+            addToBot(new ReducePowerAction(owner, owner, POWER_ID, 1));
         }
     }
 

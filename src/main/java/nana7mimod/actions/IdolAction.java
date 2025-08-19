@@ -15,6 +15,6 @@ public class IdolAction extends AbstractGameAction {
         if (p instanceof Nana7mi) {
             ((Nana7mi) p).changeStand("stand-idol.jpg");
         }
-        this.isDone = true;
+        isDone = true;
     }
 }

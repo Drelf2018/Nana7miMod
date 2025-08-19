@@ -18,10 +18,10 @@ public class Scratch extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(-2);
-            this.upgradeMagicNumber(4);
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(-2);
+            upgradeMagicNumber(4);
         }
     }
 

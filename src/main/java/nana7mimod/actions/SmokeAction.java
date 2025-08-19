@@ -35,7 +35,7 @@ public class SmokeAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.duration == this.startDuration) {
+        if (duration == startDuration) {
             CardGroup cardGroup = SmokeAction.getActualPurgeableCards(AbstractDungeon.player.masterDeck);
             AbstractDungeon.gridSelectScreen.open(cardGroup, 1, ShopScreen.NAMES[13], false, false, true, true);
             tickDuration();
@@ -44,8 +44,8 @@ public class SmokeAction extends AbstractGameAction {
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard card : AbstractDungeon.gridSelectScreen.selectedCards) {
                 PurgeCardEffect e = new PurgeCardEffect(card);
-                this.duration += e.duration;
-                this.startDuration += e.duration;
+                duration += e.duration;
+                startDuration += e.duration;
                 AbstractDungeon.topLevelEffects.add(e);
                 AbstractDungeon.player.masterDeck.removeCard(card);
             }

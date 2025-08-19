@@ -26,10 +26,10 @@ public class ExhaustAllAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.duration == this.startDuration) {
-            for (AbstractCard card : this.exhaustGroup.group)
-                addToTop(new ExhaustSpecificCardAction(card, this.cardGroup));
+        if (duration == startDuration) {
+            for (AbstractCard card : exhaustGroup.group)
+                addToTop(new ExhaustSpecificCardAction(card, cardGroup));
         }
-        this.isDone = true;
+        isDone = true;
     }
 }

@@ -28,20 +28,20 @@ public abstract class Base extends CustomPlayer {
         super(name, player, energy, model, animation);
         // 设置能量图标
         if (energy == null) {
-            String[] orbTextures = Arrays.stream(this.getOrbTextures()).map(s -> image(s)).toArray(String[]::new);
-            this.energyOrb = new CustomEnergyOrb(orbTextures, image(this.getOrbVfx()), this.getLayerSpeed());
+            String[] orbTextures = Arrays.stream(getOrbTextures()).map(s -> image(s)).toArray(String[]::new);
+            this.energyOrb = new CustomEnergyOrb(orbTextures, image(getOrbVfx()), getLayerSpeed());
         }
         // 具体初始化人物
-        String stand = this.getStandImage();
-        float[] hitbox = this.getHitbox();
-        this.initializeClass(//
+        String stand = getStandImage();
+        float[] hitbox = getHitbox();
+        initializeClass(//
                 stand == "" ? "" : image(stand), // 人物立绘
                 image("shoulder2.png"), // 火堆后图像
                 image("shoulder1.png"), // 火堆前图像
                 image("corpse.png"), // 人物死亡图像
-                this.getLoadout(), // 基础信息
+                getLoadout(), // 基础信息
                 hitbox[0], hitbox[1], hitbox[2], hitbox[3], // 人物碰撞箱大小，越大的人物模型这个越大
-                new EnergyManager(this.getCharInfo().energy) // 初始每回合的能量
+                new EnergyManager(getCharInfo().energy) // 初始每回合的能量
         );
     }
 
@@ -54,17 +54,17 @@ public abstract class Base extends CustomPlayer {
     }
 
     public CharacterStrings strings() {
-        if (this.charStrings == null) {
-            this.charStrings = CardCrawlGame.languagePack.getCharacterString(ModHelper.id(this.getClass()));
+        if (charStrings == null) {
+            charStrings = CardCrawlGame.languagePack.getCharacterString(ModHelper.id(getClass()));
         }
-        return this.charStrings;
+        return charStrings;
     }
 
     public String image(String path) {
-        if (this.charName == null) {
-            this.charName = this.getClass().getSimpleName().toLowerCase();
+        if (charName == null) {
+            charName = getClass().getSimpleName().toLowerCase();
         }
-        return ModHelper.characters(this.charName, path);
+        return ModHelper.characters(charName, path);
     }
 
     public static ArrayList<String> list(String... items) {
@@ -104,7 +104,7 @@ public abstract class Base extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        CharInfo info = this.getCharInfo();
+        CharInfo info = getCharInfo();
         return new CharSelectInfo(//
                 strings().NAMES[0], // 人物名称
                 strings().TEXT[0], // 人物介绍
@@ -114,8 +114,8 @@ public abstract class Base extends CustomPlayer {
                 info.gold, // 初始金币
                 info.cardDraw, // 每回合抽牌数
                 this, // 人物自身
-                this.getStartingRelics(), // 初始遗物
-                this.getStartingDeck(), // 初始牌组
+                getStartingRelics(), // 初始遗物
+                getStartingDeck(), // 初始牌组
                 false//
         );
     }
@@ -125,7 +125,7 @@ public abstract class Base extends CustomPlayer {
 
     // 换皮肤
     public void changeStand(String stand) {
-        this.img = ImageMaster.loadImage(image(stand));
+        img = ImageMaster.loadImage(image(stand));
     }
 
     // 能量特效图层
@@ -145,7 +145,7 @@ public abstract class Base extends CustomPlayer {
 
     // 获取碰撞箱
     public float[] getHitbox() {
-        return new float[] { 0.0F, -5.0F, 200.0F, 300.0F };
+        return new float[] {0.0F, -5.0F, 200.0F, 300.0F};
     }
 
     // 高进阶带来的生命值损失
@@ -199,10 +199,9 @@ public abstract class Base extends CustomPlayer {
     // 第三章面对心脏造成伤害时的特效
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[] { AbstractGameAction.AttackEffect.SLASH_HEAVY,
-                AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
-                AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE,
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL };
+        return new AbstractGameAction.AttackEffect[] {AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
     }
 
     // 碎心图片

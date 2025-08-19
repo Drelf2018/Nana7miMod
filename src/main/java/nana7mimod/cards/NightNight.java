@@ -15,9 +15,9 @@ public class NightNight extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBaseCost(this.cost - 1);
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(cost - 1);
         }
     }
 

@@ -20,7 +20,7 @@ public class CharacterHelper {
     }
 
     public void addColor(CardColor cardColor, Color color) {
-        String charName = this.getClass().getSimpleName().toLowerCase();
+        String charName = getClass().getSimpleName().toLowerCase();
         BaseMod.addColor(cardColor, color, color, color, color, color, color, color, //
                 ModHelper.characters(charName, "card/attack_512.png"), //
                 ModHelper.characters(charName, "card/skill_512.png"), //
@@ -34,7 +34,7 @@ public class CharacterHelper {
     }
 
     public void addCharacter(AbstractPlayer player) {
-        String charName = this.getClass().getSimpleName().toLowerCase();
+        String charName = getClass().getSimpleName().toLowerCase();
         BaseMod.addCharacter(player, //
                 ModHelper.characters(charName, "button.png"), //
                 ModHelper.characters(charName, "portrait.png"));

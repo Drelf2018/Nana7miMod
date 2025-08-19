@@ -20,18 +20,18 @@ public class Indulgence extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(20);
-            this.changeCardImage("Indulgence_50");
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(20);
+            changeCardImage("Indulgence_50");
         }
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (!m.isDeadOrEscaped() && m.hasPower(SilencePower.POWER_ID)) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }
         }

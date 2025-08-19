@@ -19,16 +19,16 @@ public class SoWhat extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(-2);
-            this.upgradeMagicNumber(25);
-            this.upgradeDescription();
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(-2);
+            upgradeMagicNumber(25);
+            upgradeDescription();
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.returnToHand = 100 * Math.random() < magicNumber;
+        returnToHand = 100 * Math.random() < magicNumber;
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
     }
 }

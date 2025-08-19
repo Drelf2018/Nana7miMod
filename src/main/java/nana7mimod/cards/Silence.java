@@ -14,10 +14,10 @@ public class Silence extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.isEthereal = false;
-            this.upgradeDescription();
+        if (!upgraded) {
+            isEthereal = false;
+            upgradeName();
+            upgradeDescription();
         }
     }
 

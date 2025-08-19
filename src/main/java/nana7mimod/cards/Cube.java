@@ -23,9 +23,9 @@ public class Cube extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(5);
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(5);
         }
     }
 

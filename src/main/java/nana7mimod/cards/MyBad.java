@@ -15,10 +15,10 @@ public class MyBad extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBlock(1);
-            this.upgradeMagicNumber(1);
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(1);
+            upgradeMagicNumber(1);
         }
     }
 

@@ -27,9 +27,8 @@ public class SilenceAction extends AbstractGameAction {
         if (dmg >= 0) {
             addToBot(new ApplyPowerAction(m, m, new SilencePower(m, 1)));
         } else {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX,
-                    AbstractDungeon.player.dialogY, 3.0F, TEXT[0], true));
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[0], true));
         }
-        this.isDone = true;
+        isDone = true;
     }
 }

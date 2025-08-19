@@ -32,17 +32,17 @@ public class DiscoveryGameAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.duration == this.startDuration) {
-            ArrayList<AbstractCard> generatedCards = this.generateCardChoices();
+        if (duration == startDuration) {
+            ArrayList<AbstractCard> generatedCards = generateCardChoices();
             AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], true);
-            this.tickDuration();
+            tickDuration();
             return;
         }
         if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
             AbstractDungeon.player.useCard(AbstractDungeon.cardRewardScreen.discoveryCard, null, 0);
             AbstractDungeon.cardRewardScreen.discoveryCard = null;
         }
-        this.isDone = true;
+        isDone = true;
     }
 
     private ArrayList<AbstractCard> generateCardChoices() {

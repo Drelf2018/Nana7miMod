@@ -19,9 +19,9 @@ public class Strike extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDamage(3);
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(3);
         }
     }
 

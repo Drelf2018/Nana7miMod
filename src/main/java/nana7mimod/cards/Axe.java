@@ -18,9 +18,9 @@ public class Axe extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(1);
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
         }
     }
 

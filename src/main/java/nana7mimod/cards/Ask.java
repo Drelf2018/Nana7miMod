@@ -14,15 +14,15 @@ public class Ask extends Base {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeDescription();
+        if (!upgraded) {
+            upgradeName();
+            upgradeDescription();
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DiscoveryGameAction(1));
-        if (this.upgraded) {
+        if (upgraded) {
             addToBot(new DiscoveryGameAction(2));
         }
     }
