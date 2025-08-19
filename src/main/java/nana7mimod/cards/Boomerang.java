@@ -22,17 +22,18 @@ public class Boomerang extends Base {
         this.returnToHand = true;
     }
 
+    // 玩家回合结束重置伤害
+    @Override
+    public void triggerOnEndOfPlayerTurn() {
+        baseDamage = actualBaseDamage + (upgraded ? upgradeBaseDamage : 0);
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(upgradeBaseDamage);
             upgradeMagicNumber(2);
         }
-    }
-
-    // 玩家回合结束重置伤害
-    public void triggerOnEndOfPlayerTurn() {
-        baseDamage = actualBaseDamage + (upgraded ? upgradeBaseDamage : 0);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

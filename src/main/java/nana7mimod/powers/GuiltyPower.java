@@ -36,6 +36,7 @@ public class GuiltyPower extends AbstractPower {
 
     // 天雷滚滚我好怕怕
     // 做亏心事遭雷劈很合理好吧
+    @Override
     public void atStartOfTurn() {
         flashWithoutSound();
         addToBot(new LightningAction(owner, new DamageInfo(source, amount, DamageType.HP_LOSS)));
@@ -43,6 +44,7 @@ public class GuiltyPower extends AbstractPower {
     }
 
     // 更新描述
+    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

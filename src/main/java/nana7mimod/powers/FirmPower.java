@@ -26,11 +26,13 @@ public class FirmPower extends AbstractPower {
     }
 
     // 格挡翻倍
+    @Override
     public float modifyBlockLast(float blockAmount) {
         return 2 * blockAmount;
     }
 
     // 回合开始时回复当前格挡值的生命
+    @Override
     public void atStartOfTurn() {
         if (owner.currentBlock != 0) {
             flashWithoutSound();

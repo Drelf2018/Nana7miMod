@@ -28,14 +28,17 @@ public class SilencePower extends AbstractPower {
         loadRegion("intangible");
     }
 
+    @Override
     public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
         return 0;
     }
 
+    @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
         return 0;
     }
 
+    @Override
     public void atEndOfRound() {
         flash();
         if (amount == 0) {
@@ -46,6 +49,7 @@ public class SilencePower extends AbstractPower {
     }
 
     // 更新描述
+    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

@@ -29,6 +29,7 @@ public class InjuredPower extends AbstractPower {
     }
 
     // 受伤
+    @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
         flashWithoutSound();
         int lostHP = lostHPLimit - amount + damageAmount;
@@ -38,6 +39,7 @@ public class InjuredPower extends AbstractPower {
     }
 
     // 更新描述
+    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

@@ -28,10 +28,12 @@ public class DormantPower extends AbstractPower {
         loadRegion("confusion"); // 换成ZZZ
     }
 
+    @Override
     public boolean canPlayCard(AbstractCard card) {
         return amount != 0;
     }
 
+    @Override
     public void atStartOfTurn() {
         if (amount > 0) {
             amount--;
@@ -39,6 +41,7 @@ public class DormantPower extends AbstractPower {
         }
     }
 
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && amount == 0) {
             flashWithoutSound();
@@ -47,6 +50,7 @@ public class DormantPower extends AbstractPower {
     }
 
     // 更新描述
+    @Override
     public void updateDescription() {
         if (amount == 0) {
             description = DESCRIPTIONS[3];

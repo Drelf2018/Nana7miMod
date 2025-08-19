@@ -14,6 +14,7 @@ public class Back extends Base {
         super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
     }
 
+    @Override
     public void triggerWhenDrawn() {
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DormantPower.POWER_ID));
     }

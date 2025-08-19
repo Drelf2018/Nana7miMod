@@ -28,6 +28,7 @@ public class NightPower extends AbstractPower {
     }
 
     // 群体失落
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             flashWithoutSound();

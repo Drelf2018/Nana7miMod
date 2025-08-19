@@ -28,6 +28,7 @@ public class PityingPower extends AbstractPower {
     }
 
     // 怜悯
+    @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
         if (info.type == DamageType.NORMAL) {
             flashWithoutSound();

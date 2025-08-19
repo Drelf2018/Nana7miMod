@@ -66,7 +66,9 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 更新能力层数
+    @Override
     public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
         amount += stackAmount;
         flashWithoutSound();
         updateDescription();
@@ -95,12 +97,14 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 回合开始重置层数
+    @Override
     public void atStartOfTurnPostDraw() {
         addAmount(Math.max(amount, 1) - amount);
         attackedCreatures.clear();
     }
 
     // 受伤
+    @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageType.NORMAL && info.owner != owner && !attackedCreatures.contains(info.owner)) {
             addAmount(1);
@@ -110,6 +114,7 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 生气
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && card.costForTurn != 0 && amount > 0) {
             addAmount(-1);
@@ -141,11 +146,13 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 增伤
+    @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         return type == DamageType.NORMAL ? damage + amount : damage;
     }
 
     // 更新描述
+    @Override
     public void updateDescription() {
         if (amount >= 0) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];

@@ -20,20 +20,22 @@ public class Game extends Base {
 
     public static final int INCORRECT = ModHelper.countGames(false);
 
-    private boolean correct;
+    private boolean incorrect;
+
+    private void init(boolean incorrect) {
+        this.incorrect = incorrect;
+        this.damage = this.baseDamage = 10;
+        this.purgeOnUse = true;
+    }
 
     public Game() {
         super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
-        this.correct = true;
-        this.damage = this.baseDamage = 10;
-        this.exhaust = true;
+        this.init(true);
     }
 
     public Game(String name, String img) {
         super(ID, name, ModHelper.cards(CardType.STATUS, img));
-        this.correct = !img.contains("incorrect");
-        this.damage = this.baseDamage = 10;
-        this.purgeOnUse = true;
+        this.init(img.contains("incorrect"));
     }
 
     public static Game Correct(int index) {
@@ -47,13 +49,13 @@ public class Game extends Base {
     public void upgrade() {}
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (correct) {
+        if (incorrect) {
+            addToBot(new DamageAction(p, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
+        } else {
             isMultiDamage = true;
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
             addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
-        } else {
-            addToBot(new DamageAction(p, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
         }
     }
 }

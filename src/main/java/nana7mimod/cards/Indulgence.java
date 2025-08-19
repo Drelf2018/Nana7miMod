@@ -19,14 +19,7 @@ public class Indulgence extends Base {
         this.exhaust = true;
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeMagicNumber(20);
-            changeCardImage("Indulgence_50");
-        }
-    }
-
+    @Override
     public void triggerOnGlowCheck() {
         glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
@@ -34,6 +27,14 @@ public class Indulgence extends Base {
                 glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }
+        }
+    }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(20);
+            changeCardImage("Indulgence_50");
         }
     }
 
