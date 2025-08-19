@@ -72,10 +72,10 @@ public class ATFieldPower extends AbstractPower {
         amount += stackAmount;
         flashWithoutSound();
         updateDescription();
+        addToTop(new DrawCardAction(owner, DevilPower.getAmount(owner)));
         if (stackAmount < 0) {
             onFieldBroken();
         }
-        addToBot(new DrawCardAction(owner, DevilPower.getAmount(owner)));
     }
 
     // 添加层数动画
