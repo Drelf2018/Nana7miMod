@@ -38,12 +38,9 @@ public class Hate extends Base {
     }
 
     public void upgrade() {
-        upgradeDamage(1 + this.timesUpgraded);
+        upgradeTimesUpgraded();
+        upgradeDamage(timesUpgraded);
         upgradeMagicNumber(1);
-        this.timesUpgraded++;
-        this.upgraded = true;
-        this.name = getName(ID) + "+" + this.timesUpgraded;
-        initializeTitle();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

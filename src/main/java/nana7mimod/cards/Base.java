@@ -42,8 +42,15 @@ public abstract class Base extends CustomCard {
     }
 
     public void upgradeDescription() {
-        this.rawDescription = strings(this.cardID).UPGRADE_DESCRIPTION;
+        rawDescription = strings(cardID).UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    public void upgradeTimesUpgraded() {
+        ++timesUpgraded;
+        upgraded = true;
+        name = getName(cardID) + "+" + timesUpgraded;
+        initializeTitle();
     }
 
     public void changeCardImage(String img) {
