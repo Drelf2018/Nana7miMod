@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -115,7 +116,7 @@ public class ATFieldPower extends AbstractPower {
     // 生气
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && card.costForTurn != 0 && amount > 0) {
+        if (card.type == CardType.ATTACK && card.costForTurn != 0 && amount > 0) {
             addAmount(-1);
         }
     }
