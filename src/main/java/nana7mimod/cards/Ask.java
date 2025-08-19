@@ -9,7 +9,7 @@ public class Ask extends Base {
     public static final String ID = ModHelper.id(Ask.class);
 
     public Ask() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.cardsToPreview = new Game();
     }
 

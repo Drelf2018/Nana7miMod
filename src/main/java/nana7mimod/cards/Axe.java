@@ -12,7 +12,7 @@ public class Axe extends Base {
     public static final String ID = ModHelper.id(Axe.class);
 
     public Axe() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
     }
