@@ -68,7 +68,6 @@ public class ATFieldPower extends AbstractPower {
     // 更新能力层数
     @Override
     public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
         amount += stackAmount;
         flashWithoutSound();
         updateDescription();
