@@ -3,7 +3,6 @@ package nana7mimod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -14,8 +13,10 @@ import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.ATFieldPower;
 import nana7mimod.powers.LostPower;
 
-public class DropCoins extends Base implements ATFieldPower.AmountAdder {
+public class DropCoins extends Base {
     public static final String ID = ModHelper.id(DropCoins.class);
+
+    private boolean hasPower = false;
 
     public DropCoins() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -24,6 +25,23 @@ public class DropCoins extends Base implements ATFieldPower.AmountAdder {
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
+            if (!m.isDeadOrEscaped() && LostPower.has(m)) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
+        if (cardPlayed == this && hasPower) {
+            ATFieldPower.addAmount(AbstractDungeon.player, magicNumber);
+        }
+    }
+
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -31,23 +49,10 @@ public class DropCoins extends Base implements ATFieldPower.AmountAdder {
         }
     }
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-            if (!m.isDeadOrEscaped() && m.hasPower(LostPower.POWER_ID)) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                break;
-            }
-        }
-    }
-
-    public int afterUsingCard(ATFieldPower power, UseCardAction action) {
-        return action.target.hasPower(LostPower.POWER_ID) ? 1 : 0;
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
-        if (m.hasPower(LostPower.POWER_ID)) {
+        hasPower = LostPower.has(m);
+        if (hasPower) {
             addToBot(new GainEnergyAction(1));
         }
     }

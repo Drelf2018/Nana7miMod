@@ -2,15 +2,16 @@ package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.ATFieldPower;
 
-public class Hate extends Base implements ATFieldPower.AmountAdder {
+public class Hate extends Base {
     public static final String ID = ModHelper.id(Hate.class);
 
     public Hate(int upgrades) {
@@ -24,6 +25,18 @@ public class Hate extends Base implements ATFieldPower.AmountAdder {
         this(0);
     }
 
+    @Override
+    public boolean canUpgrade() {
+        return true;
+    }
+
+    @Override
+    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
+        if (cardPlayed == this) {
+            ATFieldPower.addAmount(AbstractDungeon.player, magicNumber);
+        }
+    }
+
     public void upgrade() {
         upgradeDamage(1 + this.timesUpgraded);
         upgradeMagicNumber(1);
@@ -31,14 +44,6 @@ public class Hate extends Base implements ATFieldPower.AmountAdder {
         this.upgraded = true;
         this.name = getName(ID) + "+" + this.timesUpgraded;
         initializeTitle();
-    }
-
-    public boolean canUpgrade() {
-        return true;
-    }
-
-    public int afterUsingCard(ATFieldPower power, UseCardAction action) {
-        return magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

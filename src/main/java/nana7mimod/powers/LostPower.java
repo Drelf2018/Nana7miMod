@@ -27,7 +27,13 @@ public class LostPower extends AbstractPower {
         loadRegion("minion"); // 换成😭
     }
 
+    // 获取角色失落
+    public static boolean has(AbstractCreature owner) {
+        return owner.getPower(POWER_ID) instanceof LostPower;
+    }
+
     // 上一轮结束后获得能量
+    @Override
     public void atEndOfRound() {
         flashWithoutSound();
         addToBot(new GainEnergyAction(amount));

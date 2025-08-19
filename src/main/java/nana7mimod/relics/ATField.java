@@ -23,7 +23,7 @@ import nana7mimod.powers.ATFieldPower;
 public class ATField extends CustomRelic {
     public static final String ID = ModHelper.id(ATField.class);
 
-    private Boolean isFirstTimePlayGame = true;
+    private boolean isFirstTimePlayGame = true;
 
     public ATField() {
         super(ID, "bank.png", RelicTier.STARTER, LandingSound.MAGICAL);
@@ -51,7 +51,7 @@ public class ATField extends CustomRelic {
         return super.onPlayerGainedBlock(blockAmount);
     }
 
-    public static Boolean getFirstTimePlayGame() {
+    public static boolean getFirstTimePlayGame() {
         AbstractRelic r = AbstractDungeon.player.getRelic(ID);
         if (r == null || !(r instanceof ATField)) {
             return false;

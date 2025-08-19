@@ -109,17 +109,10 @@ public class ATFieldPower extends AbstractPower {
         return damageAmount;
     }
 
-    public interface AmountAdder {
-        int afterUsingCard(ATFieldPower power, UseCardAction action);
-    }
-
     // 生气
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && card.costForTurn != 0 && amount > 0) {
             addAmount(-1);
-        }
-        if (card instanceof AmountAdder) {
-            addAmount(((AmountAdder) card).afterUsingCard(this, action));
         }
     }
 
