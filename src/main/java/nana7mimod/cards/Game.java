@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import nana7mimod.helpers.ModHelper;
@@ -25,7 +26,6 @@ public class Game extends Base {
     private void init(boolean incorrect) {
         this.incorrect = incorrect;
         this.damage = this.baseDamage = 10;
-        this.purgeOnUse = true;
     }
 
     public Game() {
@@ -46,16 +46,22 @@ public class Game extends Base {
         return new Game(strings(ID).EXTENDED_DESCRIPTION[CORRECT + index + 1], "game/incorrect/" + index);
     }
 
-    public void upgrade() {}
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    @Override
+    public void onChoseThisOption() {
+        AbstractPlayer p = AbstractDungeon.player;
         if (incorrect) {
             addToBot(new DamageAction(p, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
         } else {
             isMultiDamage = true;
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
         }
+    }
+
+    public void upgrade() {}
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        onChoseThisOption();
     }
 }
