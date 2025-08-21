@@ -3,6 +3,10 @@
     "NAME": "和解",
     "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 [E] 。"
   },
+  "Nana7miMod:AllRoundDefend": {
+    "NAME": "立体防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 *金属化 。 NL 获得 !M! 层 *多层护甲 。 NL 消耗 。"
+  },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
     "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏牌 。",
