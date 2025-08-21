@@ -13,7 +13,7 @@ public class IdolAction extends AbstractGameAction {
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
         if (p instanceof Nana7mi) {
-            ((Nana7mi) p).changeStand("stand-idol.jpg");
+            ((Nana7mi) p).changeStand("stand-idol.png");
         }
         isDone = true;
     }
