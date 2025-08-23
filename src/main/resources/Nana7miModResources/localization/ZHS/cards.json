@@ -128,6 +128,10 @@
     "NAME": "娜米打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
+  "Nana7miMod:TalkToTheHand": {
+    "NAME": "以手拒之",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
+  },
   "Nana7miMod:Game": {
     "NAME": "游戏",
     "DESCRIPTION": "nana7mimod:游戏 。 NL 造成 !D! 点伤害。",

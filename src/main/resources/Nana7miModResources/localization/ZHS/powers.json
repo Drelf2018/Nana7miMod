@@ -7,6 +7,13 @@
       " 。"
     ]
   },
+  "Nana7miMod:BetrayPower": {
+    "NAME": "反踩",
+    "DESCRIPTIONS": [
+      "攻击伤害提升 #b",
+      " 。在回合结束时将 #y反踩 层数减少 #b1 。"
+    ]
+  },
   "Nana7miMod:CrazyPower": {
     "NAME": "彻底疯狂",
     "DESCRIPTIONS": [
