@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -122,11 +121,6 @@ public abstract class Base extends CustomPlayer {
 
     // 战斗界面左下角能量图标的每个图层
     public abstract String[] getOrbTextures();
-
-    // 换皮肤
-    public void changeStand(String stand) {
-        img = ImageMaster.loadImage(image(stand));
-    }
 
     // 能量特效图层
     public String getOrbVfx() {
