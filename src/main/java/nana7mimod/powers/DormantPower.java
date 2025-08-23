@@ -36,7 +36,7 @@ public class DormantPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         if (amount > 0) {
-            amount--;
+            reducePower(1);
             updateDescription();
         }
     }
