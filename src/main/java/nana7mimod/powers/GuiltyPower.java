@@ -43,7 +43,6 @@ public class GuiltyPower extends AbstractPower {
         addToBot(new ReducePowerAction(owner, owner, this, REDUCE));
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

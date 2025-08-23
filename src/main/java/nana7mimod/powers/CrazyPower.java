@@ -40,7 +40,6 @@ public class CrazyPower extends AbstractPower {
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

@@ -40,7 +40,6 @@ public class LostPower extends AbstractPower {
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

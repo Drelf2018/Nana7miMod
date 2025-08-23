@@ -151,7 +151,6 @@ public class ATFieldPower extends AbstractPower {
         return type == DamageType.NORMAL ? damage + amount : damage;
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         if (amount >= 0) {

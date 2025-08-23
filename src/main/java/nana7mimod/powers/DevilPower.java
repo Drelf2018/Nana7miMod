@@ -42,7 +42,6 @@ public class DevilPower extends AbstractPower {
         return 0;
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

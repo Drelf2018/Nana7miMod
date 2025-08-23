@@ -49,7 +49,6 @@ public class DormantPower extends AbstractPower {
         }
     }
 
-    // 更新描述
     @Override
     public void updateDescription() {
         if (amount == 0) {
