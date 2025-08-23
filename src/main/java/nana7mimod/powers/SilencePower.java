@@ -1,7 +1,6 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,16 +38,21 @@ public class SilencePower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfRound() {
+    public int onAttacked(DamageInfo info, int damageAmount) {
         flash();
-        if (amount == 0) {
-            addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
-        } else {
-            addToBot(new ReducePowerAction(owner, owner, POWER_ID, 1));
-        }
+        return damageAmount;
     }
 
-    // 更新描述
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        flash();
+    }
+
+    @Override
+    public void atEndOfRound() {
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
+    }
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
