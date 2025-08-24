@@ -11,7 +11,7 @@
     "NAME": "反踩",
     "DESCRIPTIONS": [
       "攻击伤害提升 #b",
-      " 。在回合结束时将 #y反踩 层数减少 #b1 。"
+      " 。 NL 回合结束时 #y反踩 层数减少 #b1 。"
     ]
   },
   "Nana7miMod:CrazyPower": {
@@ -34,7 +34,7 @@
       "在 #b",
       " 回合后 #y休眠 。",
       "在本回合后 #y休眠 。 NL 人生有梦，各自精彩！",
-      "#y不能出牌 。 NL 在你的回合结束时，将一张 #y我回来了 放入你的弃牌堆中。"
+      "#y不能出牌 。 NL 在你的回合结束时，将一张 #y我回来了 放入弃牌堆。"
     ]
   },
   "Nana7miMod:FirmPower": {
@@ -47,14 +47,14 @@
     "NAME": "愧疚",
     "DESCRIPTIONS": [
       "在其回合开始时，减少 #b",
-      " 点生命然后将 #y愧疚 层数减少 #b30 。"
+      " 点 #y生命 然后将 #y愧疚 层数减少 #b30 。"
     ]
   },
   "Nana7miMod:InjuredPower": {
     "NAME": "受伤",
     "DESCRIPTIONS": [
       "再失去 #r",
-      " 点生命， #y心之壁 层数增加 #b1 。"
+      " 点 #y生命 ， #y心之壁 层数增加 #b1 。"
     ]
   },
   "Nana7miMod:LostPower": {
@@ -79,7 +79,7 @@
   "Nana7miMod:SilencePower": {
     "NAME": "禁言",
     "DESCRIPTIONS": [
-      "与玩家互相不能造成伤害 #b",
+      "与玩家互相不能造成伤害。 NL 持续时间 #b",
       " 回合。"
     ]
   }
