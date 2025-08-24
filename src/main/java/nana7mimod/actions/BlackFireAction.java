@@ -34,7 +34,7 @@ public class BlackFireAction extends DamageAction {
                     return;
                 }
 
-                FlashAtkImgEffect effect = new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.FIRE, false);
+                FlashAtkImgEffect effect = new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.FIRE);
                 effect.img = vfxAtlas.findRegion("attack/black_fire");
                 AbstractDungeon.effectList.add(effect);
             }

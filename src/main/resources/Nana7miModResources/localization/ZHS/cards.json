@@ -7,6 +7,10 @@
     "NAME": "立体防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 *金属化 。 NL 获得 !M! 层 *多层护甲 。 NL 消耗 。"
   },
+  "Nana7miMod:Amaterasu": {
+    "NAME": "阿玛忒拉斯",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。"
+  },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
     "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏牌 。",
