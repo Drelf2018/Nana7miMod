@@ -103,6 +103,10 @@
     "NAME": "没念到的也晚安",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
   },
+  "Nana7miMod:Reluctant": {
+    "NAME": "勉为其难",
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:入脑 。 NL 消耗 。"
+  },
   "Nana7miMod:RestartStreaming": {
     "NAME": "重新推流",
     "DESCRIPTION": "结束你的回合。 NL 保留 你的手牌。 NL nana7mimod:保留 你的能量。"

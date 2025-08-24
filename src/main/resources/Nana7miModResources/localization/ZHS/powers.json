@@ -50,6 +50,14 @@
       " 点 #y生命 然后将 #y愧疚 层数减少 #b30 。"
     ]
   },
+  "Nana7miMod:InfatuationPower": {
+    "NAME": "入脑",
+    "DESCRIPTIONS": [
+      "即将 #y反踩 #b5 ！ NL ",
+      "#y攻击 造成的伤害减少 #b",
+      "% 。 NL 回合结束时 #y入脑 层数减少 #b1 。"
+    ]
+  },
   "Nana7miMod:InjuredPower": {
     "NAME": "受伤",
     "DESCRIPTIONS": [
