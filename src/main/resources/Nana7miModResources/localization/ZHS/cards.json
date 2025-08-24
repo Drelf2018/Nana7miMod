@@ -76,6 +76,13 @@
     "NAME": "偶像形态",
     "DESCRIPTION": "消耗 所有攻击牌。 NL 不再需要 *心之壁 。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
   },
+  "Nana7miMod:ImpotentRage": {
+    "NAME": "无能狂怒",
+    "DESCRIPTION": "没有 [E] 时才能被打出。 NL 本回合造成 *双倍伤害 。 NL *心之壁 层数增加 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      "我还有能量。"
+    ]
+  },
   "Nana7miMod:Indulgence": {
     "NAME": "赎罪券",
     "DESCRIPTION": "保留 。 NL 如果一名敌人被 nana7mimod:禁言 ，获得 !M! 金币。 NL 消耗 。"
