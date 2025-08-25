@@ -18,7 +18,6 @@ public class ImpotentRage extends Base {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        System.out.println("EnergyPanel.totalCount: " + EnergyPanel.totalCount);
         boolean canUse = super.canUse(p, m);
         if (!canUse)
             return false;

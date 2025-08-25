@@ -50,7 +50,6 @@ public class IdolForm extends Base {
             public void update() {
                 String charName = p.getClass().getSimpleName().toLowerCase();
                 String idol = ModHelper.characters(charName, "stand-idol.png");
-                System.out.println(idol);
                 if (Gdx.files.internal(idol).exists()) {
                     p.img = ImageMaster.loadImage(idol);
                 }
