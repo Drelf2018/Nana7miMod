@@ -30,12 +30,12 @@ public class Kiss extends Base {
     public Kiss() {
         super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 5;
+        this.isInnate = true;
         this.purgeOnUse = true;
     }
 
     public void upgrade() {
         if (!upgraded) {
-            isInnate = true;
             selfRetain = true;
             upgradeName();
             upgradeMagicNumber(-2);
