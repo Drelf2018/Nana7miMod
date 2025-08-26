@@ -156,6 +156,10 @@
     "NAME": "以手拒之",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
   },
+  "Nana7miMod:Unicycle": {
+    "NAME": "独轮车",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL nana7mimod:心之壁破碎 X 。"
+  },
   "Nana7miMod:Game": {
     "NAME": "游戏",
     "DESCRIPTION": "nana7mimod:游戏 。 NL 造成 !D! 点伤害。",
