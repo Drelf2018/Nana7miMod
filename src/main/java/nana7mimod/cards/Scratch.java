@@ -31,7 +31,7 @@ public class Scratch extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber / 2; i++) {
+        for (int i = 0; i < magicNumber / 2; ++i) {
             addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Nana7mi.COLOR, Color.WHITE), 0.1F));
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.NONE));
             addToBot(new VFXAction(new ClawEffectMirror(m.hb.cX, m.hb.cY, Nana7mi.COLOR, Color.WHITE), 0.1F));

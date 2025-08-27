@@ -23,7 +23,7 @@ public class MyBad extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
+        for (int i = 0; i < magicNumber; ++i) {
             addToBot(new GainBlockAction(p, p, block));
         }
     }

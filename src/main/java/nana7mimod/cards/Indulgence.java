@@ -42,7 +42,7 @@ public class Indulgence extends Base {
         AbstractPower silence = m.getPower(SilencePower.POWER_ID);
         if (silence != null && silence instanceof SilencePower) {
             p.gainGold(magicNumber);
-            for (int i = 0; i < magicNumber; i++)
+            for (int i = 0; i < magicNumber; ++i)
                 AbstractDungeon.effectList.add(new GainPennyEffect(p, m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, true));
         }
     }
