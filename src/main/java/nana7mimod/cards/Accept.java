@@ -21,10 +21,11 @@ public class Accept extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ATFieldPower power = ATFieldPower.from(p);
-        if (power != null && power.amount > 0) {
-            addToBot(new GainEnergyAction(power.amount));
-            power.addAmount(0 - power.amount, true);
-        }
+        ATFieldPower.setAmount(p, amount -> {
+            if (amount <= 0)
+                return amount;
+            addToBot(new GainEnergyAction(amount));
+            return 0;
+        });
     }
 }

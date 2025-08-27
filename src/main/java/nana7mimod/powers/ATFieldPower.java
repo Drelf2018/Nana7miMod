@@ -1,6 +1,7 @@
 package nana7mimod.powers;
 
 import java.util.ArrayList;
+import java.util.function.Function;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -58,11 +59,27 @@ public class ATFieldPower extends AbstractPower {
         }
     }
 
+    // 为拥有心之壁的角色设置层数
+    public static void setAmount(AbstractCreature target, Function<Integer, Integer> function) {
+        ATFieldPower power = ATFieldPower.from(target);
+        if (power != null) {
+            power.addAmount(function.apply(power.amount) - power.amount);
+        }
+    }
+
     // 为拥有心之壁的角色增加层数
     public static void addAmount(AbstractCreature target, int diffAmount) {
         ATFieldPower power = ATFieldPower.from(target);
         if (power != null) {
             power.addAmount(diffAmount);
+        }
+    }
+
+    // 为拥有心之壁的角色增加层数
+    public static void addAmount(AbstractCreature target, Function<Integer, Integer> function) {
+        ATFieldPower power = ATFieldPower.from(target);
+        if (power != null) {
+            power.addAmount(function.apply(power.amount));
         }
     }
 
