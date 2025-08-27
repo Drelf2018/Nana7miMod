@@ -26,9 +26,8 @@ public class Ask extends Base {
             total++;
         }
         Random random = new Random();
-        for (int i = 0; i < incorrect; ++i) {
+        for (int i = 0; i < incorrect; ++i)
             derp.add(Game.Incorrect(random.nextInt(Game.INCORRECT)));
-        }
         if (ATField.getFirstTimePlayGame()) {
             derp.add(Game.Correct(65));
         }

@@ -41,9 +41,8 @@ public class Unicycle extends Base {
             }
         }
 
-        for (int i = 0; i < effect; ++i) {
+        for (int i = 0; i < effect; ++i)
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_LIGHT));
-        }
 
         ATFieldPower.setAmount(p, -effect);
     }
