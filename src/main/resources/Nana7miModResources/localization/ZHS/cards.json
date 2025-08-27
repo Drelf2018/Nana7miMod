@@ -51,6 +51,11 @@
     "NAME": "走火入魔",
     "DESCRIPTION": "每当 *心之壁 层数改变时，抽 !M! 张牌。"
   },
+  "Nana7miMod:Disappointed": {
+    "NAME": "失望",
+    "DESCRIPTION": "*心之壁 层数翻倍。",
+    "UPGRADE_DESCRIPTION": "*心之壁 层数变为三倍。"
+  },
   "Nana7miMod:Disclaimer": {
     "NAME": "免责声明",
     "DESCRIPTION": "获得 [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。",
