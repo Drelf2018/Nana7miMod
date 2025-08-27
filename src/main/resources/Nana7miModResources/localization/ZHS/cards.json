@@ -80,6 +80,10 @@
     "NAME": "怒火中烧",
     "DESCRIPTION": "消耗 手牌中所有攻击牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
   },
+  "Nana7miMod:God": {
+    "NAME": "兄弟们有神！",
+    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。"
+  },
   "Nana7miMod:Hate": {
     "NAME": "仇恨",
     "DESCRIPTION": "造成 !D! 点伤害。 NL *心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
