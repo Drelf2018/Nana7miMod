@@ -35,6 +35,6 @@ public class Fault2 extends Base {
             addToBot(new DamageAction(mo, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_HORIZONTAL));
             addToBot(new LoseHPAction(p, p, magicNumber));
         }
-        addToBot(new MakeTempCardInHandAction(new Fault3(), 1));
+        addToBot(new MakeTempCardInHandAction(new Fault3()));
     }
 }

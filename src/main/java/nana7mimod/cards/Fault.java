@@ -30,6 +30,6 @@ public class Fault extends Base {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new LoseHPAction(p, p, magicNumber));
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_DIAGONAL));
-		addToBot(new MakeTempCardInHandAction(new Fault2(), 1));
+		addToBot(new MakeTempCardInHandAction(new Fault2()));
 	}
 }

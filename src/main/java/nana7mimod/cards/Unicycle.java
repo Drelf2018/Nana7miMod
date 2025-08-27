@@ -36,13 +36,13 @@ public class Unicycle extends Base {
         }
 
         if (effect > 0) {
-            for (int i = 0; i < effect; ++i) {
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_LIGHT));
-            }
-
             if (!this.freeToPlayOnce) {
                 p.energy.use(EnergyPanel.totalCount);
             }
+        }
+
+        for (int i = 0; i < effect; ++i) {
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_LIGHT));
         }
 
         ATFieldPower.setAmount(p, -effect);
