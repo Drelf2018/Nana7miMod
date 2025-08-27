@@ -11,6 +11,13 @@
     "NAME": "阿玛忒拉斯",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。"
   },
+  "Nana7miMod:Armor": {
+    "NAME": "叠甲过",
+    "DESCRIPTION": "获得 !B! 点 格挡 X 次。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点 格挡 !M! 次。"
+    ]
+  },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
     "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏牌 。",
@@ -43,6 +50,11 @@
   "Nana7miMod:Devil": {
     "NAME": "走火入魔",
     "DESCRIPTION": "每当 *心之壁 层数改变时，抽 !M! 张牌。"
+  },
+  "Nana7miMod:Disclaimer": {
+    "NAME": "免责声明",
+    "DESCRIPTION": "获得 [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。"
   },
   "Nana7miMod:DropCoins": {
     "NAME": "爆金币",
@@ -158,7 +170,7 @@
   },
   "Nana7miMod:Unicycle": {
     "NAME": "独轮车",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL nana7mimod:心之壁破碎 X 。"
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL nana7mimod:心之壁破碎 X 。"
   },
   "Nana7miMod:Game": {
     "NAME": "游戏",
