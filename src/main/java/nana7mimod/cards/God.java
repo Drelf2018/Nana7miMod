@@ -11,7 +11,7 @@ public class God extends Base {
     public static final String ID = ModHelper.id(God.class);
 
     public God() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
     public void upgrade() {

@@ -13,7 +13,7 @@ public class Indulgence extends Base {
     public static final String ID = ModHelper.id(Indulgence.class);
 
     public Indulgence() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.magicNumber = this.baseMagicNumber = 30;
         this.selfRetain = true;
         this.exhaust = true;

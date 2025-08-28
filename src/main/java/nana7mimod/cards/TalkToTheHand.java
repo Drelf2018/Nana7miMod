@@ -17,9 +17,9 @@ public class TalkToTheHand extends Base {
     public static final String ID = ModHelper.id(TalkToTheHand.class);
 
     public TalkToTheHand() {
-        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         this.damage = this.baseDamage = 30;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void upgrade() {
