@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import nana7mimod.helpers.ModHelper;
 
@@ -138,6 +138,12 @@ public class ATFieldPower extends AbstractPower {
         }
     }
 
+    // 宽恕
+    @Override
+    public void onGainedBlock(float blockAmount) {
+        addAmount(-1);
+    }
+
     // 破碎
     private void onFieldBroken() {
         switch (amount) {
@@ -148,7 +154,7 @@ public class ATFieldPower extends AbstractPower {
                 break;
             case -4:
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    addToBot(new ApplyPowerAction(mo, owner, new LoseStrengthPower(mo, 2)));
+                    addToBot(new ApplyPowerAction(mo, owner, new StrengthPower(mo, -2)));
                 }
                 break;
             case -6:

@@ -44,13 +44,6 @@ public class ATField extends CustomRelic {
         addToBot(new ApplyPowerAction(owner, owner, new InjuredPower(owner, 10 + AbstractDungeon.ascensionLevel)));
     }
 
-    // 宽恕
-    @Override
-    public int onPlayerGainedBlock(float blockAmount) {
-        ATFieldPower.addAmount(AbstractDungeon.player, -1);
-        return super.onPlayerGainedBlock(blockAmount);
-    }
-
     public static boolean getFirstTimePlayGame() {
         AbstractRelic r = AbstractDungeon.player.getRelic(ID);
         if (r == null || !(r instanceof ATField)) {
