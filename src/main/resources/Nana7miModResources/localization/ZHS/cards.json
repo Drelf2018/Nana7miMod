@@ -150,6 +150,10 @@
     "DESCRIPTION": "虚无 。 NL 如果一名敌人的意图是攻击则将其 nana7mimod:禁言 。",
     "UPGRADE_DESCRIPTION": "如果一名敌人的意图是攻击则将其 nana7mimod:禁言 。"
   },
+  "Nana7miMod:Silly": {
+    "NAME": "好呆啊！",
+    "DESCRIPTION": "获得 混乱 效果。 NL 抽 !M! 张牌。"
+  },
   "Nana7miMod:Slip": {
     "NAME": "哎呀滑了",
     "DESCRIPTION": "获得 !M! 点 敏捷 。",
