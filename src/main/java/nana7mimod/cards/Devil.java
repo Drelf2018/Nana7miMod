@@ -10,7 +10,7 @@ public class Devil extends Base {
     public static final String ID = ModHelper.id(Devil.class);
 
     public Devil() {
-        super(ID, CardCost.C2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
