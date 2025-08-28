@@ -15,7 +15,7 @@ public class Crazy extends Base {
 
     public Crazy() {
         super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void upgrade() {
