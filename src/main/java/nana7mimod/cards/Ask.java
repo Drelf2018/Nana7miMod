@@ -23,7 +23,7 @@ public class Ask extends Base {
     private ArrayList<AbstractCard> generateCardChoices(int total, int incorrect) {
         ArrayList<AbstractCard> derp = new ArrayList<AbstractCard>();
         if (AbstractDungeon.player.hasRelic(QuestionCard.ID)) {
-            total++;
+            ++total;
         }
         Random random = new Random();
         for (int i = 0; i < incorrect; ++i)

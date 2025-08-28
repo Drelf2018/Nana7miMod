@@ -29,7 +29,7 @@ public class Axe extends Base {
         for (AbstractCard c : p.hand.group) {
             if (c.type == CardType.ATTACK) {
                 addToBot(new DiscardSpecificCardAction(c, p.hand));
-                discardCount++;
+                ++discardCount;
             }
         }
         if (discardCount != 0) {
