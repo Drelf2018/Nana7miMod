@@ -14,7 +14,6 @@ public class Axe extends Base {
     public Axe() {
         super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust = true;
     }
 
     public void upgrade() {
