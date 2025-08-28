@@ -83,7 +83,7 @@
   },
   "Nana7miMod:Furious": {
     "NAME": "怒火中烧",
-    "DESCRIPTION": "消耗 手牌中所有攻击牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
+    "DESCRIPTION": "消耗 所有手牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
   },
   "Nana7miMod:God": {
     "NAME": "兄弟们有神！",
