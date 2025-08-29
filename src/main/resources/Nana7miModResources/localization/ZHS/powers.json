@@ -72,6 +72,14 @@
       " [E] ，然后将 #y失落 层数减少 #b1 。"
     ]
   },
+  "Nana7miMod:MonitorPower": {
+    "NAME": "监视",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，如果其意图是攻击，抽 #b",
+      " 张牌。",
+      "在你的回合开始时，如果被监视的敌人意图是攻击，抽一张牌。"
+    ]
+  },
   "Nana7miMod:NightPower": {
     "NAME": "晚安",
     "DESCRIPTIONS": [
