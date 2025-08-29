@@ -93,6 +93,10 @@
     "NAME": "仇恨",
     "DESCRIPTION": "造成 !D! 点伤害。 NL *心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
   },
+  "Nana7miMod:HealAll": {
+    "NAME": "桃园结义",
+    "DESCRIPTION": "nana7mimod:全场 回复 !M! 生命。 NL 消耗 。"
+  },
   "Nana7miMod:IdolForm": {
     "NAME": "偶像形态",
     "DESCRIPTION": "消耗 所有攻击牌。 NL 不再需要 *心之壁 。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
