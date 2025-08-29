@@ -59,7 +59,12 @@ public class Game extends Base {
         }
     }
 
-    public void upgrade() {}
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(5);
+        }
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();

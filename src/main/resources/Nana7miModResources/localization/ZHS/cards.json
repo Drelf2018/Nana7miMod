@@ -142,6 +142,11 @@
     "NAME": "没念到的也晚安",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
   },
+  "Nana7miMod:Puzzle": {
+    "NAME": "电车难题",
+    "DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。"
+  },
   "Nana7miMod:Reluctant": {
     "NAME": "勉为其难",
     "DESCRIPTION": "给予 !M! 层 nana7mimod:入脑 。 NL 消耗 。"
@@ -197,6 +202,16 @@
   "Nana7miMod:VoidEnemy": {
     "NAME": "虚空索敌",
     "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL *心之壁 层数减少 2 。"
+  },
+  "Nana7miMod:Train": {
+    "NAME": "列车",
+    "DESCRIPTION": "nana7mimod:列车 。",
+    "EXTENDED_DESCRIPTION": [
+      "一个越狱犯",
+      "五只棕熊",
+      " NL 造成 !D! 点伤害。",
+      " NL 对所有敌人造成 !D! 点伤害。"
+    ]
   },
   "Nana7miMod:Game": {
     "NAME": "游戏",
