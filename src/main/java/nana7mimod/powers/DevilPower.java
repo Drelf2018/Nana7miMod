@@ -24,19 +24,10 @@ public class DevilPower extends AbstractPower {
         updateDescription();
     }
 
-    // 获取角色走火入魔
-    public static DevilPower from(AbstractCreature owner) {
-        AbstractPower power = owner.getPower(POWER_ID);
-        if (power instanceof DevilPower) {
-            return (DevilPower) power;
-        }
-        return null;
-    }
-
     // 获取角色走火入魔程度
     public static int getAmount(AbstractCreature target) {
-        DevilPower power = DevilPower.from(target);
-        if (power != null) {
+        AbstractPower power = target.getPower(POWER_ID);
+        if (power instanceof DevilPower) {
             return power.amount;
         }
         return 0;

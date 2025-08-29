@@ -43,8 +43,8 @@ public class ATFieldPower extends AbstractPower {
     }
 
     // 获取角色心之壁
-    public static ATFieldPower from(AbstractCreature owner) {
-        AbstractPower power = owner.getPower(POWER_ID);
+    public static ATFieldPower from(AbstractCreature target) {
+        AbstractPower power = target.getPower(POWER_ID);
         if (power instanceof ATFieldPower) {
             return (ATFieldPower) power;
         }

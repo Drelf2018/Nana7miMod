@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.SilencePower;
@@ -39,8 +38,7 @@ public class Indulgence extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower silence = m.getPower(SilencePower.POWER_ID);
-        if (silence != null && silence instanceof SilencePower) {
+        if (m.getPower(SilencePower.POWER_ID) instanceof SilencePower) {
             p.gainGold(magicNumber);
             for (int i = 0; i < magicNumber; ++i)
                 AbstractDungeon.effectList.add(new GainPennyEffect(p, m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, true));

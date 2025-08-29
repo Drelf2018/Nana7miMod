@@ -24,6 +24,7 @@ public class ClawEffectMirror extends AbstractGameEffect {
         this.duration = this.startingDuration;
     }
 
+    @Override
     public void update() {
         if (MathUtils.randomBoolean()) {
             CardCrawlGame.sound.playA("ATTACK_DAGGER_5", MathUtils.random(0.0F, -0.3F));

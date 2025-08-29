@@ -28,8 +28,8 @@ public class LostPower extends AbstractPower {
     }
 
     // 获取角色失落
-    public static boolean has(AbstractCreature owner) {
-        return owner.getPower(POWER_ID) instanceof LostPower;
+    public static boolean has(AbstractCreature target) {
+        return target.getPower(POWER_ID) instanceof LostPower;
     }
 
     // 上一轮结束后获得能量
