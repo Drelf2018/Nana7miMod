@@ -44,7 +44,13 @@ public class Kiss extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        m = AbstractDungeon.getCurrRoom().monsters.monsters.get(0);
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!mo.isDeadOrEscaped()) {
+                m = mo;
+            }
+        }
+        if (m == null)
+            return;
         String[] extended = strings(ID).EXTENDED_DESCRIPTION;
         addToBot(new TalkAction(m, extended[0], 6.0F, 6.0F));
         AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 6.0F, extended[1], true));
