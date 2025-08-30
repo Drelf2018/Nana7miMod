@@ -35,6 +35,11 @@
     "NAME": "回旋镖",
     "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
   },
+  "Nana7miMod:BuyYou": {
+    "NAME": "请你喝",
+    "DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
+  },
   "Nana7miMod:Crazy": {
     "NAME": "彻底疯狂",
     "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"
