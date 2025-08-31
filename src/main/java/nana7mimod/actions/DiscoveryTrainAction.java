@@ -27,11 +27,10 @@ public class DiscoveryTrainAction extends AbstractGameAction {
         }
         if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
             AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard;
-            if (AbstractDungeon.player.hand.size() < 9) {
+            if (AbstractDungeon.player.hand.size() < 9)
                 AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
-            } else {
+            else
                 AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
-            }
             AbstractDungeon.cardRewardScreen.discoveryCard = null;
         }
         this.isDone = true;

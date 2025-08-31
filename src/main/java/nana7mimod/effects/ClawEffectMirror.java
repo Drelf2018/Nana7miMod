@@ -26,11 +26,10 @@ public class ClawEffectMirror extends AbstractGameEffect {
 
     @Override
     public void update() {
-        if (MathUtils.randomBoolean()) {
+        if (MathUtils.randomBoolean())
             CardCrawlGame.sound.playA("ATTACK_DAGGER_5", MathUtils.random(0.0F, -0.3F));
-        } else {
+        else
             CardCrawlGame.sound.playA("ATTACK_DAGGER_6", MathUtils.random(0.0F, -0.3F));
-        }
         AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(this.x - 35.0F, this.y + 35.0F, -150.0F, -150.0F, -225.0F, this.color, this.color2));
         AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(this.x, this.y, -150.0F, -150.0F, -225.0F, this.color, this.color2));
         AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(this.x + 35.0F, this.y - 35.0F, -150.0F, -150.0F, -225.0F, this.color, this.color2));

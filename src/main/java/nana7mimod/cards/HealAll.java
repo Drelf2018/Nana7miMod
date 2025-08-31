@@ -24,9 +24,8 @@ public class HealAll extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HealAction(p, p, magicNumber));
-        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             if (!mo.isDeadOrEscaped())
                 addToBot(new HealAction(mo, p, magicNumber));
-        }
     }
 }

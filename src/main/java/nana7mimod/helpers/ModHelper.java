@@ -15,9 +15,8 @@ public class ModHelper {
     }
 
     public static String unwrap(String id) {
-        if (id.startsWith(PRIFIX)) {
+        if (id.startsWith(PRIFIX))
             return id.substring(PRIFIX.length());
-        }
         return id;
     }
 
@@ -27,18 +26,16 @@ public class ModHelper {
 
     public static String L10N(String path) {
         String local = RESOURCES + "/localization/" + Settings.language.name();
-        if (Gdx.files.internal(local).exists()) {
+        if (Gdx.files.internal(local).exists())
             return local + "/" + path;
-        }
         return RESOURCES + "/localization/ZHS/" + path;
     }
 
     public static String cards(CardType type, String id) {
         String path = RESOURCES + "/image/cards/" + type.name().toLowerCase();
         String card = path + "/" + ModHelper.unwrap(id) + ".png";
-        if (Gdx.files.internal(card).exists()) {
+        if (Gdx.files.internal(card).exists())
             return card;
-        }
         return path + ".png";
     }
 
@@ -63,11 +60,10 @@ public class ModHelper {
 
         while (left < right) {
             int mid = (left + right) / 2;
-            if (Gdx.files.internal(path + "/" + mid + ".png").exists()) {
+            if (Gdx.files.internal(path + "/" + mid + ".png").exists())
                 left = mid + 1;
-            } else {
+            else
                 right = mid;
-            }
         }
 
         return left;

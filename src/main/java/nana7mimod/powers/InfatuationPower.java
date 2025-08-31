@@ -31,9 +31,8 @@ public class InfatuationPower extends AbstractPower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (amount >= 4) {
+        if (amount >= 4)
             amount = 4;
-        }
     }
 
     @Override
@@ -54,8 +53,7 @@ public class InfatuationPower extends AbstractPower {
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[1] + 25 * amount + DESCRIPTIONS[2];
-        if (amount == 1) {
+        if (amount == 1)
             description = DESCRIPTIONS[0] + description;
-        }
     }
 }

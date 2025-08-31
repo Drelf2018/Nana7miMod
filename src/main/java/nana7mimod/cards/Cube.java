@@ -32,11 +32,10 @@ public class Cube extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
         addToBot(new VFXAction(new BorderFlashEffect(Color.SKY)));
-        if (Settings.FAST_MODE) {
+        if (Settings.FAST_MODE)
             addToBot(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.1F));
-        } else {
+        else
             addToBot(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
-        }
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.HP_LOSS), AttackEffect.NONE));
     }
 }

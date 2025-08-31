@@ -45,15 +45,12 @@ public class BlackFireAction extends DamageAction {
                 this.target.tint.changeColor(Color.WHITE.cpy());
 
                 this.target.damage(this.info);
-                if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead())
                     AbstractDungeon.actionManager.clearPostCombatActions();
-                }
 
-                if (!Settings.FAST_MODE) {
+                if (!Settings.FAST_MODE)
                     this.addToTop(new WaitAction(0.1F));
-                }
             }
-
         }
     }
 }

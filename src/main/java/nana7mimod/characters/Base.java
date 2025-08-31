@@ -53,23 +53,20 @@ public abstract class Base extends CustomPlayer {
     }
 
     public CharacterStrings strings() {
-        if (charStrings == null) {
+        if (charStrings == null)
             charStrings = CardCrawlGame.languagePack.getCharacterString(ModHelper.id(getClass()));
-        }
         return charStrings;
     }
 
     public String image(String path) {
-        if (charName == null) {
+        if (charName == null)
             charName = getClass().getSimpleName().toLowerCase();
-        }
         return ModHelper.characters(charName, path);
     }
 
     public static ArrayList<String> list(String... items) {
-        if (items == null) {
+        if (items == null)
             return new ArrayList<>(); // 返回空列表
-        }
         return new ArrayList<>(Arrays.asList(items));
     }
 

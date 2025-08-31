@@ -37,11 +37,10 @@ public class LosePennyEffect extends AbstractGameEffect {
     public LosePennyEffect(AbstractCreature owner, float x, float y, float targetX, float targetY, boolean showGainEffect) {
         this.alpha = 0.0F;
         this.suctionTimer = 0.7F;
-        if (MathUtils.randomBoolean()) {
+        if (MathUtils.randomBoolean())
             this.img = ImageMaster.COPPER_COIN_1;
-        } else {
+        else
             this.img = ImageMaster.COPPER_COIN_2;
-        }
 
         this.x = x - (float) this.img.packedWidth / 2.0F;
         this.y = y - (float) this.img.packedHeight / 2.0F;
@@ -67,39 +66,35 @@ public class LosePennyEffect extends AbstractGameEffect {
     }
 
     public void update() {
-        if (this.staggerTimer > 0.0F) {
+        if (this.staggerTimer > 0.0F)
             this.staggerTimer -= Gdx.graphics.getDeltaTime();
-        } else {
+        else {
             if (this.alpha != 1.0F) {
                 this.alpha += Gdx.graphics.getDeltaTime() * 2.0F;
-                if (this.alpha > 1.0F) {
+                if (this.alpha > 1.0F)
                     this.alpha = 1.0F;
-                }
-
                 this.color.a = this.alpha;
             }
-
             this.rotation += Gdx.graphics.getDeltaTime() * this.rotationSpeed;
             this.x += Gdx.graphics.getDeltaTime() * this.vX;
             this.y += Gdx.graphics.getDeltaTime() * this.vY;
             this.vY -= Gdx.graphics.getDeltaTime() * GRAVITY;
-            if (this.suctionTimer > 0.0F) {
+            if (this.suctionTimer > 0.0F)
                 this.suctionTimer -= Gdx.graphics.getDeltaTime();
-            } else {
+            else {
                 this.vY = MathUtils.lerp(this.vY, 0.0F, Gdx.graphics.getDeltaTime() * 5.0F);
                 this.vX = MathUtils.lerp(this.vX, 0.0F, Gdx.graphics.getDeltaTime() * 5.0F);
                 this.x = MathUtils.lerp(this.x, this.targetX, Gdx.graphics.getDeltaTime() * 4.0F);
                 this.y = MathUtils.lerp(this.y, this.targetY, Gdx.graphics.getDeltaTime() * 4.0F);
                 if (Math.abs(this.x - this.targetX) < 20.0F) {
                     this.isDone = true;
-                    if (MathUtils.randomBoolean()) {
+                    if (MathUtils.randomBoolean())
                         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-                    }
 
                     AbstractDungeon.effectsQueue.add(new ShineLinesEffect(this.x, this.y));
                     boolean textEffectFound = false;
 
-                    for (AbstractGameEffect e : AbstractDungeon.effectList) {
+                    for (AbstractGameEffect e : AbstractDungeon.effectList)
                         if (e instanceof LoseGoldTextEffect) {
                             LoseGoldTextEffect g = (LoseGoldTextEffect) e;
                             if (g.owner == owner && g.ping(1)) {
@@ -107,7 +102,6 @@ public class LosePennyEffect extends AbstractGameEffect {
                                 break;
                             }
                         }
-                    }
 
                     if (!textEffectFound) {
                         for (AbstractGameEffect e : AbstractDungeon.effectsQueue)
@@ -118,12 +112,10 @@ public class LosePennyEffect extends AbstractGameEffect {
                             }
                     }
 
-                    if (!textEffectFound && this.showGainEffect) {
+                    if (!textEffectFound && this.showGainEffect)
                         AbstractDungeon.effectsQueue.add(new LoseGoldTextEffect(owner, 1));
-                    }
                 }
             }
-
         }
     }
 

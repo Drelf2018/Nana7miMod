@@ -46,9 +46,8 @@ public class ATField extends CustomRelic {
 
     public static boolean getFirstTimePlayGame() {
         AbstractRelic r = AbstractDungeon.player.getRelic(ID);
-        if (r == null || !(r instanceof ATField)) {
+        if (r == null || !(r instanceof ATField))
             return false;
-        }
         ATField a = (ATField) r;
         if (a.isFirstTimePlayGame) {
             a.isFirstTimePlayGame = false;

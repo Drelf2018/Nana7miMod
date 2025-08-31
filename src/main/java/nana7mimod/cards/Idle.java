@@ -44,13 +44,12 @@ public class Idle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
             if (!mo.isDeadOrEscaped()) {
                 p.loseGold(magicNumber);
                 for (int i = 0; i < magicNumber; ++i)
                     AbstractDungeon.effectList.add(new LosePennyEffect(mo, p.hb.cX, p.hb.cY, mo.hb.cX, mo.hb.cY, true));
                 addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, 99, false)));
             }
-        }
     }
 }

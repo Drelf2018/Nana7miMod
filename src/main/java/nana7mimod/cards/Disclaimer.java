@@ -27,20 +27,16 @@ public class Disclaimer extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int effect = EnergyPanel.totalCount;
-        if (energyOnUse != -1) {
+        if (energyOnUse != -1)
             effect = energyOnUse;
-        }
 
         if (p.hasRelic("Chemical X")) {
             effect += 2;
             p.getRelic("Chemical X").flash();
         }
 
-        if (effect > 0) {
-            if (!this.freeToPlayOnce) {
-                p.energy.use(EnergyPanel.totalCount);
-            }
-        }
+        if (effect > 0 && !this.freeToPlayOnce)
+            p.energy.use(EnergyPanel.totalCount);
 
         addToBot(new GainEnergyAction(magicNumber));
         Armor c = new Armor();

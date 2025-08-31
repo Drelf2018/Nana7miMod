@@ -45,42 +45,37 @@ public class ATFieldPower extends AbstractPower {
     // 获取角色心之壁
     public static ATFieldPower from(AbstractCreature target) {
         AbstractPower power = target.getPower(POWER_ID);
-        if (power instanceof ATFieldPower) {
+        if (power instanceof ATFieldPower)
             return (ATFieldPower) power;
-        }
         return null;
     }
 
     // 为拥有心之壁的角色设置层数
     public static void setAmount(AbstractCreature target, int newAmount) {
         ATFieldPower power = ATFieldPower.from(target);
-        if (power != null) {
+        if (power != null)
             power.addAmount(newAmount - power.amount);
-        }
     }
 
     // 为拥有心之壁的角色设置层数
     public static void setAmount(AbstractCreature target, Function<Integer, Integer> function) {
         ATFieldPower power = ATFieldPower.from(target);
-        if (power != null) {
+        if (power != null)
             power.addAmount(function.apply(power.amount) - power.amount);
-        }
     }
 
     // 为拥有心之壁的角色增加层数
     public static void addAmount(AbstractCreature target, int diffAmount) {
         ATFieldPower power = ATFieldPower.from(target);
-        if (power != null) {
+        if (power != null)
             power.addAmount(diffAmount);
-        }
     }
 
     // 为拥有心之壁的角色增加层数
     public static void addAmount(AbstractCreature target, Function<Integer, Integer> function) {
         ATFieldPower power = ATFieldPower.from(target);
-        if (power != null) {
+        if (power != null)
             power.addAmount(function.apply(power.amount));
-        }
     }
 
     // 更新能力层数
@@ -90,22 +85,19 @@ public class ATFieldPower extends AbstractPower {
         flashWithoutSound();
         updateDescription();
         addToTop(new DrawCardAction(owner, DevilPower.getAmount(owner)));
-        if (stackAmount < 0) {
+        if (stackAmount < 0)
             onFieldBroken();
-        }
     }
 
     // 添加层数动画
     public void addAmount(int diffAmount, boolean now) {
-        if (diffAmount > 0) {
-            if (now) {
+        if (diffAmount > 0)
+            if (now)
                 addToTop(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount)));
-            } else {
+            else
                 addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, diffAmount)));
-            }
-        } else if (diffAmount < 0) {
+        else if (diffAmount < 0)
             stackPower(diffAmount);
-        }
     }
 
     // 添加层数动画
@@ -133,9 +125,8 @@ public class ATFieldPower extends AbstractPower {
     // 生气
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.ATTACK && card.costForTurn != 0 && amount > 0) {
+        if (card.type == CardType.ATTACK && card.costForTurn != 0 && amount > 0)
             addAmount(-1);
-        }
     }
 
     // 宽恕
@@ -148,22 +139,19 @@ public class ATFieldPower extends AbstractPower {
     private void onFieldBroken() {
         switch (amount) {
             case -2:
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
                     addToBot(new ApplyPowerAction(mo, owner, new WeakPower(mo, 1, false)));
-                }
                 break;
             case -4:
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
                     addToBot(new ApplyPowerAction(mo, owner, new StrengthPower(mo, -2)));
-                }
                 break;
             case -6:
                 addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, 1)));
                 break;
             default:
-                if (amount < 0 && (amount & 1) == 1) {
+                if (amount < 0 && (amount & 1) == 1)
                     addToBot(new HealAction(owner, owner, -amount));
-                }
                 break;
         }
     }
@@ -176,10 +164,9 @@ public class ATFieldPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        if (amount >= 0) {
+        if (amount >= 0)
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
-        } else {
+        else
             description = DESCRIPTIONS[1] + -amount + DESCRIPTIONS[2];
-        }
     }
 }

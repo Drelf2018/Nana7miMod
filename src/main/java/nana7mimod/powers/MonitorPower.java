@@ -29,7 +29,7 @@ public class MonitorPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
             if (m.getIntentBaseDmg() >= 0) {
                 AbstractPower power = m.getPower(POWER_ID);
                 if (power instanceof MonitorPower) {
@@ -37,7 +37,6 @@ public class MonitorPower extends AbstractPower {
                     addToBot(new DrawCardAction(power.amount));
                 }
             }
-        }
     }
 
     @Override

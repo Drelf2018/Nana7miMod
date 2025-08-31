@@ -27,9 +27,8 @@ public class DevilPower extends AbstractPower {
     // 获取角色走火入魔程度
     public static int getAmount(AbstractCreature target) {
         AbstractPower power = target.getPower(POWER_ID);
-        if (power instanceof DevilPower) {
+        if (power instanceof DevilPower)
             return power.amount;
-        }
         return 0;
     }
 

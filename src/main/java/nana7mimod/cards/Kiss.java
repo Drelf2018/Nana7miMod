@@ -44,11 +44,9 @@ public class Kiss extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!mo.isDeadOrEscaped()) {
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+            if (!mo.isDeadOrEscaped())
                 m = mo;
-            }
-        }
         if (m == null)
             return;
         String[] extended = strings(ID).EXTENDED_DESCRIPTION;

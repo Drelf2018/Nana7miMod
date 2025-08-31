@@ -30,15 +30,13 @@ public class Furious extends Base {
             @Override
             public void update() {
                 int exhaustCount = p.hand.size();
-                if (exhaustCount > 0) {
+                if (exhaustCount > 0)
                     addToTop(new ApplyPowerAction(p, p, new ATFieldPower(p, exhaustCount * magicNumber)));
-                }
                 for (int i = 0; i < exhaustCount; ++i) {
-                    if (Settings.FAST_MODE) {
+                    if (Settings.FAST_MODE)
                         addToTop((AbstractGameAction) new ExhaustAction(1, true, true, false, Settings.ACTION_DUR_XFAST));
-                    } else {
+                    else
                         addToTop((AbstractGameAction) new ExhaustAction(1, true, true));
-                    }
                 }
                 isDone = true;
             }

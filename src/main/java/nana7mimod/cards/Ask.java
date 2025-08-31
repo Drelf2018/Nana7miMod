@@ -22,18 +22,15 @@ public class Ask extends Base {
 
     private ArrayList<AbstractCard> generateCardChoices(int total, int incorrect) {
         ArrayList<AbstractCard> derp = new ArrayList<AbstractCard>();
-        if (AbstractDungeon.player.hasRelic(QuestionCard.ID)) {
+        if (AbstractDungeon.player.hasRelic(QuestionCard.ID))
             ++total;
-        }
         Random random = new Random();
         for (int i = 0; i < incorrect; ++i)
             derp.add(Game.Incorrect(random.nextInt(Game.INCORRECT)));
-        if (ATField.getFirstTimePlayGame()) {
+        if (ATField.getFirstTimePlayGame())
             derp.add(Game.Correct(65));
-        }
-        while (derp.size() < total) {
+        while (derp.size() < total)
             derp.add(Game.Correct(random.nextInt(Game.CORRECT)));
-        }
         Collections.shuffle(derp);
         return derp;
     }
@@ -47,8 +44,7 @@ public class Ask extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ChooseOneAction(generateCardChoices(3, 1)));
-        if (upgraded) {
+        if (upgraded)
             addToBot(new ChooseOneAction(generateCardChoices(3, 2)));
-        }
     }
 }

@@ -17,18 +17,14 @@ public class SmokeAction extends AbstractGameAction {
     public static CardGroup getActualPurgeableCards(CardGroup cardGroup) {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : cardGroup.group) {
-            if (c.inBottleFlame || c.inBottleLightning || c.inBottleTornado) {
+            if (c.inBottleFlame || c.inBottleLightning || c.inBottleTornado)
                 continue;
-            }
-            if (c.cardID.equals("Necronomicurse")) {
+            if (c.cardID.equals("Necronomicurse"))
                 continue;
-            }
-            if (c.cardID.equals("CurseOfTheBell")) {
+            if (c.cardID.equals("CurseOfTheBell"))
                 continue;
-            }
-            if (c.cardID.equals("AscendersBane")) {
+            if (c.cardID.equals("AscendersBane"))
                 continue;
-            }
             retVal.group.add(c);
         }
         return retVal;

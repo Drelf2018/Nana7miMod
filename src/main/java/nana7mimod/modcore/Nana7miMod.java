@@ -26,7 +26,8 @@ import nana7mimod.relics.ATField;
 import nana7mimod.characters.Nana7mi;
 
 @SpireInitializer
-public class Nana7miMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber {
+public class Nana7miMod
+        implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber {
 
     // 订阅事件
     // 向 basemod 注册颜色
@@ -64,11 +65,9 @@ public class Nana7miMod implements EditCardsSubscriber, EditStringsSubscriber, E
         FileHandle file = Gdx.files.internal(ModHelper.L10N("keywords.json"));
         String json = file.readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = new Gson().fromJson(json, Keyword[].class);
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
+        if (keywords != null)
+            for (Keyword keyword : keywords)
                 BaseMod.addKeyword(ModHelper.NAME.toLowerCase(), keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
     }
 
     // 加载相应语言的本地化内容

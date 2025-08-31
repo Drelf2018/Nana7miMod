@@ -49,21 +49,18 @@ public class LoseGoldTextEffect extends AbstractGameEffect {
                 }
             } else {
                 this.waitTimer -= Gdx.graphics.getDeltaTime();
-                if (this.waitTimer < 0.0F) {
+                if (this.waitTimer < 0.0F)
                     this.gold = totalGold;
-                } else {
+                else
                     this.gold = totalGold;
-                }
             }
         } else {
             this.y += Gdx.graphics.getDeltaTime() * FADE_Y_SPEED;
             this.fadeTimer -= Gdx.graphics.getDeltaTime();
             this.color.a = this.fadeTimer;
-            if (this.fadeTimer < 0.0F) {
+            if (this.fadeTimer < 0.0F)
                 this.isDone = true;
-            }
         }
-
     }
 
     public boolean ping(int amount) {
@@ -71,16 +68,13 @@ public class LoseGoldTextEffect extends AbstractGameEffect {
             this.waitTimer = 1.0F;
             totalGold += amount;
             return true;
-        } else {
+        } else
             return false;
-        }
     }
 
     public void render(SpriteBatch sb) {
-        if (!this.isDone) {
+        if (!this.isDone)
             FontHelper.renderFontCentered(sb, FontHelper.buttonLabelFont, "+ " + Integer.toString(this.gold) + TEXT[0], this.x, this.y, this.color);
-        }
-
     }
 
     public void dispose() {}

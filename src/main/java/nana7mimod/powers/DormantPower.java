@@ -51,12 +51,11 @@ public class DormantPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        if (amount == 0) {
+        if (amount == 0)
             description = DESCRIPTIONS[3];
-        } else if (amount == 1) {
+        else if (amount == 1)
             description = DESCRIPTIONS[2];
-        } else {
+        else
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        }
     }
 }

@@ -30,9 +30,8 @@ public class CrazyPower extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.ATTACK) {
+        if (card.type == CardType.ATTACK)
             ATFieldPower.addAmount(owner, amount);
-        }
     }
 
     @Override

@@ -37,11 +37,10 @@ public class IdolForm extends Base {
         addToBot(new ExhaustAllAction(p.hand, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.drawPile, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.discardPile, CardType.ATTACK));
-        if (Settings.FAST_MODE) {
+        if (Settings.FAST_MODE)
             addToBot(new VFXAction(new GrandFinalEffect(), 0.7F));
-        } else {
+        else
             addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
-        }
         addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
         addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
         addToBot(new ApplyPowerAction(p, p, new FirmPower(p)));
@@ -50,9 +49,8 @@ public class IdolForm extends Base {
             public void update() {
                 String charName = p.getClass().getSimpleName().toLowerCase();
                 String idol = ModHelper.characters(charName, "stand-idol.png");
-                if (Gdx.files.internal(idol).exists()) {
+                if (Gdx.files.internal(idol).exists())
                     p.img = ImageMaster.loadImage(idol);
-                }
                 isDone = true;
             }
         });

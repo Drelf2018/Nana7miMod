@@ -25,14 +25,12 @@ public class Axe extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int discardCount = 0;
-        for (AbstractCard c : p.hand.group) {
+        for (AbstractCard c : p.hand.group)
             if (c.type == CardType.ATTACK) {
                 addToBot(new DiscardSpecificCardAction(c, p.hand));
                 ++discardCount;
             }
-        }
-        if (discardCount != 0) {
+        if (discardCount != 0)
             addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, discardCount * magicNumber)));
-        }
     }
 }

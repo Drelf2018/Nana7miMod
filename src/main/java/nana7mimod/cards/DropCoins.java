@@ -27,19 +27,17 @@ public class DropCoins extends Base {
     @Override
     public void triggerOnGlowCheck() {
         glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
             if (!m.isDeadOrEscaped() && LostPower.has(m)) {
                 glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }
-        }
     }
 
     @Override
     public void triggerOnCardPlayed(AbstractCard cardPlayed) {
-        if (cardPlayed == this && hasPower) {
+        if (cardPlayed == this && hasPower)
             ATFieldPower.addAmount(AbstractDungeon.player, magicNumber);
-        }
     }
 
     public void upgrade() {
@@ -52,8 +50,7 @@ public class DropCoins extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
         hasPower = LostPower.has(m);
-        if (hasPower) {
+        if (hasPower)
             addToBot(new GainEnergyAction(1));
-        }
     }
 }

@@ -32,9 +32,8 @@ public class Hate extends Base {
 
     @Override
     public void triggerOnCardPlayed(AbstractCard cardPlayed) {
-        if (cardPlayed == this) {
+        if (cardPlayed == this)
             ATFieldPower.addAmount(AbstractDungeon.player, magicNumber);
-        }
     }
 
     public void upgrade() {

@@ -49,9 +49,9 @@ public class Game extends Base {
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (incorrect) {
+        if (incorrect)
             addToBot(new DamageAction(p, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
-        } else {
+        else {
             isMultiDamage = true;
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
