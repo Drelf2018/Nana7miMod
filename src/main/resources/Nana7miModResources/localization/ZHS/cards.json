@@ -40,6 +40,10 @@
     "DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
     "UPGRADE_DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
   },
+  "Nana7miMod:Crack": {
+    "NAME": "无限火力",
+    "DESCRIPTION": "所有攻击牌耗能变为 0 。 NL 所有攻击牌在被打出时使 *心之壁 增加 !M! 层并且 消耗 。"
+  },
   "Nana7miMod:Crazy": {
     "NAME": "彻底疯狂",
     "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"

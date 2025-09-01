@@ -14,6 +14,13 @@
       " 。 NL 回合结束时 #y反踩 层数减少 #b1 。"
     ]
   },
+  "Nana7miMod:CrackPower": {
+    "NAME": "无限火力",
+    "DESCRIPTIONS": [
+      "攻击牌耗能变为 #b0 。你每打出一张 #y攻击牌 ，使 #y心之壁 增加 #b",
+      " 层并且将其 #y消耗 。"
+    ]
+  },
   "Nana7miMod:CrazyPower": {
     "NAME": "彻底疯狂",
     "DESCRIPTIONS": [
