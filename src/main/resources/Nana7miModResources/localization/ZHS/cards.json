@@ -56,6 +56,10 @@
     "NAME": "娜米防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
+  "Nana7miMod:Depression": {
+    "NAME": "我有玉玉证",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 nana7mimod:缓冲 。 NL 消耗 。"
+  },
   "Nana7miMod:Devil": {
     "NAME": "走火入魔",
     "DESCRIPTION": "每当 *心之壁 层数改变时，抽 !M! 张牌。"
