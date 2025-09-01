@@ -14,7 +14,7 @@ public class Crazy extends Base {
     public static final String ID = ModHelper.id(Crazy.class);
 
     public Crazy() {
-        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
