@@ -199,6 +199,10 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。"
   },
+  "Nana7miMod:SpiritualVictory": {
+    "NAME": "精神胜利",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
   "Nana7miMod:StopStreaming": {
     "NAME": "下播",
     "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 对所有敌人造成 !D! 点伤害。"
