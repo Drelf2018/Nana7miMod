@@ -20,8 +20,8 @@
   },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
-    "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏牌 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:复读 。 NL nana7mimod:抉择 nana7mimod:游戏牌 。"
+    "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:复读 。 NL nana7mimod:抉择 nana7mimod:游戏 。"
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
@@ -82,6 +82,10 @@
     "NAME": "海子",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
+  "Nana7miMod:Enemy": {
+    "NAME": "是敌人",
+    "DESCRIPTION": "nana7mimod:答案 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+  },
   "Nana7miMod:Fault": {
     "NAME": "都有问题",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL nana7mimod:坐标之力 。"
@@ -98,6 +102,10 @@
     "NAME": "不要骂我我好脆弱",
     "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得 !M! 层 脆弱 。 NL 消耗 。"
   },
+  "Nana7miMod:Freedom": {
+    "NAME": "是自由",
+    "DESCRIPTION": "nana7mimod:答案 。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+  },
   "Nana7miMod:Furious": {
     "NAME": "怒火中烧",
     "DESCRIPTION": "消耗 所有手牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
@@ -113,6 +121,10 @@
   "Nana7miMod:HealAll": {
     "NAME": "桃园结义",
     "DESCRIPTION": "nana7mimod:全场 回复 !M! 生命。 NL 消耗 。"
+  },
+  "Nana7miMod:Hometown": {
+    "NAME": "是故乡",
+    "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点生命。"
   },
   "Nana7miMod:Idle": {
     "NAME": "我给你钱别那么闲",
@@ -186,6 +198,10 @@
   "Nana7miMod:Scratch": {
     "NAME": "养了挠挠",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "Nana7miMod:Sea": {
+    "NAME": "海的那边",
+    "DESCRIPTION": "nana7mimod:发现 nana7mimod:答案 。 NL 消耗 。"
   },
   "Nana7miMod:Silence": {
     "NAME": "还能说话吗",
