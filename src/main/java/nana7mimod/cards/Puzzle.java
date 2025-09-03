@@ -2,7 +2,7 @@ package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import nana7mimod.actions.DiscoveryTrainAction;
+import nana7mimod.actions.DiscoveryAction;
 import nana7mimod.helpers.ModHelper;
 
 public class Puzzle extends Base {
@@ -24,6 +24,6 @@ public class Puzzle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DiscoveryTrainAction());
+        addToBot(new DiscoveryAction(new Train(false), new Train(true)));
     }
 }
