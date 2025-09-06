@@ -157,6 +157,10 @@
       "幻术的世界有什么不好……"
     ]
   },
+  "Nana7miMod:Knife": {
+    "NAME": "真的会铜丝你",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 小刀 到你的手牌。"
+  },
   "Nana7miMod:LifeHoldsDreams": {
     "NAME": "人生有梦",
     "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 下回合后 nana7mimod:休眠 。 NL 消耗 。"
