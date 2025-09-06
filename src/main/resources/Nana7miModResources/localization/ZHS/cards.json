@@ -120,11 +120,11 @@
   },
   "Nana7miMod:HealAll": {
     "NAME": "桃园结义",
-    "DESCRIPTION": "nana7mimod:全场 回复 !M! 生命。 NL 消耗 。"
+    "DESCRIPTION": "nana7mimod:全场 回复 !M! 点 *生命 。 NL 消耗 。"
   },
   "Nana7miMod:Hometown": {
     "NAME": "是故乡",
-    "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点生命。"
+    "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点 *生命 。"
   },
   "Nana7miMod:Idle": {
     "NAME": "我给你钱别那么闲",
@@ -181,6 +181,10 @@
   "Nana7miMod:NightStrike": {
     "NAME": "没念到的也晚安",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
+  },
+  "Nana7miMod:Nurse": {
+    "NAME": "打给你了",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点 *生命 。"
   },
   "Nana7miMod:Puzzle": {
     "NAME": "电车难题",
