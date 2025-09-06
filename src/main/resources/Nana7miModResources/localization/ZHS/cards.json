@@ -186,6 +186,10 @@
     "NAME": "打给你了",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点 *生命 。"
   },
+  "Nana7miMod:Overdose": {
+    "NAME": "滴泪",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将两张 伤口 放入你的抽牌堆中。"
+  },
   "Nana7miMod:Puzzle": {
     "NAME": "电车难题",
     "DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。 NL 虚无 。",
