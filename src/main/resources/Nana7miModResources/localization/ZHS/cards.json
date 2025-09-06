@@ -122,6 +122,10 @@
     "NAME": "桃园结义",
     "DESCRIPTION": "nana7mimod:全场 回复 !M! 点 *生命 。 NL 消耗 。"
   },
+  "Nana7miMod:Heritage": {
+    "NAME": "美美吃遗产咯",
+    "DESCRIPTION": "接下来 3 回合内，每当一名敌人死亡，获得 !M! 金币。"
+  },
   "Nana7miMod:Hometown": {
     "NAME": "是故乡",
     "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点 *生命 。"

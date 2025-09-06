@@ -64,6 +64,14 @@
       " 点伤害。"
     ]
   },
+  "Nana7miMod:HeritagePower": {
+    "NAME": "遗产",
+    "DESCRIPTIONS": [
+      "当这名敌人死亡时，获得 #b",
+      " 金币。持续时间 #b",
+      " 回合。"
+    ]
+  },
   "Nana7miMod:InfatuationPower": {
     "NAME": "入脑",
     "DESCRIPTIONS": [
