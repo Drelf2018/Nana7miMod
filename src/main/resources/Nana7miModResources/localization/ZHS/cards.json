@@ -263,6 +263,10 @@
     "NAME": "独轮车",
     "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL nana7mimod:心之壁破碎 X 。"
   },
+  "Nana7miMod:Vision": {
+    "NAME": "头显就是苹果",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL 抽 !M! 张牌。"
+  },
   "Nana7miMod:VoidEnemy": {
     "NAME": "虚空索敌",
     "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL *心之壁 层数减少 2 。"
