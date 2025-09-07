@@ -2,35 +2,49 @@ package nana7mimod.cards;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.QuestionCard;
+import basemod.abstracts.CustomSavable;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.relics.ATField;
 
-public class Ask extends Base {
+public class Ask extends Base implements CustomSavable<Boolean> {
     public static final String ID = ModHelper.id(Ask.class);
+
+    public static Boolean isFirstTimePlayAsk = true;
 
     public Ask() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         this.cardsToPreview = new Game();
     }
 
+    // 保存
+    @Override
+    public Boolean onSave() {
+        return isFirstTimePlayAsk;
+    }
+
+    // 读取
+    @Override
+    public void onLoad(Boolean save) {
+        isFirstTimePlayAsk = save;
+    }
+
     private ArrayList<AbstractCard> generateCardChoices(int total, int incorrect) {
         ArrayList<AbstractCard> derp = new ArrayList<AbstractCard>();
         if (AbstractDungeon.player.hasRelic(QuestionCard.ID))
             ++total;
-        Random random = new Random();
         for (int i = 0; i < incorrect; ++i)
-            derp.add(Game.Incorrect(random.nextInt(Game.INCORRECT)));
-        if (ATField.getFirstTimePlayGame())
+            derp.add(Game.Incorrect(AbstractDungeon.cardRandomRng.random(Game.INCORRECT - 1)));
+        if (isFirstTimePlayAsk) {
             derp.add(Game.Correct(65));
+            isFirstTimePlayAsk = false;
+        }
         while (derp.size() < total)
-            derp.add(Game.Correct(random.nextInt(Game.CORRECT)));
+            derp.add(Game.Correct(AbstractDungeon.cardRandomRng.random(Game.CORRECT - 1)));
         Collections.shuffle(derp);
         return derp;
     }
