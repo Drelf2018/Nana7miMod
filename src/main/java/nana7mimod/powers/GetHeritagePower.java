@@ -1,40 +1,34 @@
 package nana7mimod.powers;
 
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import nana7mimod.helpers.ModHelper;
 
-public class HeritagePower extends AbstractPower {
-    public static final String POWER_ID = ModHelper.id(HeritagePower.class);
+public class GetHeritagePower extends AbstractPower {
+    public static final String POWER_ID = ModHelper.id(GetHeritagePower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public HeritagePower(AbstractCreature owner, int amount) {
+    public GetHeritagePower(AbstractCreature owner, int amount) {
         this.name = powerStrings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.type = PowerType.DEBUFF;
+        this.type = PowerType.BUFF;
+        this.isTurnBased = true;
 
         updateDescription();
         loadRegion("thievery"); // 换成😭
     }
 
     @Override
-    public void onDeath() {
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.getPower(GetHeritagePower.POWER_ID) instanceof GetHeritagePower) {
-            p.gainGold(amount);
-            for (int i = 0; i < amount; ++i)
-                AbstractDungeon.effectList.add(new GainPennyEffect(p, owner.hb.cX, owner.hb.cY, p.hb.cX, p.hb.cY, true));
-        }
+    public void atEndOfRound() {
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
     @Override

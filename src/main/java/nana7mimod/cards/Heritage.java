@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.GetHeritagePower;
 import nana7mimod.powers.HeritagePower;
 
 public class Heritage extends Base {
@@ -23,7 +24,8 @@ public class Heritage extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new GetHeritagePower(p, 3)));
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-            addToBot(new ApplyPowerAction(mo, p, new HeritagePower(mo, 3, magicNumber)));
+            addToBot(new ApplyPowerAction(mo, p, new HeritagePower(mo, magicNumber)));
     }
 }

@@ -50,6 +50,13 @@
       "从卡牌中获得的 #y格挡 翻倍。在你的回合开始时，回复当前 #y格挡 值的 #y生命 。"
     ]
   },
+  "Nana7miMod:GetHeritagePower": {
+    "NAME": "吃遗产",
+    "DESCRIPTIONS": [
+      "获得死亡的敌人的遗产。 NL 持续时间 #b",
+      " 回合。"
+    ]
+  },
   "Nana7miMod:GuiltyPower": {
     "NAME": "愧疚",
     "DESCRIPTIONS": [
@@ -67,9 +74,8 @@
   "Nana7miMod:HeritagePower": {
     "NAME": "遗产",
     "DESCRIPTIONS": [
-      "当这名敌人死亡时，获得 #b",
-      " 金币。持续时间 #b",
-      " 回合。"
+      "这名敌人有 #b",
+      " 金币遗产。"
     ]
   },
   "Nana7miMod:InfatuationPower": {
