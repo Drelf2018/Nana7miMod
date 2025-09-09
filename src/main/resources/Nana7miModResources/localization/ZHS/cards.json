@@ -86,6 +86,13 @@
     "NAME": "是敌人",
     "DESCRIPTION": "nana7mimod:答案 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
+  "Nana7miMod:EyeForEye": {
+    "NAME": "以牙还牙",
+    "DESCRIPTION": "造成你上回合受到伤害值的伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害。）"
+    ]
+  },
   "Nana7miMod:Fault": {
     "NAME": "都有问题",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL nana7mimod:坐标之力 。"
