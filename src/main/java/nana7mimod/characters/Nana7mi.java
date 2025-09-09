@@ -50,6 +50,11 @@ public class Nana7mi extends Base {
     }
 
     @Override
+    public float[] getHitbox() {
+        return new float[] {13.0F, 0.0F, 220.0F, 350.0F};
+    }
+
+    @Override
     public float[] getLayerSpeed() {
         return new float[] {-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     }
