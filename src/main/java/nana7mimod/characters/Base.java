@@ -31,17 +31,9 @@ public abstract class Base extends CustomPlayer {
             this.energyOrb = new CustomEnergyOrb(orbTextures, image(getOrbVfx()), getLayerSpeed());
         }
         // 具体初始化人物
-        String stand = getStandImage();
         float[] hitbox = getHitbox();
-        initializeClass(//
-                stand == "" ? "" : image(stand), // 人物立绘
-                image("shoulder2.png"), // 火堆后图像
-                image("shoulder1.png"), // 火堆前图像
-                image("corpse.png"), // 人物死亡图像
-                getLoadout(), // 基础信息
-                hitbox[0], hitbox[1], hitbox[2], hitbox[3], // 人物碰撞箱大小，越大的人物模型这个越大
-                new EnergyManager(getCharInfo().energy) // 初始每回合的能量
-        );
+        initializeClass(image(getCharacterImage()), image(getShoulder2Image()), image(getShoulderImage()), image(getCorpseImage()), getLoadout(),
+                hitbox[0], hitbox[1], hitbox[2], hitbox[3], new EnergyManager(getInitialEnergy()));
     }
 
     public Base(String name, PlayerClass player, String model, String animation) {
@@ -59,6 +51,8 @@ public abstract class Base extends CustomPlayer {
     }
 
     public String image(String path) {
+        if (path == null || path == "")
+            return null;
         if (charName == null)
             charName = getClass().getSimpleName().toLowerCase();
         return ModHelper.characters(charName, path);
@@ -79,7 +73,6 @@ public abstract class Base extends CustomPlayer {
     public class CharInfo {
         public int gold;
         public int maxHp;
-        public int energy = 3;
         public int maxOrbs = 0;
         public int cardDraw = 5;
         public int currentHp = 50;
@@ -87,11 +80,6 @@ public abstract class Base extends CustomPlayer {
         CharInfo(int maxHP, int gold) {
             this.currentHp = this.maxHp = maxHP;
             this.gold = gold;
-        }
-
-        CharInfo(int maxHP, int gold, int energy) {
-            this(maxHP, gold);
-            this.energy = energy;
         }
     }
 
@@ -130,13 +118,34 @@ public abstract class Base extends CustomPlayer {
     }
 
     // 战斗界面静态立绘
-    public String getStandImage() {
-        return "stand.png";
+    public String getCharacterImage() {
+        return "character.png";
+    }
+
+    // 通过火堆后图像
+    public String getShoulder2Image() {
+        return "shoulder2.png";
+    }
+
+    // 通过火堆前图像
+    public String getShoulderImage() {
+        return "shoulder.png";
+    }
+
+    // 角色死亡图像
+    public String getCorpseImage() {
+        return "corpse.png";
     }
 
     // 获取碰撞箱
+    // 向右偏移 向上偏移 宽度 高度
     public float[] getHitbox() {
         return new float[] {0.0F, -5.0F, 200.0F, 300.0F};
+    }
+
+    // 获取初始能量
+    public int getInitialEnergy() {
+        return 3;
     }
 
     // 高进阶带来的生命值损失

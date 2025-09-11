@@ -4,23 +4,28 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import java.util.ArrayList;
+import nana7mimod.actions.ClothingAction;
 import nana7mimod.cards.Accept;
 import nana7mimod.cards.Defend;
 import nana7mimod.cards.Strike;
 import nana7mimod.helpers.CharacterHelper;
+import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
 import nana7mimod.cards.NightStrike;
 import nana7mimod.relics.ATField;
 
-public class Nana7mi extends Base {
+public class Nana7mi extends Base implements ClothingHandler {
     public Nana7mi(String name) {
         super(name, Nana7mi.PlayerColorEnum.NANA7MI);
+        // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
+        this.dialogX = (this.drawX + 0.0F * Settings.scale);
+        this.dialogY = (this.drawY + 325.0F * Settings.scale);
     }
 
-    // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
-    // this.dialogX = (this.drawX + 0.0F * Settings.scale);
-    // this.dialogY = (this.drawY + 150.0F * Settings.scale);
     // 如果你的人物没有动画，那么这些不需要写
     // this.loadAnimation(ModHelper.image("characters/character.atlas",
     // ModHelper.image("characters/character.json", 1.8F);
@@ -43,20 +48,28 @@ public class Nana7mi extends Base {
     }
 
     public String[] getOrbTextures() {
-        return new String[] {//
-                "orb/layer5.png", "orb/layer4.png", "orb/layer3.png", "orb/layer2.png", "orb/layer1.png", "orb/layer6.png", //
-                "orb/layer5d.png", "orb/layer4d.png", "orb/layer3d.png", "orb/layer2d.png", "orb/layer1d.png"//
-        };
+        return new String[] {"orb/layer.png"};
+    }
+
+    public void PutOnClothes() {
+        for (int i = 0; i < 60; i++)
+            AbstractDungeon.actionManager.addToBottom(new ClothingAction(image("images/" + i + ".png")));
+        // corpseImg
+    }
+
+    public void TakeOffClothes() {
+        img = ImageMaster.loadImage(image(getCharacterImage()));
+        // corpseImg
+    }
+
+    @Override
+    public String getCharacterImage() {
+        return "images/0.png";
     }
 
     @Override
     public float[] getHitbox() {
-        return new float[] {13.0F, 0.0F, 220.0F, 350.0F};
-    }
-
-    @Override
-    public float[] getLayerSpeed() {
-        return new float[] {-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
+        return new float[] {4.0F, 0.0F, 220.0F, 350.0F};
     }
 
     // 翻牌事件出现的你的职业牌（一般设为打击）

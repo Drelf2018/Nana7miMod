@@ -1,18 +1,15 @@
 package nana7mimod.cards;
 
-import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import basemod.helpers.BaseModCardTags;
 import nana7mimod.actions.ExhaustAllAction;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
 import nana7mimod.powers.InjuredPower;
 import nana7mimod.powers.PityingPower;
 import nana7mimod.powers.ATFieldPower;
@@ -37,22 +34,14 @@ public class IdolForm extends Base {
         addToBot(new ExhaustAllAction(p.hand, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.drawPile, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.discardPile, CardType.ATTACK));
-        if (Settings.FAST_MODE)
-            addToBot(new VFXAction(new GrandFinalEffect(), 0.7F));
-        else
-            addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
         addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
         addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
-        addToBot(new ApplyPowerAction(p, p, new FirmPower(p)));
-        addToBot(new ApplyPowerAction(p, p, new PityingPower(p)));
-        addToBot(new AbstractGameAction() {
-            public void update() {
-                String charName = p.getClass().getSimpleName().toLowerCase();
-                String idol = ModHelper.characters(charName, "stand-idol.png");
-                if (Gdx.files.internal(idol).exists())
-                    p.img = ImageMaster.loadImage(idol);
-                isDone = true;
-            }
-        });
+        if (!(p.getPower(FirmPower.POWER_ID) instanceof FirmPower)) {
+            addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
+            if (p instanceof ClothingHandler)
+                ((ClothingHandler) p).PutOnClothes();
+            addToBot(new ApplyPowerAction(p, p, new FirmPower(p)));
+            addToBot(new ApplyPowerAction(p, p, new PityingPower(p)));
+        }
     }
 }
