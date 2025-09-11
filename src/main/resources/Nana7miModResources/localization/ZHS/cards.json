@@ -212,7 +212,7 @@
   },
   "Nana7miMod:Reluctant": {
     "NAME": "勉为其难",
-    "DESCRIPTION": "给予 !M! 层 nana7mimod:入脑 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:入脑 。 NL 给予 5 层 nana7mimod:反踩 。 NL 消耗 。"
   },
   "Nana7miMod:RestartStreaming": {
     "NAME": "重新推流",

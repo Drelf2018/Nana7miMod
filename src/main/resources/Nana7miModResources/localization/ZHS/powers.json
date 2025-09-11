@@ -11,7 +11,8 @@
     "NAME": "反踩",
     "DESCRIPTIONS": [
       "#y攻击 伤害提升 #b",
-      " 。 NL 回合结束时 #y反踩 层数减少 #b1 。"
+      " 。 NL 回合结束时 #y反踩 层数减少 #b1 。",
+      "出脑后"
     ]
   },
   "Nana7miMod:CrackPower": {
@@ -81,7 +82,6 @@
   "Nana7miMod:InfatuationPower": {
     "NAME": "入脑",
     "DESCRIPTIONS": [
-      "即将 #y反踩 #b5 ！ NL ",
       "#y攻击 造成的伤害减少 #b",
       "% 。 NL 回合结束时 #y入脑 层数减少 #b1 。"
     ]

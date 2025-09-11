@@ -33,6 +33,6 @@ public class TalkToTheHand extends Base {
         addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         addToBot(new WaitAction(0.8F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, magicNumber)));
+        addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, magicNumber, false)));
     }
 }

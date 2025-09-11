@@ -1,6 +1,6 @@
 package nana7mimod.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -47,13 +47,18 @@ public class InfatuationPower extends AbstractPower {
 
     @Override
     public void onRemove() {
-        addToBot(new ApplyPowerAction(owner, owner, new BetrayPower(owner, 5)));
+        addToTop(new AbstractGameAction() {
+            public void update() {
+                AbstractPower p = owner.getPower(BetrayPower.POWER_ID);
+                if (p != null)
+                    p.updateDescription();
+                isDone = true;
+            }
+        });
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[1] + 25 * amount + DESCRIPTIONS[2];
-        if (amount == 1)
-            description = DESCRIPTIONS[0] + description;
+        description = DESCRIPTIONS[0] + 25 * amount + DESCRIPTIONS[1];
     }
 }

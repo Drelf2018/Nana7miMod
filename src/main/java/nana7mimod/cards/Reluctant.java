@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.BetrayPower;
 import nana7mimod.powers.InfatuationPower;
 
 public class Reluctant extends Base {
@@ -24,5 +25,6 @@ public class Reluctant extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new InfatuationPower(m, magicNumber)));
+        addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, 5, true)));
     }
 }
