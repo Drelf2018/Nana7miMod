@@ -30,7 +30,7 @@ public class PityingPower extends AbstractPower {
     // 怜悯
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (info.type == DamageType.NORMAL) {
+        if (info.type == DamageType.NORMAL && info.owner != owner) {
             flashWithoutSound();
             addToBot(new ApplyPowerAction(info.owner, owner, new GuiltyPower(info.owner, owner, damageAmount)));
         }
