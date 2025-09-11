@@ -22,8 +22,8 @@ public class NightPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.description = DESCRIPTIONS[0];
 
+        updateDescription();
         loadRegion("time"); // 换成😭
     }
 
@@ -33,7 +33,12 @@ public class NightPower extends AbstractPower {
         if (isPlayer) {
             flashWithoutSound();
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-                addToBot(new ApplyPowerAction(mo, owner, new LostPower(mo, 1)));
+                addToBot(new ApplyPowerAction(mo, owner, new LostPower(mo, amount)));
         }
+    }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

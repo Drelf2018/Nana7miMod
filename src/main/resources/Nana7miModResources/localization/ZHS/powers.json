@@ -111,7 +111,8 @@
   "Nana7miMod:NightPower": {
     "NAME": "晚安",
     "DESCRIPTIONS": [
-      "在你的回合结束时，给予所有敌人 #b1 层 #y失落 。"
+      "在你的回合结束时，给予所有敌人 #b",
+      " 层 #y失落 。"
     ]
   },
   "Nana7miMod:PityingPower": {
