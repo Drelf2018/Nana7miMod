@@ -40,6 +40,10 @@
     "DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
     "UPGRADE_DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
   },
+  "Nana7miMod:ConfessionBouquet": {
+    "NAME": "告白花束",
+    "DESCRIPTION": "在你的回合结束时，给予所有未 nana7mimod:入脑 的敌人 !M! 层 nana7mimod:入脑 。"
+  },
   "Nana7miMod:Crack": {
     "NAME": "无限火力",
     "DESCRIPTION": "所有攻击牌耗能变为 0 。 NL 所有攻击牌在被打出时被 消耗 且使 *心之壁 层数增加 !M! 。"

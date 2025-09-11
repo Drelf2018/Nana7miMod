@@ -15,6 +15,13 @@
       "出脑后"
     ]
   },
+  "Nana7miMod:BouquetPower": {
+    "NAME": "告白花束",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，给予所有未 #y入脑 的敌人 #b",
+      " 层 #y入脑 。"
+    ]
+  },
   "Nana7miMod:CrackPower": {
     "NAME": "无限火力",
     "DESCRIPTIONS": [
