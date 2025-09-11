@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -8,6 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import nana7mimod.helpers.CharacterHelper.Nana7mi;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.patches.ClearPatch;
 
@@ -43,7 +43,7 @@ public class EyeForEye extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null)
-            addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
+            addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Nana7mi.COLOR.cpy()), 0.3F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
         rawDescription = strings(ID).DESCRIPTION;
         initializeDescription();
