@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.LostPower;
 
-public class StopStreaming extends Base {
-    public static final String ID = ModHelper.id(StopStreaming.class);
+public class Logout extends Base {
+    public static final String ID = ModHelper.id(Logout.class);
 
-    public StopStreaming() {
+    public Logout() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 7;
+        this.damage = this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isMultiDamage = true;
     }
