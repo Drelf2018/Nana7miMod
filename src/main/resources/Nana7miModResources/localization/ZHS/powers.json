@@ -122,6 +122,13 @@
       " 层 #y失落 。"
     ]
   },
+  "Nana7miMod:PadoruPower": {
+    "NAME": "帕多路",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，增加 #b",
+      " 张随机罕见技能牌到你的手牌。"
+    ]
+  },
   "Nana7miMod:PityingPower": {
     "NAME": "怜悯",
     "DESCRIPTIONS": [

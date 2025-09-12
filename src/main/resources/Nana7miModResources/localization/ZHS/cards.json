@@ -209,6 +209,10 @@
     "NAME": "滴泪",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将两张 伤口 放入你的抽牌堆中。"
   },
+  "Nana7miMod:Padoru": {
+    "NAME": "帕多路",
+    "DESCRIPTION": "在你的回合开始时，增加一张随机罕见技能牌到你的手牌。"
+  },
   "Nana7miMod:Puzzle": {
     "NAME": "电车难题",
     "DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。 NL 虚无 。",
