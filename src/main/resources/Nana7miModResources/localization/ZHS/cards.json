@@ -11,6 +11,10 @@
     "NAME": "阿玛忒拉斯",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。"
   },
+  "Nana7miMod:Angelina": {
+    "NAME": "安洁莉娜",
+    "DESCRIPTION": "获得 !M! 层 nana7mimod:反重力 。"
+  },
   "Nana7miMod:Armor": {
     "NAME": "叠甲过",
     "DESCRIPTION": "获得 !B! 点 格挡 X 次。",
