@@ -30,7 +30,8 @@ public class Ask extends Base implements CustomSavable<Boolean> {
     // 读取
     @Override
     public void onLoad(Boolean save) {
-        isFirstTimePlayAsk = save;
+        if (save != null)
+            isFirstTimePlayAsk = save;
     }
 
     private ArrayList<AbstractCard> generateCardChoices(int total, int incorrect) {
@@ -39,7 +40,7 @@ public class Ask extends Base implements CustomSavable<Boolean> {
             ++total;
         for (int i = 0; i < incorrect; ++i)
             derp.add(Game.Incorrect(AbstractDungeon.cardRandomRng.random(Game.INCORRECT - 1)));
-        if (isFirstTimePlayAsk) {
+        if (isFirstTimePlayAsk != null && isFirstTimePlayAsk) {
             derp.add(Game.Correct(65));
             isFirstTimePlayAsk = false;
         }
