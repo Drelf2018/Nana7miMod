@@ -287,6 +287,10 @@
     "NAME": "以手拒之",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
   },
+  "Nana7miMod:Teleport": {
+    "NAME": "Q到捏吗嘴里",
+    "DESCRIPTION": "*传送 到敌人的后面。 NL 获得 !M! 层 nana7mimod:我在呢 。"
+  },
   "Nana7miMod:Unicycle": {
     "NAME": "独轮车",
     "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL nana7mimod:心之壁破碎 X 。"

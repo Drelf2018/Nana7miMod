@@ -14,6 +14,13 @@
       " 。"
     ]
   },
+  "Nana7miMod:BackAttackPower": {
+    "NAME": "我在呢",
+    "DESCRIPTIONS": [
+      "你对面前的敌人造成下 #b",
+      " 次伤害时会追加一次等量的伤害。层数耗尽后返回原位置。"
+    ]
+  },
   "Nana7miMod:BetrayPower": {
     "NAME": "反踩",
     "DESCRIPTIONS": [
