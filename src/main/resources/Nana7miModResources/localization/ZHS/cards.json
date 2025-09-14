@@ -242,6 +242,10 @@
     "NAME": "海的那边",
     "DESCRIPTION": "nana7mimod:发现 nana7mimod:答案 。 NL 消耗 。"
   },
+  "Nana7miMod:Shark": {
+    "NAME": "七海大鲨鱼",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:流血 。"
+  },
   "Nana7miMod:Silence": {
     "NAME": "还能说话吗",
     "DESCRIPTION": "虚无 。 NL 如果一名敌人的意图是攻击则将其 nana7mimod:禁言 。",
