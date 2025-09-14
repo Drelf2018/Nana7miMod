@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.CorruptionPower;
 import nana7mimod.helpers.ModHelper;
 
 public class CrackPower extends AbstractPower {
@@ -22,10 +21,6 @@ public class CrackPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-
-        for (String s : CorruptionPower.DESCRIPTIONS) {
-            System.out.println(s);
-        }
 
         updateDescription();
         loadRegion("time"); // 换成😭
