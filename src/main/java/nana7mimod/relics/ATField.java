@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.InjuredPower;
 import nana7mimod.powers.ATFieldPower;
@@ -24,20 +25,34 @@ public class ATField extends CustomRelic {
 
     public ATField() {
         super(ID, "bank.png", RelicTier.STARTER, LandingSound.MAGICAL);
+        this.counter = 1;
+    }
+
+    private String setDescription(AbstractPlayer.PlayerClass c) {
+        return DESCRIPTIONS[0] + (c == null ? 1 : counter) + DESCRIPTIONS[1];
     }
 
     // 初始化遗物描述
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return setDescription(null);
+    }
+
+    // 更新遗物描述
+    @Override
+    public void updateDescription(AbstractPlayer.PlayerClass c) {
+        description = setDescription(c);
+        tips.clear();
+        tips.add(new PowerTip(this.name, this.description));
+        initializeTips();
     }
 
     @Override
     public void atBattleStart() {
         flash();
-        AbstractPlayer owner = AbstractDungeon.player;
-        addToBot(new RelicAboveCreatureAction(owner, this));
-        addToBot(new ApplyPowerAction(owner, owner, new ATFieldPower(owner, 1)));
-        addToBot(new ApplyPowerAction(owner, owner, new InjuredPower(owner, 10 + AbstractDungeon.ascensionLevel)));
+        AbstractPlayer p = AbstractDungeon.player;
+        addToBot(new RelicAboveCreatureAction(p, this));
+        addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, counter)));
+        addToBot(new ApplyPowerAction(p, p, new InjuredPower(p, 10 + AbstractDungeon.ascensionLevel)));
     }
 }
