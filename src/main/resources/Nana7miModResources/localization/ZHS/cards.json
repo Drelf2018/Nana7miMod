@@ -117,6 +117,10 @@
     "NAME": "不要骂我我好脆弱",
     "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得 !M! 层 脆弱 。 NL 消耗 。"
   },
+  "Nana7miMod:Fraud": {
+    "NAME": "使诈",
+    "DESCRIPTION": "获得 !M! 层 *心之壁 。"
+  },
   "Nana7miMod:Freedom": {
     "NAME": "是自由",
     "DESCRIPTION": "nana7mimod:答案 。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
