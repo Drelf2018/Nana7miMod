@@ -121,6 +121,13 @@
       " 点 #y生命 ， #y心之壁 层数增加 #b1 。"
     ]
   },
+  "Nana7miMod:LoseStrengthPower": {
+    "NAME": "失去力量",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，失去 #b",
+      " 点 #y力量 。"
+    ]
+  },
   "Nana7miMod:LostPower": {
     "NAME": "失落",
     "DESCRIPTIONS": [

@@ -287,6 +287,10 @@
     "NAME": "娜米打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
+  "Nana7miMod:Sulking": {
+    "NAME": "生闷气",
+    "DESCRIPTION": "*心之壁 层数增加 !M! 。 NL 在你的回合结束时，失去 1 点 力量 。"
+  },
   "Nana7miMod:TalkToTheHand": {
     "NAME": "以手拒之",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
