@@ -33,6 +33,7 @@ public class HaterPower extends AbstractPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        flashWithoutSound();
         addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE));
     }
 

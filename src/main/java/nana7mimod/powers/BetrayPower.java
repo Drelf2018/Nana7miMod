@@ -1,6 +1,7 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -44,6 +45,11 @@ public class BetrayPower extends AbstractPower {
         if (type != DamageType.NORMAL || owner.getPower(InfatuationPower.POWER_ID) instanceof InfatuationPower)
             return damage;
         return damage + amount;
+    }
+
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        flashWithoutSound();
     }
 
     @Override

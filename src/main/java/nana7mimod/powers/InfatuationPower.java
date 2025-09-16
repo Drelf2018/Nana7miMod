@@ -2,6 +2,7 @@ package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,6 +44,11 @@ public class InfatuationPower extends AbstractPower {
     @Override
     public float atDamageGive(float damage, DamageType type) {
         return type == DamageType.NORMAL ? damage * (1 - amount / 4.0F) : damage;
+    }
+
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        flashWithoutSound();
     }
 
     @Override

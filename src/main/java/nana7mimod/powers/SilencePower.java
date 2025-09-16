@@ -39,13 +39,13 @@ public class SilencePower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        flash();
+        flashWithoutSound();
         return damageAmount;
     }
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        flash();
+        flashWithoutSound();
     }
 
     @Override

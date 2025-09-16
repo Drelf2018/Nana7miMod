@@ -30,7 +30,7 @@ public class BleedingPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageType.NORMAL) {
-            flash();
+            flashWithoutSound();
             addToBot(new LoseHPAction(owner, null, amount));
         }
         return damageAmount;

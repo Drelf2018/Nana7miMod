@@ -35,7 +35,7 @@ public class LostPower extends AbstractPower {
     // 上一轮结束后获得能量
     @Override
     public void atEndOfRound() {
-        flashWithoutSound();
+        flash();
         addToBot(new GainEnergyAction(amount));
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }

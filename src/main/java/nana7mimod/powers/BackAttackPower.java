@@ -44,7 +44,7 @@ public class BackAttackPower extends AbstractPower {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (info.type == DamageType.NORMAL && owner.hb.cX - target.hb.cX > 0 == owner.flipHorizontal) {
-            flash();
+            flashWithoutSound();
             addToBot(new DamageAction(target, new DamageInfo(owner, damageAmount, DamageType.THORNS)));
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }

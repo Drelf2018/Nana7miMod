@@ -38,7 +38,7 @@ public class BouquetPower extends AbstractPower {
                     addToBot(new ApplyPowerAction(mo, owner, new InfatuationPower(mo, amount)));
                 }
             if (applyCount != 0)
-                flashWithoutSound();
+                flash();
         }
     }
 

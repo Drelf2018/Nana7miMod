@@ -33,7 +33,7 @@ public class MonitorPower extends AbstractPower {
             if (m.getIntentBaseDmg() >= 0) {
                 AbstractPower power = m.getPower(POWER_ID);
                 if (power instanceof MonitorPower) {
-                    power.flash();
+                    power.flashWithoutSound();
                     addToBot(new DrawCardAction(power.amount));
                 }
             }

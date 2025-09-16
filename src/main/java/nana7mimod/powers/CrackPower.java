@@ -33,7 +33,7 @@ public class CrackPower extends AbstractPower {
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
-            flash();
+            flashWithoutSound();
             action.exhaustCard = true;
             ATFieldPower.addAmount(owner, amount);
         }

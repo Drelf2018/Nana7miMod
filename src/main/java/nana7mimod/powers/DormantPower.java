@@ -44,7 +44,7 @@ public class DormantPower extends AbstractPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && amount == 0) {
-            flashWithoutSound();
+            flash();
             addToBot(new MakeTempCardInDiscardAction(new Back(), 1));
         }
     }
