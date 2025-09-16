@@ -25,7 +25,7 @@ public class InjuredPower extends AbstractPower {
         this.lostHPLimit = amount;
 
         updateDescription();
-        loadRegion("modeShift");
+        loadRegion("brutality");
     }
 
     // 受伤
