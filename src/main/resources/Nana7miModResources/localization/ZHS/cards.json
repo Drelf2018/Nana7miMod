@@ -238,6 +238,10 @@
     "NAME": "重新推流",
     "DESCRIPTION": "结束你的回合。 NL 保留 你的手牌。 NL nana7mimod:保留 你的能量。"
   },
+  "Nana7miMod:Rinnegan": {
+    "NAME": "轮回尽封",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 偷取 !M! 点 力量 。"
+  },
   "Nana7miMod:Scratch": {
     "NAME": "养了挠挠",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
