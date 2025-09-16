@@ -26,7 +26,7 @@ public class Cube extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new VFXAction(new MindblastEffect(p.hb.cX, p.hb.cY, p.flipHorizontal)));
+        addToBot(new VFXAction(new MindblastEffect(p.hb.cX, p.hb.cY + p.hb.height / 4, p.flipHorizontal)));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.HP_LOSS), AttackEffect.NONE));
     }
 }
