@@ -54,12 +54,12 @@ public class Nana7mi extends Base implements ClothingHandler {
     public void PutOnClothes() {
         for (int i = 0; i < 60; i++)
             AbstractDungeon.actionManager.addToBottom(new ClothingAction(image("images/" + i + ".png")));
-        // corpseImg
+        corpseImg = ImageMaster.loadImage(image("corpse2.png"));
     }
 
     public void TakeOffClothes() {
         img = ImageMaster.loadImage(image(getCharacterImage()));
-        // corpseImg
+        corpseImg = ImageMaster.loadImage(image("corpse.png"));
     }
 
     @Override
