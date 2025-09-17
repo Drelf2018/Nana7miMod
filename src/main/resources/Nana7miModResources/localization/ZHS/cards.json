@@ -175,6 +175,10 @@
     "NAME": "火遁·豪火灭却",
     "DESCRIPTION": "*心之壁 层数归零。 NL 造成 !D! 点伤害等量次数。"
   },
+  "Nana7miMod:KillingDesire": {
+    "NAME": "杀戮欲望",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，每场战斗开始时获得的 *心之壁 层数增加 !M! 。"
+  },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
     "DESCRIPTION": " 固有 。 NL 回复所有 *生命 。",
