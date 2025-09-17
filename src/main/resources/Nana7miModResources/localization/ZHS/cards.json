@@ -171,6 +171,10 @@
     "NAME": "赎罪券",
     "DESCRIPTION": "保留 。 NL 如果一名敌人被 nana7mimod:禁言 ，获得 !M! 金币。 NL 消耗 。"
   },
+  "Nana7miMod:Katon": {
+    "NAME": "火遁·豪火灭却",
+    "DESCRIPTION": "*心之壁 层数归零。 NL 造成 !D! 点伤害等量次数 。"
+  },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
     "DESCRIPTION": " 固有 。 NL 回复所有 *生命 。",
