@@ -18,7 +18,7 @@ public class Rinnegan extends Base {
     public Rinnegan() {
         super(ID, CardCost.C3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         this.damage = this.baseDamage = 15;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void upgrade() {

@@ -173,7 +173,7 @@
   },
   "Nana7miMod:Katon": {
     "NAME": "火遁·豪火灭却",
-    "DESCRIPTION": "*心之壁 层数归零。 NL 造成 !D! 点伤害等量次数 。"
+    "DESCRIPTION": "*心之壁 层数归零。 NL 造成 !D! 点伤害等量次数。"
   },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
@@ -244,7 +244,7 @@
   },
   "Nana7miMod:Rinnegan": {
     "NAME": "轮回尽封",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 偷取 !M! 点 力量 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL nana7mimod:偷取 !M! 点 力量 。"
   },
   "Nana7miMod:Scratch": {
     "NAME": "养了挠挠",
