@@ -129,6 +129,10 @@
     "NAME": "怒火中烧",
     "DESCRIPTION": "消耗 所有手牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
   },
+  "Nana7miMod:GloomShroom": {
+    "NAME": "经典忧郁菇",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。"
+  },
   "Nana7miMod:God": {
     "NAME": "兄弟们有神！",
     "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。"
