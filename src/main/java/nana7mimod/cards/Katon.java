@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
+import nana7mimod.effects.KatonEffect;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.ATFieldPower;
 
@@ -31,7 +31,7 @@ public class Katon extends Base {
                 return amount;
             for (int i = 0; i < amount; i++) {
                 if (m != null)
-                    addToBot(new VFXAction(new SearingBlowEffect(m.hb.cX, m.hb.cY, amount), 0.1F));
+                    addToBot(new VFXAction(new KatonEffect(m.hb.cX, m.hb.cY, amount), 0.1F));
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL)));
             }
             return 0;
