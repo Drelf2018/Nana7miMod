@@ -90,6 +90,13 @@
     "NAME": "海子",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
+  "Nana7miMod:Eat": {
+    "NAME": "我要吃人啦",
+    "DESCRIPTION": "如果敌人的生命值小于等于 !D! 点，则 nana7mimod:吸取 其剩余生命值。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "敌人的生命值太高了。"
+    ]
+  },
   "Nana7miMod:Enemy": {
     "NAME": "是敌人",
     "DESCRIPTION": "nana7mimod:答案 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
@@ -252,7 +259,7 @@
   },
   "Nana7miMod:Rinnegan": {
     "NAME": "轮回尽封",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL nana7mimod:偷取 !M! 点 力量 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL nana7mimod:吸取 !M! 点 力量 。"
   },
   "Nana7miMod:Scratch": {
     "NAME": "养了挠挠",
