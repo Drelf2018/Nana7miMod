@@ -27,21 +27,19 @@ public class Teleport extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToTop(new ApplyPowerAction(p, p, new BackAttackPower(p, magicNumber)));
+        boolean flip = 2 * m.hb.cX >= Settings.WIDTH;
+        float targetY = m.hb.y - Settings.HEIGHT / 80;
+        float targetX = flip ? m.hb.x + m.hb.width + p.hb.width / 4 : m.hb.x - p.hb.width / 4;
+        addToTop(new ApplyPowerAction(p, p, new BackAttackPower(p, magicNumber, flip)));
         addToTop(new RemoveSpecificPowerAction(p, p, "Surrounded"));
         addToTop(new AbstractGameAction() {
             @Override
             public void update() {
-                if (2 * m.hb.cX < Settings.WIDTH) {
-                    p.flipHorizontal = false;
-                    p.movePosition(m.hb.x, p.hb.y);
-                } else {
-                    p.flipHorizontal = true;
-                    p.movePosition(m.hb.x + m.hb.width, p.hb.y);
-                }
+                p.flipHorizontal = flip;
+                p.movePosition(targetX, targetY);
                 isDone = true;
             }
         });
-        addToTop(new VFXAction(new FlickCoinEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        addToTop(new VFXAction(new FlickCoinEffect(p.hb.cX, p.hb.cY, targetX, targetY), 0.5F));
     }
 }

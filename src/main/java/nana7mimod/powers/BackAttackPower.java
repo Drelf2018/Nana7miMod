@@ -1,6 +1,7 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.SurroundedPower;
+import com.megacrit.cardcrawl.vfx.combat.FlickCoinEffect;
 import nana7mimod.helpers.ModHelper;
 
 public class BackAttackPower extends AbstractPower {
@@ -26,7 +28,7 @@ public class BackAttackPower extends AbstractPower {
     private boolean flipHorizontal;
     private boolean hasSurrounded;
 
-    public BackAttackPower(AbstractPlayer owner, int amount) {
+    public BackAttackPower(AbstractPlayer owner, int amount, boolean flip) {
         this.name = powerStrings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -38,7 +40,10 @@ public class BackAttackPower extends AbstractPower {
         this.hasSurrounded = owner.hasPower(SurroundedPower.POWER_ID);
 
         updateDescription();
-        loadRegion("backAttack2");
+        if (flip)
+            loadRegion("backAttack2");
+        else
+            loadRegion("backAttack");
     }
 
     @Override
@@ -53,6 +58,7 @@ public class BackAttackPower extends AbstractPower {
     @Override
     public void onRemove() {
         AbstractPlayer p = (AbstractPlayer) owner;
+        addToBot(new VFXAction(new FlickCoinEffect(p.hb.cX, p.hb.cY, drawX, drawY), 0.5F));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {

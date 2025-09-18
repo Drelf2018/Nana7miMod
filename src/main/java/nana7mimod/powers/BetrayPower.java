@@ -36,8 +36,15 @@ public class BetrayPower extends AbstractPower {
 
     @Override
     public void atEndOfRound() {
-        if (!(owner.getPower(InfatuationPower.POWER_ID) instanceof InfatuationPower))
+        AbstractPower p = owner.getPower(InfatuationPower.POWER_ID);
+        if (p instanceof InfatuationPower) {
+            if (p.amount == 1) {
+                name = powerStrings.NAME;
+                description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            }
+        } else {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
+        }
     }
 
     @Override

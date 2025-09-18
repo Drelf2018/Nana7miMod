@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -28,17 +27,11 @@ public class Silence extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (m.getIntentBaseDmg() >= 0)
-                    addToBot(new ApplyPowerAction(m, m, new SilencePower(m, 1)));
-                else {
-                    UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("OpeningAction");
-                    AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, uiStrings.TEXT[0], true));
-                }
-                isDone = true;
-            }
-        });
+        if (m.getIntentBaseDmg() >= 0)
+            addToBot(new ApplyPowerAction(m, m, new SilencePower(m, 1)));
+        else {
+            UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("OpeningAction");
+            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, uiStrings.TEXT[0], true));
+        }
     }
 }

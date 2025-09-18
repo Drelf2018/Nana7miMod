@@ -34,9 +34,9 @@ public class Furious extends Base {
                     addToTop(new ApplyPowerAction(p, p, new ATFieldPower(p, exhaustCount * magicNumber)));
                 for (int i = 0; i < exhaustCount; ++i) {
                     if (Settings.FAST_MODE)
-                        addToTop((AbstractGameAction) new ExhaustAction(1, true, true, false, Settings.ACTION_DUR_XFAST));
+                        addToTop(new ExhaustAction(1, true, true, false, Settings.ACTION_DUR_XFAST));
                     else
-                        addToTop((AbstractGameAction) new ExhaustAction(1, true, true));
+                        addToTop(new ExhaustAction(1, true, true));
                 }
                 isDone = true;
             }
