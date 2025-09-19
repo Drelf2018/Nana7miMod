@@ -27,7 +27,7 @@ public class DropCoins extends Base {
     @Override
     public void triggerOnGlowCheck() {
         glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
             if (!m.isDeadOrEscaped() && LostPower.has(m)) {
                 glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;

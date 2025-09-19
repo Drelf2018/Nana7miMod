@@ -139,11 +139,11 @@ public class ATFieldPower extends AbstractPower {
     private void onFieldBroken() {
         switch (amount) {
             case -2:
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+                for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
                     addToBot(new ApplyPowerAction(mo, owner, new WeakPower(mo, 1, false)));
                 break;
             case -4:
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+                for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
                     addToBot(new ApplyPowerAction(mo, owner, new StrengthPower(mo, -2)));
                 break;
             case -6:

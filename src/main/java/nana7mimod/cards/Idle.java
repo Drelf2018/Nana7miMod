@@ -24,7 +24,7 @@ public class Idle extends Base {
             return false;
 
         int totalGold = 0;
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             if (!mo.isDeadOrEscaped())
                 totalGold += magicNumber;
 
@@ -44,7 +44,7 @@ public class Idle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             if (!mo.isDeadOrEscaped()) {
                 p.loseGold(magicNumber);
                 for (int i = 0; i < magicNumber; ++i)

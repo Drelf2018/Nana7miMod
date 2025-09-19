@@ -32,7 +32,7 @@ public class KillingAction extends AbstractGameAction {
                     r.counter += amount;
                 ATFieldPower.addAmount(AbstractDungeon.player, amount);
             }
-            if ((AbstractDungeon.getCurrRoom()).monsters.areMonstersBasicallyDead())
+            if (AbstractDungeon.getMonsters().areMonstersBasicallyDead())
                 AbstractDungeon.actionManager.clearPostCombatActions();
         }
         tickDuration();

@@ -34,7 +34,7 @@ public class Fault3 extends Base {
     public void use(AbstractPlayer p, AbstractMonster n) {
         addToBot(new LoseHPAction(p, p, magicNumber));
         addToBot(new ExhaustAllAction(p.hand));
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
             if (!m.isDeadOrEscaped())
                 addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         addToBot(new WaitAction(0.8F));

@@ -32,7 +32,7 @@ public class BouquetPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             int applyCount = 0;
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+            for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
                 if (!mo.hasPower(InfatuationPower.POWER_ID)) {
                     applyCount++;
                     addToBot(new ApplyPowerAction(mo, owner, new InfatuationPower(mo, amount)));
