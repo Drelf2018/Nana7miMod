@@ -144,13 +144,20 @@
     "NAME": "兄弟们有神！",
     "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。"
   },
+  "Nana7miMod:Haruhikage": {
+    "NAME": "春日影",
+    "DESCRIPTION": "如果一名敌人的生命值不是所有敌人中最高的则使其逃跑。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "敌人的生命值太高了。"
+    ]
+  },
   "Nana7miMod:Hate": {
     "NAME": "仇恨",
     "DESCRIPTION": "造成 !D! 点伤害。 NL *心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
   },
   "Nana7miMod:HealAll": {
     "NAME": "桃园结义",
-    "DESCRIPTION": "nana7mimod:全场 回复 !M! 点 *生命 。 NL 消耗 。"
+    "DESCRIPTION": "nana7mimod:全场 回复 !M! 点生命。 NL 消耗 。"
   },
   "Nana7miMod:Heritage": {
     "NAME": "美美吃遗产咯",
@@ -158,7 +165,7 @@
   },
   "Nana7miMod:Hometown": {
     "NAME": "是故乡",
-    "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点 *生命 。"
+    "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点生命。"
   },
   "Nana7miMod:Idle": {
     "NAME": "我给你钱别那么闲",
@@ -192,8 +199,8 @@
   },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
-    "DESCRIPTION": " 固有 。 NL 回复所有 *生命 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 保留 。 NL 回复所有 *生命 。",
+    "DESCRIPTION": " 固有 。 NL 回复所有生命。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 保留 。 NL 回复所有生命。",
     "EXTENDED_DESCRIPTION": [
       "沉浸在万花筒的黑暗之中吧！",
       "幻术的世界有什么不好……"
@@ -234,7 +241,7 @@
   },
   "Nana7miMod:Nurse": {
     "NAME": "打给你了",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点 *生命 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点生命。"
   },
   "Nana7miMod:Overdose": {
     "NAME": "滴泪",
