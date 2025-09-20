@@ -29,7 +29,7 @@ public class ATField extends CustomRelic {
     }
 
     private String setDescription(AbstractPlayer.PlayerClass c) {
-        return DESCRIPTIONS[0] + (c == null ? 1 : counter) + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + (counter == 0 ? 1 : counter) + DESCRIPTIONS[1];
     }
 
     // 初始化遗物描述

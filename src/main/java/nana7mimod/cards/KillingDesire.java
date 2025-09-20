@@ -12,14 +12,16 @@ public class KillingDesire extends Base {
 
     public KillingDesire() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 3;
+        this.damage = this.baseDamage = 4;
         this.magicNumber = this.baseMagicNumber = 1;
+        this.exhaust = true;
     }
 
     public void upgrade() {
         if (!upgraded) {
+            this.exhaust = false;
             upgradeName();
-            upgradeDamage(2);
+            upgradeDescription();
         }
     }
 
