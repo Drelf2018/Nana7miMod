@@ -12,7 +12,7 @@ public class GloomShroom extends Base {
     public static final String ID = ModHelper.id(GloomShroom.class);
 
     public GloomShroom() {
-        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 6;
         this.isEthereal = true;

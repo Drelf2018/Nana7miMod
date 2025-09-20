@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -39,9 +40,10 @@ public class HaterPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group)
-            if (c.cardID.equals(Mark.ID))
-                addToBot(new DiscardToHandAction(c));
+        if (info.type == DamageType.NORMAL)
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+                if (c.cardID.equals(Mark.ID))
+                    addToBot(new DiscardToHandAction(c));
         return damageAmount;
     }
 

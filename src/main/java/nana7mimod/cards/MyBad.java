@@ -10,7 +10,7 @@ public class MyBad extends Base {
 
     public MyBad() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.block = this.baseBlock = 2;
+        this.block = this.baseBlock = 4;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 

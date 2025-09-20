@@ -15,7 +15,7 @@ public class NightStrike extends Base {
 
     public NightStrike() {
         super(ID, CardCost.C2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 7;
+        this.damage = this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

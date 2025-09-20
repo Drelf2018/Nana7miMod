@@ -27,6 +27,6 @@ public class Frail extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -magicNumber)));
-        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
+        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, 2, false)));
     }
 }

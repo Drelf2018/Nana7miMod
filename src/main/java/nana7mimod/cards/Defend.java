@@ -10,7 +10,7 @@ public class Defend extends Base {
 
     public Defend() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        this.block = this.baseBlock = 4;
+        this.block = this.baseBlock = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
     }
 

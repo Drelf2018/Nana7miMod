@@ -12,7 +12,7 @@ public class Sulking extends Base {
 
     public Sulking() {
         super(ID, CardCost.C1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     public void upgrade() {

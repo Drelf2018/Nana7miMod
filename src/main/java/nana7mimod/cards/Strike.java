@@ -13,7 +13,7 @@ public class Strike extends Base {
 
     public Strike() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 5;
+        this.damage = this.baseDamage = 6;
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
     }
