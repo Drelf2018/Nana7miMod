@@ -73,6 +73,13 @@
       "#y不能出牌 。 NL 在你的回合结束时，将一张 #y我回来了 放入弃牌堆。"
     ]
   },
+  "Nana7miMod:EscapePower": {
+    "NAME": "春日影",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合后逃跑。"
+    ]
+  },
   "Nana7miMod:FirmPower": {
     "NAME": "坚定",
     "DESCRIPTIONS": [

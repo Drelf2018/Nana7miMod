@@ -146,7 +146,7 @@
   },
   "Nana7miMod:Haruhikage": {
     "NAME": "春日影",
-    "DESCRIPTION": "如果一名敌人的生命值不是所有敌人中最高的则使其逃跑。 NL 消耗 。",
+    "DESCRIPTION": "使一名生命值不是所有敌人中最高的敌人在三回合后逃跑。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "敌人的生命值太高了。"
     ]

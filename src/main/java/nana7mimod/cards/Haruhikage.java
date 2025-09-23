@@ -1,18 +1,19 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.common.EscapeAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.EscapePower;
 
 public class Haruhikage extends Base {
     public static final String ID = ModHelper.id(Haruhikage.class);
 
     public Haruhikage() {
         super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }
 
@@ -29,8 +30,7 @@ public class Haruhikage extends Base {
             if (mo.currentHealth > maxHP)
                 maxHP = mo.currentHealth;
         if (m.currentHealth < maxHP) {
-            addToBot(new WaitAction(0.8F));
-            addToBot(new EscapeAction(m));
+            addToBot(new ApplyPowerAction(m, p, new EscapePower(m, magicNumber)));
         } else {
             String ext = strings(ID).EXTENDED_DESCRIPTION[0];
             AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, ext, true));
