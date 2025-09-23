@@ -36,7 +36,7 @@ public class FirmPower extends AbstractPower {
     public void atStartOfTurn() {
         if (owner.currentBlock != 0) {
             flashWithoutSound();
-            addToBot(new HealAction(owner, owner, owner.currentBlock));
+            addToTop(new HealAction(owner, owner, owner.currentBlock));
         }
     }
 }

@@ -83,7 +83,7 @@
   "Nana7miMod:FirmPower": {
     "NAME": "坚定",
     "DESCRIPTIONS": [
-      "从卡牌中获得的 #y格挡 翻倍。在你的回合开始时，回复当前 #y格挡 值的 #y生命 。"
+      "从卡牌中获得的 #y格挡 翻倍。在你的回合开始时，回复当前 #y格挡 值的生命。"
     ]
   },
   "Nana7miMod:GetHeritagePower": {
@@ -97,7 +97,7 @@
     "NAME": "愧疚",
     "DESCRIPTIONS": [
       "在其回合开始时，减少 #b",
-      " 点 #y生命 然后将 #y愧疚 层数减少 #b30 。"
+      " 点生命然后将 #y愧疚 层数减少 #b30 。"
     ]
   },
   "Nana7miMod:HaterPower": {
@@ -125,7 +125,7 @@
     "NAME": "受伤",
     "DESCRIPTIONS": [
       "再失去 #r",
-      " 点 #y生命 ， #y心之壁 层数增加 #b1 。"
+      " 点生命， #y心之壁 层数增加 #b1 。"
     ]
   },
   "Nana7miMod:LoseStrengthPower": {

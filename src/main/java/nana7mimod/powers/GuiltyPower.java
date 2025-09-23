@@ -17,8 +17,6 @@ public class GuiltyPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public static final int REDUCE = 30;
-
     private AbstractCreature source;
 
     public GuiltyPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -39,8 +37,8 @@ public class GuiltyPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         flashWithoutSound();
-        addToBot(new LightningAction(owner, new DamageInfo(source, amount, DamageType.HP_LOSS)));
-        addToBot(new ReducePowerAction(owner, owner, this, REDUCE));
+        addToTop(new ReducePowerAction(owner, owner, this, 30));
+        addToTop(new LightningAction(owner, new DamageInfo(source, amount, DamageType.HP_LOSS)));
     }
 
     @Override
