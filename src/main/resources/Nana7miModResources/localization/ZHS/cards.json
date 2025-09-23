@@ -281,6 +281,10 @@
     "NAME": "海的那边",
     "DESCRIPTION": "nana7mimod:发现 nana7mimod:答案 。 NL 消耗 。"
   },
+  "Nana7miMod:ShapeOfUnn": {
+    "NAME": "乌恩之形",
+    "DESCRIPTION": "如果你在回合中不打出任何攻击牌，在你的回合结束时，回复 5 点生命。"
+  },
   "Nana7miMod:Shark": {
     "NAME": "七海大鲨鱼",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:流血 。"
