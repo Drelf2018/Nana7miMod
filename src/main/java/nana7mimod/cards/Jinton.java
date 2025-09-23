@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import nana7mimod.helpers.ModHelper;
 
-public class Cube extends Base {
-    public static final String ID = ModHelper.id(Cube.class);
+public class Jinton extends Base {
+    public static final String ID = ModHelper.id(Jinton.class);
 
-    public Cube() {
+    public Jinton() {
         super(ID, CardCost.C2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 15;
     }

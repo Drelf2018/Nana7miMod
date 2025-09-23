@@ -56,10 +56,6 @@
     "NAME": "彻底疯狂",
     "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"
   },
-  "Nana7miMod:Cube": {
-    "NAME": "尘遁·限界剥离之术",
-    "DESCRIPTION": "无视 格挡 。 NL 造成 !D! 点伤害。"
-  },
   "Nana7miMod:Defend": {
     "NAME": "娜米防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
@@ -188,6 +184,10 @@
   "Nana7miMod:Indulgence": {
     "NAME": "赎罪券",
     "DESCRIPTION": "保留 。 NL 如果一名敌人被 nana7mimod:禁言 ，获得 !M! 金币。 NL 消耗 。"
+  },
+  "Nana7miMod:Jinton": {
+    "NAME": "尘遁·原界剥离之术",
+    "DESCRIPTION": "无视 格挡 。 NL 造成 !D! 点伤害。"
   },
   "Nana7miMod:Katon": {
     "NAME": "火遁·豪火灭却",
