@@ -91,7 +91,7 @@
   },
   "Nana7miMod:Enemy": {
     "NAME": "是敌人",
-    "DESCRIPTION": "nana7mimod:答案 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "nana7mimod:答案 。 NL 造成 !D! 点伤害。"
   },
   "Nana7miMod:EyeForEye": {
     "NAME": "以牙还牙",
@@ -122,7 +122,7 @@
   },
   "Nana7miMod:Freedom": {
     "NAME": "是自由",
-    "DESCRIPTION": "nana7mimod:答案 。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "nana7mimod:答案 。 NL 获得 !B! 点 格挡 。"
   },
   "Nana7miMod:Furious": {
     "NAME": "怒火中烧",

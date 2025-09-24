@@ -9,7 +9,7 @@ public class Sea extends Base {
     public static final String ID = ModHelper.id(Sea.class);
 
     public Sea() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
     }
 

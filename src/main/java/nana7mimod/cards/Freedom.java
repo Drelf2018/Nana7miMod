@@ -9,9 +9,8 @@ public class Freedom extends Base {
     public static final String ID = ModHelper.id(Freedom.class);
 
     public Freedom() {
-        super(ID, CardCost.C0, CardType.SKILL, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardTarget.SELF);
         this.block = this.baseBlock = 15;
-        this.exhaust = true;
     }
 
     public void upgrade() {

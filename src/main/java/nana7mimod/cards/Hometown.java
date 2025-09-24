@@ -10,7 +10,7 @@ public class Hometown extends Base {
     public static final String ID = ModHelper.id(Hometown.class);
 
     public Hometown() {
-        super(ID, CardCost.C0, CardType.POWER, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.POWER, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 10;
     }
 
