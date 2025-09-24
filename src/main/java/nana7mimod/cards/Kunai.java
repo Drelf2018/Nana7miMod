@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
 
-public class Boomerang extends Base {
-    public static final String ID = ModHelper.id(Boomerang.class);
+public class Kunai extends Base {
+    public static final String ID = ModHelper.id(Kunai.class);
 
     public static final int actualBaseDamage = 5;
 
     public static final int upgradeBaseDamage = 2;
 
-    public Boomerang() {
+    public Kunai() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = actualBaseDamage;
         this.magicNumber = this.baseMagicNumber = 5;

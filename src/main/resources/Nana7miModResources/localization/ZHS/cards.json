@@ -35,10 +35,6 @@
     "NAME": "我回来了",
     "DESCRIPTION": "不能被打出 。 NL 抽到这张牌时移除你身上的 nana7mimod:休眠 效果。"
   },
-  "Nana7miMod:Boomerang": {
-    "NAME": "回旋镖",
-    "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
-  },
   "Nana7miMod:BuyYou": {
     "NAME": "请你喝",
     "DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
@@ -210,6 +206,10 @@
   "Nana7miMod:Knife": {
     "NAME": "真的会铜丝你",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 小刀 到你的手牌。"
+  },
+  "Nana7miMod:Kunai": {
+    "NAME": "苦无",
+    "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
   },
   "Nana7miMod:LifeHoldsDreams": {
     "NAME": "人生有梦",
