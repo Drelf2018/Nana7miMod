@@ -13,8 +13,8 @@ public class Nurse extends Base {
     public static final String ID = ModHelper.id(Nurse.class);
 
     public Nurse() {
-        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 10;
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        this.damage = this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 4;
     }
 
