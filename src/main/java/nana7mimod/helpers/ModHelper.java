@@ -10,8 +10,12 @@ public class ModHelper {
     public static final String PRIFIX = NAME + ":";
     public static final String RESOURCES = NAME + "Resources";
 
+    public static String id(String s) {
+        return PRIFIX + s;
+    }
+
     public static String id(Class<?> cardType) {
-        return PRIFIX + cardType.getSimpleName();
+        return id(cardType.getSimpleName());
     }
 
     public static String unwrap(String id) {
