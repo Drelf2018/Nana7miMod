@@ -1,6 +1,9 @@
 package nana7mimod.characters;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,28 +13,24 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import java.util.ArrayList;
 import nana7mimod.actions.ClothingAction;
+import nana7mimod.actions.WaitAction;
 import nana7mimod.cards.Accept;
 import nana7mimod.cards.Defend;
 import nana7mimod.cards.Strike;
+import nana7mimod.cards.Kyojinka.KyojinHandler;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
+import nana7mimod.powers.FirmPower;
 import nana7mimod.cards.NightStrike;
 import nana7mimod.relics.ATField;
 
-public class Nana7mi extends Base implements ClothingHandler {
+public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     public Nana7mi(String name) {
         super(name, Nana7mi.PlayerColorEnum.NANA7MI);
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
         this.dialogY = (this.drawY + 325.0F * Settings.scale);
     }
-
-    // 如果你的人物没有动画，那么这些不需要写
-    // this.loadAnimation(ModHelper.image("characters/character.atlas",
-    // ModHelper.image("characters/character.json", 1.8F);
-    // AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-    // e.setTime(e.getEndTime() * MathUtils.random());
-    // e.setTimeScale(1.2F);
 
     // 初始卡组的 ID
     public ArrayList<String> getStartingDeck() {
@@ -62,6 +61,27 @@ public class Nana7mi extends Base implements ClothingHandler {
         corpseImg = ImageMaster.loadImage(image("corpse.png"));
     }
 
+    public void Kyojinka() {
+        int scale = 2;
+
+        FileTextureData data = (FileTextureData) img.getTextureData();
+        Pixmap originalPixmap = new Pixmap(data.getFileHandle());
+        int w = originalPixmap.getWidth(), h = originalPixmap.getHeight();
+
+        Pixmap scaledPixmap = new Pixmap(scale * w, scale * h, originalPixmap.getFormat());
+        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, scale * w, scale * h);
+
+        AbstractDungeon.actionManager.addToTop(new ClothingAction(new Texture(scaledPixmap)));
+        AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
+    }
+
+    public void Kaijo() {
+        if (getPower(FirmPower.POWER_ID) instanceof FirmPower)
+            img = ImageMaster.loadImage(image("images/59.png"));
+        else
+            img = ImageMaster.loadImage(image("images/0.png"));
+    }
+
     @Override
     public String getCharacterImage() {
         return "images/0.png";
@@ -69,7 +89,7 @@ public class Nana7mi extends Base implements ClothingHandler {
 
     @Override
     public float[] getHitbox() {
-        return new float[] {4.0F, 0.0F, 220.0F, 350.0F};
+        return new float[] {10.0F, 0.0F, 220.0F, 350.0F};
     }
 
     // 翻牌事件出现的你的职业牌（一般设为打击）

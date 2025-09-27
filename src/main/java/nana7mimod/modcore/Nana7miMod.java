@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.StanceStrings;
 import java.nio.charset.StandardCharsets;
 import nana7mimod.cards.Base;
 import nana7mimod.helpers.CharacterHelper;
@@ -75,6 +76,7 @@ public class Nana7miMod
         ModHelper.loadStrings(CardStrings.class); // 卡牌
         ModHelper.loadStrings(RelicStrings.class); // 遗物
         ModHelper.loadStrings(PowerStrings.class); // 能力
+        ModHelper.loadStrings(StanceStrings.class); // 姿态
         ModHelper.loadStrings(CharacterStrings.class); // 人物
     }
 }

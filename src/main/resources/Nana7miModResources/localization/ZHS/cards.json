@@ -211,6 +211,11 @@
     "NAME": "苦无",
     "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
   },
+  "Nana7miMod:Kyojinka": {
+    "NAME": "巨人化",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 成为 nana7mimod:巨人 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 失去 !M! 点生命。 NL 成为 nana7mimod:巨人 。"
+  },
   "Nana7miMod:LifeHoldsDreams": {
     "NAME": "人生有梦",
     "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 下回合后 nana7mimod:休眠 。 NL 消耗 。"
