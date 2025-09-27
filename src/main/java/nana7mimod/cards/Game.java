@@ -1,5 +1,6 @@
 package nana7mimod.cards;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,9 +18,30 @@ import nana7mimod.helpers.ModHelper;
 public class Game extends Base {
     public static final String ID = ModHelper.id(Game.class);
 
-    public static final int CORRECT = ModHelper.countGames(true);
+    public static final int CORRECT = countGames(true);
 
-    public static final int INCORRECT = ModHelper.countGames(false);
+    public static final int INCORRECT = countGames(false);
+
+    public static int countGames(boolean correct) {
+        String path = ModHelper.RESOURCES + "/image/cards/status/game/" + (correct ? "correct" : "incorrect");
+        int left = 0;
+        int right = 1;
+
+        while (Gdx.files.internal(path + "/" + right + ".png").exists()) {
+            left = right;
+            right *= 2;
+        }
+
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (Gdx.files.internal(path + "/" + mid + ".png").exists())
+                left = mid + 1;
+            else
+                right = mid;
+        }
+
+        return left;
+    }
 
     private boolean incorrect;
 

@@ -51,25 +51,4 @@ public class ModHelper {
         String local = ModHelper.L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
         BaseMod.loadCustomStringsFile(stringType, local);
     }
-
-    public static int countGames(boolean correct) {
-        String path = RESOURCES + "/image/cards/status/game/" + (correct ? "correct" : "incorrect");
-        int left = 0;
-        int right = 1;
-
-        while (Gdx.files.internal(path + "/" + right + ".png").exists()) {
-            left = right;
-            right *= 2;
-        }
-
-        while (left < right) {
-            int mid = (left + right) / 2;
-            if (Gdx.files.internal(path + "/" + mid + ".png").exists())
-                left = mid + 1;
-            else
-                right = mid;
-        }
-
-        return left;
-    }
 }
