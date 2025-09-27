@@ -74,6 +74,10 @@
     "DESCRIPTION": "获得 [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。"
   },
+  "Nana7miMod:Dislike": {
+    "NAME": "嫌弃",
+    "DESCRIPTION": "nana7mimod:受伤 的阈值下降 !M! 。"
+  },
   "Nana7miMod:DropCoins": {
     "NAME": "爆金币",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 nana7mimod:失落 状态， *心之壁 层数增加 !M! 并且获得 [E] 。"
@@ -213,8 +217,8 @@
   },
   "Nana7miMod:Kyojinka": {
     "NAME": "巨人化",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 成为 nana7mimod:巨人 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 失去 !M! 点生命。 NL 成为 nana7mimod:巨人 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 变身 nana7mimod:巨人 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 失去 !M! 点生命。 NL 变身 nana7mimod:巨人 。"
   },
   "Nana7miMod:LifeHoldsDreams": {
     "NAME": "人生有梦",

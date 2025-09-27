@@ -28,6 +28,15 @@ public class InjuredPower extends AbstractPower {
         loadRegion("brutality");
     }
 
+    @Override
+    public void reducePower(int reduceAmount) {
+        lostHPLimit -= reduceAmount;
+        if (lostHPLimit < 1) {
+            lostHPLimit = 1;
+        }
+        wasHPLost(null, reduceAmount);
+    }
+
     // 受伤
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
