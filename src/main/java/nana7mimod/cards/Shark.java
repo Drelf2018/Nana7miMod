@@ -17,9 +17,9 @@ public class Shark extends Base {
     public static final String ID = ModHelper.id(Shark.class);
 
     public Shark() {
-        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 6;
-        this.magicNumber = this.baseMagicNumber = 3;
+        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.damage = this.baseDamage = 8;
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     public void upgrade() {

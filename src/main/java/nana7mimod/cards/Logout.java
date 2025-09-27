@@ -16,8 +16,8 @@ public class Logout extends Base {
     public static final String ID = ModHelper.id(Logout.class);
 
     public Logout() {
-        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 6;
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.damage = this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isMultiDamage = true;
     }
@@ -25,7 +25,7 @@ public class Logout extends Base {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(4);
         }
     }
 
