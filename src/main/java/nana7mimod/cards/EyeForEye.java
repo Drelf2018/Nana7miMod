@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import nana7mimod.helpers.CharacterHelper.Nana7mi;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.ClearPatch;
+import nana7mimod.patches.DamageReceivedLastTurnPatch;
 
 public class EyeForEye extends Base {
     public static final String ID = ModHelper.id(EyeForEye.class);
@@ -21,7 +21,7 @@ public class EyeForEye extends Base {
 
     @Override
     public void applyPowers() {
-        baseDamage = ClearPatch.damageReceivedLastTurn;
+        baseDamage = DamageReceivedLastTurnPatch.damageReceivedLastTurn;
         super.applyPowers();
         rawDescription = strings(ID).DESCRIPTION + strings(ID).EXTENDED_DESCRIPTION[0];
         initializeDescription();
