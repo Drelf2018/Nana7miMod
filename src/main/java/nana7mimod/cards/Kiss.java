@@ -50,8 +50,8 @@ public class Kiss extends Base {
         if (m == null)
             return;
         String[] extended = strings(ID).EXTENDED_DESCRIPTION;
-        addToBot(new TalkAction(m, extended[0], 6.0F, 6.0F));
-        AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 6.0F, extended[1], true));
+        addToBot(new TalkAction(m, extended[0], 8.0F, 8.0F));
+        AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 8.0F, extended[1], true));
         addToBot(new SFXAction("MONSTER_COLLECTOR_DEBUFF"));
         addToBot(new VFXAction(new CollectorCurseEffect(p.hb.cX, p.hb.cY), 2.0F));
         addToBot(new ApplyPowerAction(p, m, new ConfusionPower(p)));
