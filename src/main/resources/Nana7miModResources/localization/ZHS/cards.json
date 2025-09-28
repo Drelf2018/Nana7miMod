@@ -29,7 +29,7 @@
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
-    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 *心之壁 增加 !M! 层。"
+    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 *心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Back": {
     "NAME": "我回来了",
@@ -37,8 +37,8 @@
   },
   "Nana7miMod:BuyYou": {
     "NAME": "请你喝",
-    "DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
+    "DESCRIPTION": "nana7mimod:七海喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:七海喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
   },
   "Nana7miMod:ConfessionBouquet": {
     "NAME": "告白花束",
@@ -134,7 +134,7 @@
   },
   "Nana7miMod:Furious": {
     "NAME": "怒火中烧",
-    "DESCRIPTION": "消耗 所有手牌。 NL 每张被 消耗 的牌使 *心之壁 增加 !M! 层。 NL 消耗 。"
+    "DESCRIPTION": "消耗 所有手牌。 NL 每张被 消耗 的牌使 *心之壁 层数增加 !M! 。 NL 消耗 。"
   },
   "Nana7miMod:GloomShroom": {
     "NAME": "经典忧郁菇",
