@@ -185,10 +185,6 @@
       "我还有能量。"
     ]
   },
-  "Nana7miMod:Indulgence": {
-    "NAME": "赎罪券",
-    "DESCRIPTION": "保留 。 NL 如果一名敌人被 nana7mimod:禁言 ，获得 !M! 金币。 NL 消耗 。"
-  },
   "Nana7miMod:Jinton": {
     "NAME": "尘遁·原界剥离之术",
     "DESCRIPTION": "无视 格挡 。 NL 造成 !D! 点伤害。"
