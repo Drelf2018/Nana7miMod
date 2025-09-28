@@ -52,6 +52,10 @@
     "NAME": "彻底疯狂",
     "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"
   },
+  "Nana7miMod:CuishaLetsGO": {
+    "NAME": "脆鲨启动",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每打出一次，它在本局游戏中的伤害永久性增加 !M! 。 NL 消耗 。"
+  },
   "Nana7miMod:Defend": {
     "NAME": "娜米防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
