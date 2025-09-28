@@ -34,8 +34,8 @@ public class Eat extends Base {
             addToBot(new HealAction(p, p, m.currentHealth));
             addToBot(new InstantKillAction(m));
         } else {
-            String ext = strings(ID).EXTENDED_DESCRIPTION[0];
-            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, ext, true));
+            String extended = strings(ID).EXTENDED_DESCRIPTION[0];
+            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, extended, true));
         }
     }
 }
