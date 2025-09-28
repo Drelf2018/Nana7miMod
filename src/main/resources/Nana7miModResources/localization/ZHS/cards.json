@@ -163,6 +163,10 @@
     "NAME": "是故乡",
     "DESCRIPTION": "nana7mimod:答案 。 NL 在战斗结束时，回复 !M! 点生命。"
   },
+  "Nana7miMod:HotSpring": {
+    "NAME": "一起泡温泉",
+    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌，回复 !M! 点生命。"
+  },
   "Nana7miMod:Idle": {
     "NAME": "我给你钱别那么闲",
     "DESCRIPTION": "给予所有敌人 !M! 金币和 99 层 易伤 。 NL 消耗 。",
