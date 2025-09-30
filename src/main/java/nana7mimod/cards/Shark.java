@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -32,7 +31,7 @@ public class Shark extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null)
             addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Nana7mi.COLOR.cpy()), 0.3F));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage)));
         addToBot(new ApplyPowerAction(m, p, new BleedingPower(m, magicNumber)));
     }
 }

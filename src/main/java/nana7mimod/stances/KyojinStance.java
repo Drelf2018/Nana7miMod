@@ -3,7 +3,7 @@ package nana7mimod.stances;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,8 +33,8 @@ public class KyojinStance extends AbstractStance {
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        if (type == DamageInfo.DamageType.NORMAL)
+    public float atDamageGive(float damage, DamageType type) {
+        if (type == DamageType.NORMAL)
             return damage * 3.0F;
         return damage;
     }

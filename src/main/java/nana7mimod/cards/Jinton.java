@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -27,6 +26,6 @@ public class Jinton extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new MindblastEffect(p.hb.cX, p.hb.cY + p.hb.height / 4, p.flipHorizontal)));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.HP_LOSS), AttackEffect.NONE));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.HP_LOSS)));
     }
 }

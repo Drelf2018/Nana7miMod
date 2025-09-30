@@ -1,7 +1,6 @@
 package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.actions.KillingAction;
@@ -26,6 +25,6 @@ public class KillingDesire extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new KillingAction(m, new DamageInfo(p, damage, DamageType.NORMAL), magicNumber));
+        addToBot(new KillingAction(m, new DamageInfo(p, damage), magicNumber));
     }
 }

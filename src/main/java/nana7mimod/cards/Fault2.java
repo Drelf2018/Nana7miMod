@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -32,7 +31,7 @@ public class Fault2 extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new DamageAction(mo, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.SLASH_HORIZONTAL));
+            addToBot(new DamageAction(mo, new DamageInfo(p, damage), AttackEffect.SLASH_HORIZONTAL));
             addToBot(new LoseHPAction(p, p, magicNumber));
         }
         addToBot(new MakeTempCardInHandAction(new Fault3()));

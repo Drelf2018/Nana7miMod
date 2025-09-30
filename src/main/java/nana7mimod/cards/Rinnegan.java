@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -32,7 +31,7 @@ public class Rinnegan extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         addToBot(new WaitAction(0.8F));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageType.NORMAL)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage)));
         addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
     }

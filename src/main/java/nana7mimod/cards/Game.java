@@ -72,7 +72,7 @@ public class Game extends Base {
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
         if (incorrect)
-            addToBot(new DamageAction(p, new DamageInfo(p, damage, DamageType.NORMAL), AttackEffect.BLUNT_LIGHT));
+            addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
         else {
             isMultiDamage = true;
             addToBot(new SFXAction("ATTACK_HEAVY"));

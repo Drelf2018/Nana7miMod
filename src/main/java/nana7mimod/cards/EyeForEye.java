@@ -44,7 +44,7 @@ public class EyeForEye extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null)
             addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Nana7mi.COLOR.cpy()), 0.3F));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage)));
         rawDescription = strings(ID).DESCRIPTION;
         initializeDescription();
     }
