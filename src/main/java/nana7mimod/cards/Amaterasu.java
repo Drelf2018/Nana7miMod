@@ -1,15 +1,12 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import nana7mimod.actions.BlackFireAction;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AttackEffectPatch;
 
 public class Amaterasu extends Base {
 	public static final String ID = ModHelper.id(Amaterasu.class);
@@ -28,18 +25,7 @@ public class Amaterasu extends Base {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new LoseHPAction(p, p, magicNumber, AbstractGameAction.AttackEffect.FIRE) {
-			@Override
-			public void update() {
-				if (duration == 0.33F && target.currentHealth > 0) {
-					FlashAtkImgEffect effect = new FlashAtkImgEffect(target.hb.cX, target.hb.cY, AttackEffect.FIRE);
-					effect.img = BlackFireAction.vfxAtlas.findRegion("attack/black_fire");
-					AbstractDungeon.effectList.add(effect);
-					tickDuration();
-				}
-				super.update();
-			}
-		});
-		addToBot(new BlackFireAction(m, new DamageInfo(p, damage, DamageType.NORMAL)));
+		addToBot(new LoseHPAction(p, p, magicNumber, AttackEffectPatch.BLACK_FIRE));
+		addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffectPatch.BLACK_FIRE));
 	}
 }
