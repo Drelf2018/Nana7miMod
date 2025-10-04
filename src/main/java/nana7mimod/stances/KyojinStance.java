@@ -2,6 +2,9 @@ package nana7mimod.stances;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,10 +16,25 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
-import nana7mimod.cards.Kyojinka.KyojinHandler;
 import nana7mimod.helpers.ModHelper;
 
 public class KyojinStance extends AbstractStance {
+    public interface KyojinHandler {
+        void Kyojinka();
+
+        void Kaijo();
+    }
+
+    public static Texture scale(FileTextureData data, int scale) {
+        Pixmap originalPixmap = new Pixmap(data.getFileHandle());
+        int w = originalPixmap.getWidth(), h = originalPixmap.getHeight();
+
+        Pixmap scaledPixmap = new Pixmap(scale * w, scale * h, originalPixmap.getFormat());
+        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, scale * w, scale * h);
+
+        return new Texture(scaledPixmap);
+    }
+
     public static final String STANCE_ID = ModHelper.id("Kyojin");
     private static final StanceStrings stanceString = CardCrawlGame.languagePack.getStanceString(STANCE_ID);
     private static long sfxId = -1L;

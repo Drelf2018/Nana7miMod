@@ -1,7 +1,6 @@
 package nana7mimod.characters;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -17,12 +16,13 @@ import nana7mimod.actions.WaitAction;
 import nana7mimod.cards.Accept;
 import nana7mimod.cards.Defend;
 import nana7mimod.cards.Strike;
-import nana7mimod.cards.Kyojinka.KyojinHandler;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
 import nana7mimod.powers.FirmPower;
 import nana7mimod.cards.NightStrike;
 import nana7mimod.relics.ATField;
+import nana7mimod.stances.KyojinStance;
+import nana7mimod.stances.KyojinStance.KyojinHandler;
 
 public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     public Nana7mi(String name) {
@@ -62,16 +62,8 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     }
 
     public void Kyojinka() {
-        int scale = 2;
-
-        FileTextureData data = (FileTextureData) img.getTextureData();
-        Pixmap originalPixmap = new Pixmap(data.getFileHandle());
-        int w = originalPixmap.getWidth(), h = originalPixmap.getHeight();
-
-        Pixmap scaledPixmap = new Pixmap(scale * w, scale * h, originalPixmap.getFormat());
-        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, scale * w, scale * h);
-
-        AbstractDungeon.actionManager.addToTop(new ClothingAction(new Texture(scaledPixmap)));
+        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 2);
+        AbstractDungeon.actionManager.addToTop(new ClothingAction(clothes));
         AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
     }
 
