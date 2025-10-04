@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class LostPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(LostPower.class);
@@ -24,7 +25,7 @@ public class LostPower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("minion"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "lost");
     }
 
     // 获取角色失落

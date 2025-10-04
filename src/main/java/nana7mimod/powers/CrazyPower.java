@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class CrazyPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(CrazyPower.class);
@@ -25,7 +26,7 @@ public class CrazyPower extends AbstractPower {
         this.type = PowerType.BUFF;
 
         updateDescription();
-        loadRegion("anger");
+        AbstractPowerPatch.loadRegion(this, "crazy");
     }
 
     @Override

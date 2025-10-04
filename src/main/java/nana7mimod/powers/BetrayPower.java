@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class BetrayPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(BetrayPower.class);
@@ -31,7 +32,7 @@ public class BetrayPower extends AbstractPower {
             this.description = DESCRIPTIONS[0] + 0 + DESCRIPTIONS[1];
         else
             updateDescription();
-        loadRegion("minion"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "betray");
     }
 
     @Override

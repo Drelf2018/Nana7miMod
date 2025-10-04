@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class SilencePower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(SilencePower.class);
@@ -24,7 +25,7 @@ public class SilencePower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("intangible");
+        AbstractPowerPatch.loadRegion(this, "silence");
     }
 
     @Override

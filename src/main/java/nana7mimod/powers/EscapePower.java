@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class EscapePower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(EscapePower.class);
@@ -24,7 +25,7 @@ public class EscapePower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("hymn");
+        AbstractPowerPatch.loadRegion(this, "escape");
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class MonitorPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(MonitorPower.class);
@@ -24,7 +25,7 @@ public class MonitorPower extends AbstractPower {
         this.type = amount == -1 ? PowerType.BUFF : PowerType.DEBUFF;
 
         updateDescription();
-        loadRegion("lockon"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "monitor");
     }
 
     @Override

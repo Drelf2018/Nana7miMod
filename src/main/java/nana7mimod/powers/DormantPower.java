@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.cards.Back;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class DormantPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(DormantPower.class);
@@ -25,7 +26,7 @@ public class DormantPower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("confusion"); // 换成ZZZ
+        AbstractPowerPatch.loadRegion(this, "dormant");
     }
 
     @Override

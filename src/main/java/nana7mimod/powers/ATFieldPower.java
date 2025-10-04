@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class ATFieldPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(ATFieldPower.class);
@@ -39,7 +40,7 @@ public class ATFieldPower extends AbstractPower {
         this.canGoNegative = true;
 
         updateDescription();
-        loadRegion("strength");
+        AbstractPowerPatch.loadRegion(this, "atfield");
     }
 
     // 获取角色心之壁

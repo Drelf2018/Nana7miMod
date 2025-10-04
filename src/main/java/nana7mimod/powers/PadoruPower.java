@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class PadoruPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(PadoruPower.class);
@@ -26,7 +27,7 @@ public class PadoruPower extends AbstractPower {
         this.type = PowerType.BUFF;
 
         updateDescription();
-        loadRegion("time"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "padoru");
     }
 
     public void atStartOfTurn() {

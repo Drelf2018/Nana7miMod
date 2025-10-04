@@ -23,7 +23,7 @@ public class GetHeritagePower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("thievery"); // 换成😭
+        loadRegion("thievery");
     }
 
     @Override

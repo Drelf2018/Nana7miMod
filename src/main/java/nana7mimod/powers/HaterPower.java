@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.cards.Mark;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class HaterPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(HaterPower.class);
@@ -29,7 +30,7 @@ public class HaterPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
 
         updateDescription();
-        loadRegion("minion"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "hater");
     }
 
     @Override

@@ -1,11 +1,12 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import nana7mimod.helpers.ModHelper;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class InjuredPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(InjuredPower.class);
@@ -25,7 +26,7 @@ public class InjuredPower extends AbstractPower {
         this.lostHPLimit = amount;
 
         updateDescription();
-        loadRegion("brutality");
+        AbstractPowerPatch.loadRegion(this, "injured");
     }
 
     @Override

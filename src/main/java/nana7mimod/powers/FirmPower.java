@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class FirmPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(FirmPower.class);
@@ -22,7 +23,7 @@ public class FirmPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.description = DESCRIPTIONS[0];
 
-        loadRegion("dexterity");
+        AbstractPowerPatch.loadRegion(this, "firm");
     }
 
     // 格挡翻倍

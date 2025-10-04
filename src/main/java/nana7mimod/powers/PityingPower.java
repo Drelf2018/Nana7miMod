@@ -1,13 +1,14 @@
 package nana7mimod.powers;
 
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import nana7mimod.helpers.ModHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class PityingPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(PityingPower.class);
@@ -24,7 +25,7 @@ public class PityingPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.description = DESCRIPTIONS[0];
 
-        loadRegion("hello");
+        AbstractPowerPatch.loadRegion(this, "pitying");
     }
 
     // 怜悯

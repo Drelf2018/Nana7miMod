@@ -29,7 +29,7 @@ public class GuiltyPower extends AbstractPower {
         this.isTurnBased = true;
 
         updateDescription();
-        loadRegion("poison"); // 换成😭
+        loadRegion("storm");
     }
 
     // 天雷滚滚我好怕怕

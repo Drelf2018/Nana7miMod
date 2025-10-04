@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
 public class HotSpringPower extends AbstractPower {
     public static final String POWER_ID = ModHelper.id(HotSpringPower.class);
@@ -26,7 +27,7 @@ public class HotSpringPower extends AbstractPower {
         this.type = PowerType.BUFF;
 
         updateDescription();
-        loadRegion("like_water");
+        AbstractPowerPatch.loadRegion(this, "hot_spring");
     }
 
     @Override

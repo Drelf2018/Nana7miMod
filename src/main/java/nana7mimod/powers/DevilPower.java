@@ -20,7 +20,7 @@ public class DevilPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
 
-        loadRegion("darkembrace"); // 换成😭
+        loadRegion("darkembrace");
         updateDescription();
     }
 
