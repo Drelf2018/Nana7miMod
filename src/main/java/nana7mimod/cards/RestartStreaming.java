@@ -12,7 +12,7 @@ public class RestartStreaming extends Base {
     public static final String ID = ModHelper.id(RestartStreaming.class);
 
     public RestartStreaming() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void upgrade() {
