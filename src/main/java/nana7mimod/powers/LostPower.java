@@ -41,6 +41,13 @@ public class LostPower extends AbstractPower {
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
+    // 死亡时获得能量
+    @Override
+    public void onDeath() {
+        flash();
+        addToBot(new GainEnergyAction(1));
+    }
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

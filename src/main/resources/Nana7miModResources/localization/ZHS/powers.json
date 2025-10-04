@@ -146,7 +146,7 @@
     "NAME": "失落",
     "DESCRIPTIONS": [
       "在你的回合开始时获得 #b",
-      " [E] ，然后将 #y失落 层数减少 #b1 。"
+      " [E] ，然后将 #y失落 层数减少 #b1 。死亡时，获得 [E] 。"
     ]
   },
   "Nana7miMod:MonitorPower": {
