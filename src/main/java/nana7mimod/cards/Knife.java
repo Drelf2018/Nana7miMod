@@ -14,7 +14,7 @@ public class Knife extends Base {
 
     public Knife() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 5;
+        this.damage = this.baseDamage = 4;
         this.magicNumber = this.baseMagicNumber = 2;
         this.cardsToPreview = new Shiv();
     }
