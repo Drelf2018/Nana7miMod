@@ -226,7 +226,7 @@
   },
   "Nana7miMod:LifeHoldsDreams": {
     "NAME": "人生有梦",
-    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 下回合后 nana7mimod:休眠 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 下回合结束后 nana7mimod:休眠 。 NL 消耗 。"
   },
   "Nana7miMod:Logout": {
     "NAME": "用户已注销",
@@ -323,8 +323,8 @@
   },
   "Nana7miMod:Smoke": {
     "NAME": "薯条着火了",
-    "DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去最大生命值 [#FF6563]41%[] 的生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去最大生命值 [#FF6563]29%[] 的生命。 NL 消耗 。"
+    "DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去 [#FF6563]最大[] 生命值 [#FF6563]41%[] 的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去 [#FF6563]最大[] 生命值 [#FF6563]29%[] 的生命。 NL 消耗 。"
   },
   "Nana7miMod:SoWhat": {
     "NAME": "那咋啦",
