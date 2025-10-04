@@ -5,26 +5,40 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.InjuredPower;
+import nana7mimod.powers.LostPower;
+import nana7mimod.powers.MonitorPower;
+import nana7mimod.powers.NightPower;
+import nana7mimod.powers.PadoruPower;
+import nana7mimod.powers.PityingPower;
+import nana7mimod.powers.SilencePower;
+import nana7mimod.powers.SulkingPower;
+import nana7mimod.powers.UnnPower;
 import nana7mimod.powers.ATFieldPower;
-
-// 图片路径（大小128x128，可参考同目录的图片）
-// private static final String IMG_PATH = ModHelper.relics(ID);
-// 遗物未解锁时的轮廓。可以不使用。如果要使用，取消注释
-// private static final String OUTLINE_PATH =
-// "ExampleModResources/img/relics/MyRelic_Outline.png";
-// ImageMaster.loadImage(IMG_PATH)
-// 如果你需要轮廓图，取消注释下面一行并注释上面一行，不需要就删除
-// super(ID, ImageMaster.loadImage(IMG_PATH), ImageMaster.loadImage(OUTLINE_PATH), RELIC_TIER,
-// LANDING_SOUND);
+import nana7mimod.powers.BetrayPower;
+import nana7mimod.powers.BouquetPower;
+import nana7mimod.powers.CrackPower;
+import nana7mimod.powers.CrazyPower;
+import nana7mimod.powers.DormantPower;
+import nana7mimod.powers.EscapePower;
+import nana7mimod.powers.FirmPower;
+import nana7mimod.powers.GetHeritagePower;
+import nana7mimod.powers.GuiltyPower;
+import nana7mimod.powers.HaterPower;
+import nana7mimod.powers.HeritagePower;
+import nana7mimod.powers.HometownPower;
+import nana7mimod.powers.HotSpringPower;
+import nana7mimod.powers.InfatuationPower;
 
 public class ATField extends CustomRelic {
     public static final String ID = ModHelper.id(ATField.class);
 
     public ATField() {
-        super(ID, "bank.png", RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, ImageMaster.loadImage(ModHelper.relics(ID)), RelicTier.STARTER, LandingSound.MAGICAL);
         this.counter = 1;
     }
 
