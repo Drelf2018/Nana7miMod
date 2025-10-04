@@ -7,15 +7,16 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.patches.AbstractPowerPatch;
 
-public class LoseStrengthPower extends AbstractPower {
-    public static final String POWER_ID = ModHelper.id(LoseStrengthPower.class);
+public class SulkingPower extends AbstractPower {
+    public static final String POWER_ID = ModHelper.id(SulkingPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public LoseStrengthPower(AbstractCreature owner, int amount) {
+    public SulkingPower(AbstractCreature owner, int amount) {
         this.name = powerStrings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -23,7 +24,7 @@ public class LoseStrengthPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
 
         updateDescription();
-        loadRegion("strength"); // 换成😭
+        AbstractPowerPatch.loadRegion(this, "sulking");
     }
 
     @Override

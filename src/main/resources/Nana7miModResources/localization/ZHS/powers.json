@@ -142,13 +142,6 @@
       " 点生命， #y心之壁 层数增加 #b1 。"
     ]
   },
-  "Nana7miMod:LoseStrengthPower": {
-    "NAME": "失去力量",
-    "DESCRIPTIONS": [
-      "在你的回合结束时，失去 #b",
-      " 点 #y力量 。"
-    ]
-  },
   "Nana7miMod:LostPower": {
     "NAME": "失落",
     "DESCRIPTIONS": [
@@ -189,6 +182,13 @@
     "DESCRIPTIONS": [
       "与玩家互相不能造成伤害。 NL 持续时间 #b",
       " 回合。"
+    ]
+  },
+  "Nana7miMod:SulkingPower": {
+    "NAME": "生闷气",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，失去 #b",
+      " 点 #y力量 。"
     ]
   },
   "Nana7miMod:UnnPower": {
