@@ -3,8 +3,8 @@ package nana7mimod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RepairPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.HometownPower;
 
 public class Hometown extends Base {
     public static final String ID = ModHelper.id(Hometown.class);
@@ -22,6 +22,6 @@ public class Hometown extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new RepairPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new HometownPower(p, magicNumber)));
     }
 }

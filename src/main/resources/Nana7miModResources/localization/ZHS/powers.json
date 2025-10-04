@@ -114,6 +114,13 @@
       " 金币遗产。"
     ]
   },
+  "Nana7miMod:HometownPower": {
+    "NAME": "樱花",
+    "DESCRIPTIONS": [
+      "在战斗结束时，回复 #b",
+      " 点生命。"
+    ]
+  },
   "Nana7miMod:HotSpringPower": {
     "NAME": "温泉",
     "DESCRIPTIONS": [
