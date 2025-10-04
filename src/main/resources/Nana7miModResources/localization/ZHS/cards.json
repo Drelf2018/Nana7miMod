@@ -138,7 +138,7 @@
   },
   "Nana7miMod:GloomShroom": {
     "NAME": "经典忧郁菇",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 消耗 。"
   },
   "Nana7miMod:God": {
     "NAME": "兄弟们有神！",

@@ -14,7 +14,7 @@ public class GloomShroom extends Base {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 6;
-        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     public void upgrade() {
