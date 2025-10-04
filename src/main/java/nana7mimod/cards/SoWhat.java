@@ -12,7 +12,7 @@ public class SoWhat extends Base {
     public static final String ID = ModHelper.id(SoWhat.class);
 
     public SoWhat() {
-        super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 50;
     }
