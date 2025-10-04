@@ -13,7 +13,7 @@ public class NightStrike extends Base {
     public static final String ID = ModHelper.id(NightStrike.class);
 
     public NightStrike() {
-        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         this.damage = this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 1;
     }
