@@ -10,9 +10,8 @@ public class Monitor extends Base {
     public static final String ID = ModHelper.id(Monitor.class);
 
     public Monitor() {
-        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust = true;
     }
 
     public void upgrade() {
