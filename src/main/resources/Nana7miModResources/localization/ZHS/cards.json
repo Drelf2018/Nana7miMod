@@ -238,8 +238,8 @@
   },
   "Nana7miMod:Monitor": {
     "NAME": "我在看着你",
-    "DESCRIPTION": "给予 !M! 层 nana7mimod:监视 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 给予 !M! 层 nana7mimod:监视 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:监视 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 给予 !M! 层 nana7mimod:监视 。"
   },
   "Nana7miMod:MyBad": {
     "NAME": "但确实是我的错哦",
