@@ -50,7 +50,7 @@
   },
   "Nana7miMod:Crazy": {
     "NAME": "彻底疯狂",
-    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张 *耗能 的攻击牌， *心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:CuishaLetsGO": {
     "NAME": "脆鲨启动",
