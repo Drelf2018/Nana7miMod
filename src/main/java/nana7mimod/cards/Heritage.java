@@ -24,7 +24,7 @@ public class Heritage extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new GetHeritagePower(p, 3)));
+        addToBot(new ApplyPowerAction(p, p, new GetHeritagePower(p, 4)));
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             addToBot(new ApplyPowerAction(mo, p, new HeritagePower(mo, magicNumber)));
     }
