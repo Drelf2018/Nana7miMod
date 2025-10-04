@@ -21,7 +21,7 @@ public class Nurse extends Base {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(3);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 
