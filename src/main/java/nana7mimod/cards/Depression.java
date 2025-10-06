@@ -12,7 +12,7 @@ public class Depression extends Base {
 
     public Depression() {
         super(ID, CardCost.C3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.block = this.baseBlock = 10;
+        this.block = this.baseBlock = 15;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
     }
