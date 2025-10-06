@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import nana7mimod.helpers.ModHelper;
 
 public class Fault extends Base {
@@ -16,7 +17,7 @@ public class Fault extends Base {
 		super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 		this.damage = this.baseDamage = 10;
 		this.magicNumber = this.baseMagicNumber = 1;
-		this.cardsToPreview = new Fault2();
+		MultiCardPreview.add(this, new Fault2(), new Fault3());
 	}
 
 	public void upgrade() {
