@@ -238,8 +238,8 @@
   },
   "Nana7miMod:Monitor": {
     "NAME": "我在看着你",
-    "DESCRIPTION": "给予 !M! 层 nana7mimod:监视 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 给予 !M! 层 nana7mimod:监视 。"
+    "DESCRIPTION": "在你的回合开始时，如果一名敌人的意图是攻击，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 在你的回合开始时，如果一名敌人的意图是攻击，抽一张牌。"
   },
   "Nana7miMod:MyBad": {
     "NAME": "但确实是我的错哦",
