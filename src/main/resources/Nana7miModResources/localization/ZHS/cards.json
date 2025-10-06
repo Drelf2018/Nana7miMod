@@ -13,7 +13,7 @@
   },
   "Nana7miMod:Angelina": {
     "NAME": "安洁莉娜",
-    "DESCRIPTION": "获得 !M! 层 nana7mimod:反重力 。"
+    "DESCRIPTION": "受到的伤害降低 [#87CEEE]50%[] 。 NL 如果在一个回合内被攻击伤害两次，该状态就会消失。"
   },
   "Nana7miMod:Armor": {
     "NAME": "叠甲过",
