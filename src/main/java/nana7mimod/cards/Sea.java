@@ -1,5 +1,6 @@
 package nana7mimod.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
@@ -11,6 +12,7 @@ public class Sea extends Base {
     public Sea() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
+        MultiCardPreview.add(this, new Freedom(), new Enemy(), new Hometown());
     }
 
     public void upgrade() {
