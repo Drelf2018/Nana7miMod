@@ -12,7 +12,7 @@ public class SoWhat extends Base {
     public static final String ID = ModHelper.id(SoWhat.class);
 
     public SoWhat() {
-        super(ID, CardCost.C0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 50;
     }
@@ -28,6 +28,7 @@ public class SoWhat extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         returnToHand = AbstractDungeon.cardRandomRng.random(99) < magicNumber;
+        exhaust = !returnToHand;
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }
 }

@@ -328,8 +328,8 @@
   },
   "Nana7miMod:SoWhat": {
     "NAME": "那咋啦",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。"
   },
   "Nana7miMod:SpiritualVictory": {
     "NAME": "精神胜利",
