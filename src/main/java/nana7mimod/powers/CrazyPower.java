@@ -31,7 +31,7 @@ public class CrazyPower extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.ATTACK && card.costForTurn != 0) {
+        if (card.type == CardType.ATTACK) {
             flashWithoutSound();
             ATFieldPower.addAmount(owner, amount);
         }
