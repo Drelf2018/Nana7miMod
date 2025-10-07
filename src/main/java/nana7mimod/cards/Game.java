@@ -1,6 +1,8 @@
 package nana7mimod.cards;
 
-import com.badlogic.gdx.Gdx;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.stream.Collectors;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -13,59 +15,44 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+import nana7mimod.helpers.GameStrings;
 import nana7mimod.helpers.ModHelper;
 
 public class Game extends Base {
     public static final String ID = ModHelper.id(Game.class);
 
-    public static final int CORRECT = countGames(true);
+    public static final Map<String, GameStrings> GAMES = GameStrings.load();
 
-    public static final int INCORRECT = countGames(false);
+    public static final ArrayList<String> INCORRECT;
 
-    public static int countGames(boolean correct) {
-        String path = ModHelper.RESOURCES + "/image/cards/status/game/" + (correct ? "correct" : "incorrect");
-        int left = 0;
-        int right = 1;
+    public static final ArrayList<String> CORRECT;
 
-        while (Gdx.files.internal(path + "/" + right + ".png").exists()) {
-            left = right;
-            right *= 2;
-        }
-
-        while (left < right) {
-            int mid = (left + right) / 2;
-            if (Gdx.files.internal(path + "/" + mid + ".png").exists())
-                left = mid + 1;
-            else
-                right = mid;
-        }
-
-        return left;
+    static {
+        CORRECT = GAMES.entrySet().stream().filter(entry -> Boolean.TRUE.equals(entry.getValue().PLAYED)).map(Map.Entry::getKey)
+                .collect(Collectors.toCollection(ArrayList::new));
+        INCORRECT = GAMES.entrySet().stream().filter(entry -> Boolean.FALSE.equals(entry.getValue().PLAYED)).map(Map.Entry::getKey)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     private boolean incorrect;
 
-    private void init(boolean incorrect) {
-        this.incorrect = incorrect;
+    public Game() {
+        super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
         this.damage = this.baseDamage = 10;
     }
 
-    public Game() {
-        super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
-        this.init(true);
-    }
-
-    public Game(String name, String img) {
-        super(ID, name, ModHelper.cards(CardType.STATUS, img));
-        this.init(img.contains("incorrect"));
+    public Game(String name, Boolean incorrect) {
+        super(ID, GAMES.get(name).NAME, ModHelper.cards("game", name));
+        this.damage = this.baseDamage = 10;
+        this.incorrect = incorrect;
     }
 
     public static Game Correct(int index) {
-        return new Game(strings(ID).EXTENDED_DESCRIPTION[index], "game/correct/" + index);
+        return new Game(CORRECT.get(index), false);
     }
 
     public static Game Incorrect(int index) {
-        return new Game(strings(ID).EXTENDED_DESCRIPTION[CORRECT + index + 1], "game/incorrect/" + index);
+        return new Game(INCORRECT.get(index), true);
     }
 
     @Override

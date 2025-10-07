@@ -35,12 +35,16 @@ public class ModHelper {
         return RESOURCES + "/localization/ZHS/" + path;
     }
 
-    public static String cards(CardType type, String id) {
-        String path = RESOURCES + "/image/cards/" + type.name().toLowerCase();
+    public static String cards(String type, String id) {
+        String path = RESOURCES + "/image/cards/" + type;
         String card = path + "/" + ModHelper.unwrap(id) + ".png";
         if (Gdx.files.internal(card).exists())
             return card;
         return path + ".png";
+    }
+
+    public static String cards(CardType type, String id) {
+        return ModHelper.cards(type.name().toLowerCase(), id);
     }
 
     public static String relics(String id) {

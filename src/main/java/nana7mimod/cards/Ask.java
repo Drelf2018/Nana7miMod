@@ -39,13 +39,13 @@ public class Ask extends Base implements CustomSavable<Boolean> {
         if (AbstractDungeon.player.hasRelic(QuestionCard.ID))
             ++total;
         for (int i = 0; i < incorrect; ++i)
-            derp.add(Game.Incorrect(AbstractDungeon.cardRandomRng.random(Game.INCORRECT - 1)));
+            derp.add(Game.Incorrect(AbstractDungeon.cardRandomRng.random(Game.INCORRECT.size() - 1)));
         if (isFirstTimePlayAsk != null && isFirstTimePlayAsk) {
             derp.add(Game.Correct(65));
             isFirstTimePlayAsk = false;
         }
         while (derp.size() < total)
-            derp.add(Game.Correct(AbstractDungeon.cardRandomRng.random(Game.CORRECT - 1)));
+            derp.add(Game.Correct(AbstractDungeon.cardRandomRng.random(Game.CORRECT.size() - 1)));
         Collections.shuffle(derp);
         return derp;
     }

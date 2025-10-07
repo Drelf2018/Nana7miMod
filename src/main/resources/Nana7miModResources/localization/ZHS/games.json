@@ -1,0 +1,602 @@
+{
+  "AI：梦境档案": {
+    "NAME": "AI：梦境档案",
+    "PLAYED": true
+  },
+  "APEX英雄": {
+    "NAME": "APEX英雄",
+    "PLAYED": true
+  },
+  "Cairn": {
+    "NAME": "Cairn",
+    "PLAYED": true
+  },
+  "Dota2": {
+    "NAME": "Dota2",
+    "PLAYED": true
+  },
+  "Fate：SamuraiRemnant": {
+    "NAME": "Fate：SamuraiRemnant",
+    "PLAYED": true
+  },
+  "GrandTheftAutoV": {
+    "NAME": "GrandTheftAutoV",
+    "PLAYED": true
+  },
+  "osu!": {
+    "NAME": "osu!",
+    "PLAYED": true
+  },
+  "Splatoon2": {
+    "NAME": "Splatoon2",
+    "PLAYED": true
+  },
+  "Valorant": {
+    "NAME": "Valorant",
+    "PLAYED": true
+  },
+  "三国杀": {
+    "NAME": "三国杀",
+    "PLAYED": true
+  },
+  "三国：谋定天下": {
+    "NAME": "三国：谋定天下",
+    "PLAYED": true
+  },
+  "人类：一败涂地": {
+    "NAME": "人类：一败涂地",
+    "PLAYED": true
+  },
+  "仁王3": {
+    "NAME": "仁王3",
+    "PLAYED": true
+  },
+  "仙剑奇侠传4": {
+    "NAME": "仙剑奇侠传4",
+    "PLAYED": true
+  },
+  "优米雅的炼金工房": {
+    "NAME": "优米雅的炼金工房",
+    "PLAYED": true
+  },
+  "使命召唤19现代战争2": {
+    "NAME": "使命召唤19现代战争2",
+    "PLAYED": true
+  },
+  "健身环大冒险": {
+    "NAME": "健身环大冒险",
+    "PLAYED": true
+  },
+  "光与影：33号远征队": {
+    "NAME": "光与影：33号远征队",
+    "PLAYED": true
+  },
+  "冒险岛": {
+    "NAME": "冒险岛",
+    "PLAYED": true
+  },
+  "决战！平安京": {
+    "NAME": "决战！平安京",
+    "PLAYED": true
+  },
+  "刺客信条：影": {
+    "NAME": "刺客信条：影",
+    "PLAYED": true
+  },
+  "十三机兵防卫圈": {
+    "NAME": "十三机兵防卫圈",
+    "PLAYED": true
+  },
+  "原神": {
+    "NAME": "原神",
+    "PLAYED": true
+  },
+  "双人成行": {
+    "NAME": "双人成行",
+    "PLAYED": true
+  },
+  "双影奇境": {
+    "NAME": "双影奇境",
+    "PLAYED": true
+  },
+  "古剑奇谭3": {
+    "NAME": "古剑奇谭3",
+    "PLAYED": true
+  },
+  "咚奇刚：蕉力全开": {
+    "NAME": "咚奇刚：蕉力全开",
+    "PLAYED": true
+  },
+  "喋血复仇": {
+    "NAME": "喋血复仇",
+    "PLAYED": true
+  },
+  "土豆兄弟": {
+    "NAME": "土豆兄弟",
+    "PLAYED": true
+  },
+  "圣兽之王": {
+    "NAME": "圣兽之王",
+    "PLAYED": true
+  },
+  "大家的节奏天国": {
+    "NAME": "大家的节奏天国",
+    "PLAYED": true
+  },
+  "天国：拯救2": {
+    "NAME": "天国：拯救2",
+    "PLAYED": true
+  },
+  "女神异闻录3：Reload": {
+    "NAME": "女神异闻录3：Reload",
+    "PLAYED": true
+  },
+  "女神异闻录4黄金版": {
+    "NAME": "女神异闻录4黄金版",
+    "PLAYED": true
+  },
+  "学园偶像大师": {
+    "NAME": "学园偶像大师",
+    "PLAYED": true
+  },
+  "守望先锋2": {
+    "NAME": "守望先锋2",
+    "PLAYED": true
+  },
+  "宝可梦剑": {
+    "NAME": "宝可梦剑",
+    "PLAYED": true
+  },
+  "宝可梦紫": {
+    "NAME": "宝可梦紫",
+    "PLAYED": true
+  },
+  "宝可梦传说阿尔宙斯": {
+    "NAME": "宝可梦传说阿尔宙斯",
+    "PLAYED": true
+  },
+  "尼尔：自动人形": {
+    "NAME": "尼尔：自动人形",
+    "PLAYED": true
+  },
+  "层层恐惧": {
+    "NAME": "层层恐惧",
+    "PLAYED": true
+  },
+  "层层恐惧2": {
+    "NAME": "层层恐惧2",
+    "PLAYED": true
+  },
+  "崩坏星穹铁道": {
+    "NAME": "崩坏星穹铁道",
+    "PLAYED": true
+  },
+  "幽灵诡计": {
+    "NAME": "幽灵诡计",
+    "PLAYED": true
+  },
+  "异度神剑2": {
+    "NAME": "异度神剑2",
+    "PLAYED": true
+  },
+  "异度神剑3": {
+    "NAME": "异度神剑3",
+    "PLAYED": true
+  },
+  "彩虹岛": {
+    "NAME": "彩虹岛",
+    "PLAYED": true
+  },
+  "影之诗：超凡世界": {
+    "NAME": "影之诗：超凡世界",
+    "PLAYED": true
+  },
+  "怪物猎人：世界": {
+    "NAME": "怪物猎人：世界",
+    "PLAYED": true
+  },
+  "怪物猎人：荒野": {
+    "NAME": "怪物猎人：荒野",
+    "PLAYED": true
+  },
+  "我的世界": {
+    "NAME": "我的世界",
+    "PLAYED": true
+  },
+  "战神4": {
+    "NAME": "战神4",
+    "PLAYED": true
+  },
+  "战神诸神黄昏": {
+    "NAME": "战神诸神黄昏",
+    "PLAYED": true
+  },
+  "斗地主": {
+    "NAME": "斗地主",
+    "PLAYED": true
+  },
+  "方舟：生存进化": {
+    "NAME": "方舟：生存进化",
+    "PLAYED": true
+  },
+  "无主之地3": {
+    "NAME": "无主之地3",
+    "PLAYED": true
+  },
+  "无双深渊": {
+    "NAME": "无双深渊",
+    "PLAYED": true
+  },
+  "星露谷物语": {
+    "NAME": "星露谷物语",
+    "PLAYED": true
+  },
+  "暗喻幻想": {
+    "NAME": "暗喻幻想",
+    "PLAYED": true
+  },
+  "最后生还者Part1": {
+    "NAME": "最后生还者Part1",
+    "PLAYED": true
+  },
+  "最终幻想10HD重制版": {
+    "NAME": "最终幻想10HD重制版",
+    "PLAYED": true
+  },
+  "最终幻想14": {
+    "NAME": "最终幻想14",
+    "PLAYED": true
+  },
+  "最终幻想15": {
+    "NAME": "最终幻想15",
+    "PLAYED": true
+  },
+  "最终幻想7Rebirth": {
+    "NAME": "最终幻想7Rebirth",
+    "PLAYED": true
+  },
+  "最终幻想7：Re": {
+    "NAME": "最终幻想7：Re",
+    "PLAYED": true
+  },
+  "杀戮尖塔": {
+    "NAME": "杀戮尖塔",
+    "PLAYED": true
+  },
+  "模拟人生4": {
+    "NAME": "模拟人生4",
+    "PLAYED": true
+  },
+  "死亡搁浅": {
+    "NAME": "死亡搁浅",
+    "PLAYED": true
+  },
+  "死亡搁浅2：冥滩之上": {
+    "NAME": "死亡搁浅2：冥滩之上",
+    "PLAYED": true
+  },
+  "沙威玛传奇": {
+    "NAME": "沙威玛传奇",
+    "PLAYED": true
+  },
+  "漫威争锋": {
+    "NAME": "漫威争锋",
+    "PLAYED": true
+  },
+  "炉石传说": {
+    "NAME": "炉石传说",
+    "PLAYED": true
+  },
+  "燕云十六声": {
+    "NAME": "燕云十六声",
+    "PLAYED": true
+  },
+  "王国之心3": {
+    "NAME": "王国之心3",
+    "PLAYED": true
+  },
+  "生化危机3：Re": {
+    "NAME": "生化危机3：Re",
+    "PLAYED": true
+  },
+  "界外狂潮": {
+    "NAME": "界外狂潮",
+    "PLAYED": true
+  },
+  "真·三国无双：起源": {
+    "NAME": "真·三国无双：起源",
+    "PLAYED": true
+  },
+  "碧蓝航线": {
+    "NAME": "碧蓝航线",
+    "PLAYED": true
+  },
+  "神之天平": {
+    "NAME": "神之天平",
+    "PLAYED": true
+  },
+  "符文工房：龙之天地": {
+    "NAME": "符文工房：龙之天地",
+    "PLAYED": true
+  },
+  "糖豆人": {
+    "NAME": "糖豆人",
+    "PLAYED": true
+  },
+  "绝区零": {
+    "NAME": "绝区零",
+    "PLAYED": true
+  },
+  "胜利女神：新的希望": {
+    "NAME": "胜利女神：新的希望",
+    "PLAYED": true
+  },
+  "胡闹厨房2": {
+    "NAME": "胡闹厨房2",
+    "PLAYED": true
+  },
+  "艾尔登法环": {
+    "NAME": "艾尔登法环",
+    "PLAYED": true
+  },
+  "艾尔登法环：黑夜君临": {
+    "NAME": "艾尔登法环：黑夜君临",
+    "PLAYED": true
+  },
+  "英雄联盟": {
+    "NAME": "英雄联盟",
+    "PLAYED": true
+  },
+  "茶杯头": {
+    "NAME": "茶杯头",
+    "PLAYED": true
+  },
+  "荒野大镖客2：救赎": {
+    "NAME": "荒野大镖客2：救赎",
+    "PLAYED": true
+  },
+  "蔚蓝档案": {
+    "NAME": "蔚蓝档案",
+    "PLAYED": true
+  },
+  "血源诅咒": {
+    "NAME": "血源诅咒",
+    "PLAYED": true
+  },
+  "街头霸王6": {
+    "NAME": "街头霸王6",
+    "PLAYED": true
+  },
+  "超级马力欧创作家2": {
+    "NAME": "超级马力欧创作家2",
+    "PLAYED": true
+  },
+  "集合啦！动物森友会": {
+    "NAME": "集合啦！动物森友会",
+    "PLAYED": true
+  },
+  "马力欧卡丁车8豪华版": {
+    "NAME": "马力欧卡丁车8豪华版",
+    "PLAYED": true
+  },
+  "魔兽世界": {
+    "NAME": "魔兽世界",
+    "PLAYED": true
+  },
+  "鸣潮": {
+    "NAME": "鸣潮",
+    "PLAYED": true
+  },
+  "黑暗之魂": {
+    "NAME": "黑暗之魂",
+    "PLAYED": true
+  },
+  "黑暗之魂3": {
+    "NAME": "黑暗之魂3",
+    "PLAYED": true
+  },
+  "黑神话：悟空": {
+    "NAME": "黑神话：悟空",
+    "PLAYED": true
+  },
+  "上古卷轴5：天际": {
+    "NAME": "上古卷轴5：天际",
+    "PLAYED": false
+  },
+  "仁王2": {
+    "NAME": "仁王2",
+    "PLAYED": false
+  },
+  "传送门2": {
+    "NAME": "传送门2",
+    "PLAYED": false
+  },
+  "信使": {
+    "NAME": "信使",
+    "PLAYED": false
+  },
+  "冰汽时代": {
+    "NAME": "冰汽时代",
+    "PLAYED": false
+  },
+  "半衰期：爱莉克斯": {
+    "NAME": "半衰期：爱莉克斯",
+    "PLAYED": false
+  },
+  "博德之门3": {
+    "NAME": "博德之门3",
+    "PLAYED": false
+  },
+  "哈迪斯": {
+    "NAME": "哈迪斯",
+    "PLAYED": false
+  },
+  "嗜血代码": {
+    "NAME": "嗜血代码",
+    "PLAYED": false
+  },
+  "地平线：零之曙光": {
+    "NAME": "地平线：零之曙光",
+    "PLAYED": false
+  },
+  "城市：天际线": {
+    "NAME": "城市：天际线",
+    "PLAYED": false
+  },
+  "塞尔达传说：旷野之息": {
+    "NAME": "塞尔达传说：旷野之息",
+    "PLAYED": true
+  },
+  "奥日与黑暗森林": {
+    "NAME": "奥日与黑暗森林",
+    "PLAYED": false
+  },
+  "如龙7：光与暗的去向": {
+    "NAME": "如龙7：光与暗的去向",
+    "PLAYED": false
+  },
+  "密特罗德：生存恐惧": {
+    "NAME": "密特罗德：生存恐惧",
+    "PLAYED": false
+  },
+  "对马岛之魂": {
+    "NAME": "对马岛之魂",
+    "PLAYED": false
+  },
+  "小小梦魇": {
+    "NAME": "小小梦魇",
+    "PLAYED": false
+  },
+  "尼尔：人工生命": {
+    "NAME": "尼尔：人工生命",
+    "PLAYED": true
+  },
+  "巫师3：狂猎": {
+    "NAME": "巫师3：狂猎",
+    "PLAYED": false
+  },
+  "恶灵附身": {
+    "NAME": "恶灵附身",
+    "PLAYED": false
+  },
+  "掠食": {
+    "NAME": "掠食",
+    "PLAYED": false
+  },
+  "控制": {
+    "NAME": "控制",
+    "PLAYED": false
+  },
+  "星界边境": {
+    "NAME": "星界边境",
+    "PLAYED": false
+  },
+  "星际拓荒": {
+    "NAME": "星际拓荒",
+    "PLAYED": false
+  },
+  "杀戮空间2": {
+    "NAME": "杀戮空间2",
+    "PLAYED": false
+  },
+  "极乐迪斯科": {
+    "NAME": "极乐迪斯科",
+    "PLAYED": false
+  },
+  "武士零": {
+    "NAME": "武士零",
+    "PLAYED": false
+  },
+  "波西亚时光": {
+    "NAME": "波西亚时光",
+    "PLAYED": false
+  },
+  "泰拉瑞亚": {
+    "NAME": "泰拉瑞亚",
+    "PLAYED": false
+  },
+  "深岩银河": {
+    "NAME": "深岩银河",
+    "PLAYED": false
+  },
+  "漫威蜘蛛侠2": {
+    "NAME": "漫威蜘蛛侠2",
+    "PLAYED": false
+  },
+  "火焰纹章：风花雪月": {
+    "NAME": "火焰纹章：风花雪月",
+    "PLAYED": false
+  },
+  "猎天使魔女3": {
+    "NAME": "猎天使魔女3",
+    "PLAYED": false
+  },
+  "生化危机2：重制版": {
+    "NAME": "生化危机2：重制版",
+    "PLAYED": false
+  },
+  "盗贼之海": {
+    "NAME": "盗贼之海",
+    "PLAYED": true
+  },
+  "直到黎明": {
+    "NAME": "直到黎明",
+    "PLAYED": false
+  },
+  "破晓传说": {
+    "NAME": "破晓传说",
+    "PLAYED": false
+  },
+  "神界：原罪2": {
+    "NAME": "神界：原罪2",
+    "PLAYED": true
+  },
+  "空洞骑士：丝之歌": {
+    "NAME": "空洞骑士：丝之歌",
+    "PLAYED": true
+  },
+  "精灵与森林": {
+    "NAME": "精灵与森林",
+    "PLAYED": false
+  },
+  "缺氧": {
+    "NAME": "缺氧",
+    "PLAYED": false
+  },
+  "耻辱2": {
+    "NAME": "耻辱2",
+    "PLAYED": false
+  },
+  "蔚蓝": {
+    "NAME": "蔚蓝",
+    "PLAYED": false
+  },
+  "蝙蝠侠：阿卡姆骑士": {
+    "NAME": "蝙蝠侠：阿卡姆骑士",
+    "PLAYED": false
+  },
+  "赛博朋克2077": {
+    "NAME": "赛博朋克2077",
+    "PLAYED": false
+  },
+  "辐射4": {
+    "NAME": "辐射4",
+    "PLAYED": false
+  },
+  "过山车之星2": {
+    "NAME": "过山车之星2",
+    "PLAYED": false
+  },
+  "逃出生天": {
+    "NAME": "逃出生天",
+    "PLAYED": false
+  },
+  "陷阵之志": {
+    "NAME": "陷阵之志",
+    "PLAYED": false
+  },
+  "鬼泣5": {
+    "NAME": "鬼泣5",
+    "PLAYED": false
+  }
+}
