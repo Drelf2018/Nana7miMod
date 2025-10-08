@@ -44,6 +44,6 @@ public class ATField extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new RelicAboveCreatureAction(p, this));
         addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, counter)));
-        addToBot(new ApplyPowerAction(p, p, new InjuredPower(p, 20 + AbstractDungeon.ascensionLevel)));
+        addToBot(new ApplyPowerAction(p, p, new InjuredPower(p, 10)));
     }
 }
