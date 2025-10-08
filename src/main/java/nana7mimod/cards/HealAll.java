@@ -10,8 +10,8 @@ public class HealAll extends Base {
     public static final String ID = ModHelper.id(HealAll.class);
 
     public HealAll() {
-        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        this.magicNumber = this.baseMagicNumber = 5;
+        super(ID, CardCost.C0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL);
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
     }
 
