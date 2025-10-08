@@ -169,7 +169,7 @@
   },
   "Nana7miMod:HotSpring": {
     "NAME": "一起泡温泉",
-    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌，回复 !M! 点生命。"
+    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌，回复 !M! 点生命。 NL 消耗 。"
   },
   "Nana7miMod:Idle": {
     "NAME": "我给你钱别那么闲",

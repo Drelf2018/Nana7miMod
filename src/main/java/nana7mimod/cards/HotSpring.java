@@ -10,8 +10,9 @@ public class HotSpring extends Base {
     public static final String ID = ModHelper.id(HotSpring.class);
 
     public HotSpring() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 3;
+        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
     }
 
     public void upgrade() {
