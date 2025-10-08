@@ -97,7 +97,7 @@
     "NAME": "愧疚",
     "DESCRIPTIONS": [
       "在其回合开始时，减少 #b",
-      " 点生命然后将 #y愧疚 层数减少 #b30 。"
+      " 点生命，然后将层数减少 #b30 。"
     ]
   },
   "Nana7miMod:HaterPower": {
@@ -145,8 +145,8 @@
   "Nana7miMod:LostPower": {
     "NAME": "失落",
     "DESCRIPTIONS": [
-      "在你的回合开始时获得 #b",
-      " [E] ，然后将 #y失落 层数减少 #b1 。死亡时，获得 [E] 。"
+      "这名敌人死亡时，你获得 [E] 。否则在你的回合开始时获得 #b",
+      " [E] ，然后将层数减少 #b1 。"
     ]
   },
   "Nana7miMod:MonitorPower": {
