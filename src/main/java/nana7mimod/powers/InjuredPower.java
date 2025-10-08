@@ -33,15 +33,6 @@ public class InjuredPower extends AbstractPower {
         AbstractPowerPatch.loadRegion(this, "injured");
     }
 
-    @Override
-    public void reducePower(int reduceAmount) {
-        lostHPLimit -= reduceAmount;
-        if (lostHPLimit < 1) {
-            lostHPLimit = 1;
-        }
-        wasHPLost(null, reduceAmount);
-    }
-
     // 受击
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
