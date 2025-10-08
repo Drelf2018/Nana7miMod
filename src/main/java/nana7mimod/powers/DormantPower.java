@@ -51,6 +51,11 @@ public class DormantPower extends AbstractPower {
     }
 
     @Override
+    public void onRemove() {
+        flash();
+    }
+
+    @Override
     public void updateDescription() {
         if (amount == 0)
             description = DESCRIPTIONS[3];
