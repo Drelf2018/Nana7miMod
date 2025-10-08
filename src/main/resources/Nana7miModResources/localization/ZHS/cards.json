@@ -142,7 +142,8 @@
   },
   "Nana7miMod:God": {
     "NAME": "兄弟们有神！",
-    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。"
+    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。",
+    "UPGRADE_DESCRIPTION": "*心之壁 层数归零。 NL 获得双倍 真言 。"
   },
   "Nana7miMod:Haruhikage": {
     "NAME": "春日影",

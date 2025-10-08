@@ -12,12 +12,14 @@ public class God extends Base {
 
     public God() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(cost - 1);
+            upgradeMagicNumber(1);
+            upgradeDescription();
         }
     }
 
@@ -26,7 +28,7 @@ public class God extends Base {
             if (amount <= 0)
                 return amount;
             for (int i = 0; i < amount; ++i)
-                addToBot(new ApplyPowerAction(p, p, new MantraPower(p, 1)));
+                addToBot(new ApplyPowerAction(p, p, new MantraPower(p, magicNumber)));
             return 0;
         });
     }
