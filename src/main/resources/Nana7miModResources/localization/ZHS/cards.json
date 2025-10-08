@@ -230,7 +230,7 @@
   },
   "Nana7miMod:Logout": {
     "NAME": "用户已注销",
-    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 nana7mimod:失落 。"
   },
   "Nana7miMod:Mark": {
     "NAME": "标记",
