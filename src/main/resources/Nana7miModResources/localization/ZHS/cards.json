@@ -1,7 +1,7 @@
 {
   "Nana7miMod:Accept": {
     "NAME": "和解",
-    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 [E] 。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数 nana7mimod:归零 。 NL 获得等量 [E] 。"
   },
   "Nana7miMod:AllRoundDefend": {
     "NAME": "立体防御",
@@ -29,7 +29,7 @@
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
-    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 *心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "丢弃手牌中所有攻击牌。 NL 每张被丢弃的牌使 nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Back": {
     "NAME": "我回来了",
@@ -46,11 +46,11 @@
   },
   "Nana7miMod:Crack": {
     "NAME": "无限火力",
-    "DESCRIPTION": "所有攻击牌耗能变为 0 。 NL 所有攻击牌在被打出时被 消耗 且使 *心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "所有攻击牌耗能变为 0 。 NL 所有攻击牌在被打出时被 消耗 且使 nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Crazy": {
     "NAME": "彻底疯狂",
-    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， *心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "打出此牌后，你在这个回合内每打出一张攻击牌， nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:CuishaLetsGO": {
     "NAME": "脆鲨启动",
@@ -66,12 +66,12 @@
   },
   "Nana7miMod:Devil": {
     "NAME": "走火入魔",
-    "DESCRIPTION": "每当 *心之壁 层数改变时，抽 !M! 张牌。"
+    "DESCRIPTION": "每当 nana7mimod:心之壁 层数改变时，抽 !M! 张牌。"
   },
   "Nana7miMod:Disappointed": {
     "NAME": "失望",
-    "DESCRIPTION": "*心之壁 层数翻倍。",
-    "UPGRADE_DESCRIPTION": "*心之壁 层数变为三倍。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数翻倍。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:心之壁 层数变为三倍。"
   },
   "Nana7miMod:Disclaimer": {
     "NAME": "免责声明",
@@ -80,7 +80,7 @@
   },
   "Nana7miMod:DropCoins": {
     "NAME": "爆金币",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 nana7mimod:失落 状态， *心之壁 层数增加 !M! 并且获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 nana7mimod:失落 状态， nana7mimod:心之壁 层数增加 !M! 并且获得 [E] 。"
   },
   "Nana7miMod:Dumpling": {
     "NAME": "海子",
@@ -122,7 +122,7 @@
   },
   "Nana7miMod:Fraud": {
     "NAME": "使诈",
-    "DESCRIPTION": "*心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Freedom": {
     "NAME": "是自由",
@@ -142,8 +142,8 @@
   },
   "Nana7miMod:God": {
     "NAME": "兄弟们有神！",
-    "DESCRIPTION": "*心之壁 层数归零。 NL 获得等量 真言 。",
-    "UPGRADE_DESCRIPTION": "*心之壁 层数归零。 NL 获得双倍 真言 。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数 nana7mimod:归零 。 NL 获得等量 真言 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:心之壁 层数 nana7mimod:归零 。 NL 获得双倍 真言 。"
   },
   "Nana7miMod:Haruhikage": {
     "NAME": "春日影",
@@ -154,7 +154,7 @@
   },
   "Nana7miMod:Hate": {
     "NAME": "仇恨",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL *心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL nana7mimod:心之壁 层数增加 !M! 。 NL 能被多次 升级 。"
   },
   "Nana7miMod:HealAll": {
     "NAME": "桃园结义",
@@ -181,11 +181,11 @@
   },
   "Nana7miMod:IdolForm": {
     "NAME": "偶像形态",
-    "DESCRIPTION": "消耗 所有攻击牌。 NL 不再需要 *心之壁 。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
+    "DESCRIPTION": "消耗 所有攻击牌。 NL 不再需要 nana7mimod:心之壁 。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
   },
   "Nana7miMod:ImpotentRage": {
     "NAME": "无能狂怒",
-    "DESCRIPTION": "没有 [E] 时才能被打出。 NL 本回合造成 *双倍伤害 。 NL *心之壁 层数增加 !M! 。",
+    "DESCRIPTION": "没有 [E] 时才能被打出。 NL 本回合造成 *双倍伤害 。 NL nana7mimod:心之壁 层数增加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       "我还有能量。"
     ]
@@ -196,12 +196,12 @@
   },
   "Nana7miMod:Katon": {
     "NAME": "火遁·豪火灭却",
-    "DESCRIPTION": "*心之壁 层数归零。 NL 造成 !D! 点伤害等量次数。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数 nana7mimod:归零 。 NL 造成 !D! 点伤害等量次数。"
   },
   "Nana7miMod:KillingDesire": {
     "NAME": "杀戮欲望",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，每场战斗开始时获得的 *心之壁 层数增加 !M! 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，每场战斗开始时获得的 *心之壁 层数增加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，每场战斗开始时获得的 nana7mimod:心之壁 层数增加 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，每场战斗开始时获得的 nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
@@ -342,7 +342,7 @@
   },
   "Nana7miMod:Sulking": {
     "NAME": "生闷气",
-    "DESCRIPTION": "*心之壁 层数增加 !M! 。 NL 在你的回合结束时，失去 1 点 力量 。"
+    "DESCRIPTION": "nana7mimod:心之壁 层数增加 !M! 。 NL 在你的回合结束时，失去 1 点 力量 。"
   },
   "Nana7miMod:TalkToTheHand": {
     "NAME": "以手拒之",
@@ -372,6 +372,6 @@
   },
   "Nana7miMod:VoidEnemy": {
     "NAME": "虚空索敌",
-    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL *心之壁 层数减少 2 。"
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL nana7mimod:心之壁 层数减少 2 。"
   }
 }
