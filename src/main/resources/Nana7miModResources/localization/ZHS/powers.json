@@ -29,13 +29,6 @@
       "出脑后"
     ]
   },
-  "Nana7miMod:BleedingPower": {
-    "NAME": "流血",
-    "DESCRIPTIONS": [
-      "受到 #y攻击 时，失去 #b",
-      " 点生命。"
-    ]
-  },
   "Nana7miMod:BouquetPower": {
     "NAME": "告白花束",
     "DESCRIPTIONS": [

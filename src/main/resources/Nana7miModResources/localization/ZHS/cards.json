@@ -300,8 +300,8 @@
     "DESCRIPTION": "如果你在回合中不打出任何攻击牌，在你的回合结束时，回复 5 点生命。"
   },
   "Nana7miMod:Shark": {
-    "NAME": "七海大鲨鱼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:流血 。"
+    "NAME": "鲨旋风",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃 !M! 张牌。 NL nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Silence": {
     "NAME": "还能说话吗",
