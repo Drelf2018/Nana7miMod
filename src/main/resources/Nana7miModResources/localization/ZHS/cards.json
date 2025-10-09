@@ -344,6 +344,10 @@
     "NAME": "生闷气",
     "DESCRIPTION": "nana7mimod:心之壁 层数增加 !M! 。 NL 在你的回合结束时，失去 1 点 力量 。"
   },
+  "Nana7miMod:Summon": {
+    "NAME": "召唤术式",
+    "DESCRIPTION": "抽 2 张牌。 NL 额外抽取你 nana7mimod:心之壁 层数张牌，最多 !M! 张。"
+  },
   "Nana7miMod:TalkToTheHand": {
     "NAME": "以手拒之",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
