@@ -271,6 +271,10 @@
     "DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。 NL 虚无 。",
     "UPGRADE_DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。"
   },
+  "Nana7miMod:Reality": {
+    "NAME": "认清现实",
+    "DESCRIPTION": "移除你身上的所有负面效果。"
+  },
   "Nana7miMod:Reluctant": {
     "NAME": "勉为其难",
     "DESCRIPTION": "给予 !M! 层 nana7mimod:入脑 。 NL 给予 5 层 nana7mimod:反踩 。 NL 消耗 。"

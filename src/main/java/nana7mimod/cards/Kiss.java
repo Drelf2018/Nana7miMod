@@ -3,6 +3,7 @@ package nana7mimod.cards;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +14,6 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.HexPower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 import com.megacrit.cardcrawl.powers.NoDrawPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -58,7 +58,6 @@ public class Kiss extends Base {
         addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -magicNumber)));
         addToBot(new ApplyPowerAction(p, m, new DexterityPower(p, -magicNumber)));
         addToBot(new ApplyPowerAction(p, m, new EnergyDownPower(p, magicNumber)));
-        addToBot(new ApplyPowerAction(p, m, new HexPower(p, magicNumber)));
         addToBot(new ApplyPowerAction(p, m, new NoDrawPower(p)));
         addToBot(new ApplyPowerAction(p, m, new EntanglePower(p)));
         addToBot(new ApplyPowerAction(p, m, new DrawReductionPower(p, magicNumber)));
@@ -67,5 +66,6 @@ public class Kiss extends Base {
         addToBot(new ApplyPowerAction(p, m, new FrailPower(p, magicNumber, true)));
         addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber, true)));
         addToBot(new ApplyPowerAction(p, m, new ConstrictedPower(p, m, magicNumber)));
+        addToBot(new MakeTempCardInHandAction(new Reality()));
     }
 }
