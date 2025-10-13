@@ -16,6 +16,13 @@ public class KyojinkaSmokeEffect extends com.megacrit.cardcrawl.vfx.combat.Smoke
         this.y = y;
     }
 
+    public class SmokeBlurEffect extends com.megacrit.cardcrawl.vfx.combat.SmokeBlurEffect {
+        public SmokeBlurEffect(float x, float y, Color color) {
+            super(x, y);
+            this.color = color;
+        }
+    }
+
     @Override
     public void update() {
         if (this.duration == 0.2F) {

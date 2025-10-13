@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import java.util.ArrayList;
 import nana7mimod.actions.ClothingAction;
-import nana7mimod.actions.WaitAction;
 import nana7mimod.cards.Accept;
 import nana7mimod.cards.Defend;
 import nana7mimod.cards.Strike;
@@ -59,6 +59,17 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     public void TakeOffClothes() {
         img = ImageMaster.loadImage(image(getCharacterImage()));
         corpseImg = ImageMaster.loadImage(image("corpse.png"));
+    }
+
+    public class WaitAction extends AbstractGameAction {
+        public WaitAction(float setDur) {
+            this.duration = setDur;
+            this.actionType = ActionType.WAIT;
+        }
+
+        public void update() {
+            tickDuration();
+        }
     }
 
     public void Kyojinka() {
