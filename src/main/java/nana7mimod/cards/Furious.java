@@ -11,6 +11,7 @@ public class Furious extends Base {
     public Furious() {
         super(ID, CardCost.C1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 4;
+        this.isInnate = true;
     }
 
     public void upgrade() {
