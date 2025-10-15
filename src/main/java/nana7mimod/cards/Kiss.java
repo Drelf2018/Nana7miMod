@@ -28,7 +28,7 @@ public class Kiss extends Base {
     public static final String ID = ModHelper.id(Kiss.class);
 
     public Kiss() {
-        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 5;
         this.isInnate = true;
         this.purgeOnUse = true;
