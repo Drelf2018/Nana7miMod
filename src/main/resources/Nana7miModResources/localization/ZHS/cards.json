@@ -318,8 +318,7 @@
   },
   "Nana7miMod:Sleepy": {
     "NAME": "刚醒",
-    "DESCRIPTION": "本回合进入 愤怒 。 NL 对随机敌人造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 点 敏捷 。"
+    "DESCRIPTION": "本回合进入 愤怒 。 NL 对随机敌人造成 !D! 点伤害。"
   },
   "Nana7miMod:Slip": {
     "NAME": "哎呀滑了",
