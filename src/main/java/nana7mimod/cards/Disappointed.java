@@ -9,7 +9,7 @@ public class Disappointed extends Base {
     public static final String ID = ModHelper.id(Disappointed.class);
 
     public Disappointed() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
