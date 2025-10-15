@@ -18,6 +18,7 @@ public class Ask extends Base implements CustomSavable<Boolean> {
 
     public Ask() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        this.magicNumber = this.baseMagicNumber = 1;
         this.cardsToPreview = new Game();
     }
 
@@ -53,7 +54,7 @@ public class Ask extends Base implements CustomSavable<Boolean> {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

@@ -24,8 +24,7 @@
   },
   "Nana7miMod:Ask": {
     "NAME": "那我问你",
-    "DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:抉择 nana7mimod:游戏 两次。"
+    "DESCRIPTION": "选择 !M! 张 nana7mimod:游戏 牌立即打出。"
   },
   "Nana7miMod:Axe": {
     "NAME": "收起斧头",
