@@ -23,7 +23,7 @@ public class Train extends Base {
     public Train(boolean multi) {
         super(ID, multi ? 1 : 0);
         this.isMultiDamage = multi;
-        this.damage = multi ? 5 : 8;
+        this.damage = multi ? 7 : 10;
         this.baseDamage = this.damage;
     }
 
