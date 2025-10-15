@@ -1,8 +1,5 @@
 package nana7mimod.cards;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.stream.Collectors;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -21,51 +18,49 @@ import nana7mimod.helpers.ModHelper;
 public class Game extends Base {
     public static final String ID = ModHelper.id(Game.class);
 
-    public static final Map<String, GameStrings> GAMES = GameStrings.load();
+    public static final GameStrings GAMES = GameStrings.load();
 
-    public static final ArrayList<String> INCORRECT;
+    public static final String[] PLAYED = GAMES.PLAYED.keySet().toArray(new String[0]);
 
-    public static final ArrayList<String> CORRECT;
+    public static final String[] UNPLAYED = GAMES.UNPLAYED.keySet().toArray(new String[0]);
 
-    static {
-        CORRECT = GAMES.entrySet().stream().filter(entry -> Boolean.TRUE.equals(entry.getValue().PLAYED)).map(Map.Entry::getKey)
-                .collect(Collectors.toCollection(ArrayList::new));
-        INCORRECT = GAMES.entrySet().stream().filter(entry -> Boolean.FALSE.equals(entry.getValue().PLAYED)).map(Map.Entry::getKey)
-                .collect(Collectors.toCollection(ArrayList::new));
-    }
-
-    private boolean incorrect;
+    private boolean played;
 
     public Game() {
         super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
         this.damage = this.baseDamage = 10;
     }
 
-    public Game(String name, Boolean incorrect) {
-        super(ID, GAMES.get(name).NAME, ModHelper.cards("game", name));
+    public Game(String name, String img, Boolean played) {
+        super(ID, name, ModHelper.cards("game", img));
         this.damage = this.baseDamage = 10;
-        this.incorrect = incorrect;
+        this.played = played;
     }
 
-    public static Game Correct(int index) {
-        return new Game(CORRECT.get(index), false);
+    public static Game Played() {
+        String img = PLAYED[AbstractDungeon.cardRandomRng.random(PLAYED.length - 1)];
+        return new Game(GAMES.PLAYED.get(img), img, true);
     }
 
-    public static Game Incorrect(int index) {
-        return new Game(INCORRECT.get(index), true);
+    public static Game Unplayed() {
+        String img = UNPLAYED[AbstractDungeon.cardRandomRng.random(UNPLAYED.length - 1)];
+        return new Game(GAMES.UNPLAYED.get(img), img, false);
+    }
+
+    public static Game SlayTheSpire() {
+        return new Game("杀戮尖塔", "杀戮尖塔", true);
     }
 
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (incorrect)
-            addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
-        else {
+        if (played) {
             isMultiDamage = true;
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
             addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
-        }
+        } else
+            addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }
 
     public void upgrade() {

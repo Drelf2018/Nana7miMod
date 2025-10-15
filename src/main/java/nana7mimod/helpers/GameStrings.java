@@ -8,14 +8,14 @@ import com.google.gson.reflect.TypeToken;
 import basemod.BaseMod;
 
 public class GameStrings {
-    public String NAME;
-    public Boolean PLAYED;
+    public Map<String, String> PLAYED;
+    public Map<String, String> UNPLAYED;
 
     public GameStrings() {}
 
-    public static Map<String, GameStrings> load() {
+    public static GameStrings load() {
         String json = Gdx.files.internal(ModHelper.L10N("games.json")).readString(String.valueOf(StandardCharsets.UTF_8));
-        Type gameMap = new TypeToken<Map<String, GameStrings>>() {}.getType();
+        Type gameMap = new TypeToken<GameStrings>() {}.getType();
         return BaseMod.gson.fromJson(json, gameMap);
     }
 }
