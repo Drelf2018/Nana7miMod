@@ -157,7 +157,7 @@
   },
   "Nana7miMod:HealAll": {
     "NAME": "桃园结义",
-    "DESCRIPTION": "nana7mimod:全场 回复 !M! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "你和所有敌人回复 !M! 点生命。 NL 消耗 。"
   },
   "Nana7miMod:Heritage": {
     "NAME": "美美吃遗产咯",
