@@ -12,7 +12,7 @@ public class Haruhikage extends Base {
     public static final String ID = ModHelper.id(Haruhikage.class);
 
     public Haruhikage() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }

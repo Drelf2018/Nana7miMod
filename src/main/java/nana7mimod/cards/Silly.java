@@ -12,7 +12,7 @@ public class Silly extends Base {
     public static final String ID = ModHelper.id(Silly.class);
 
     public Silly() {
-        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 3;
     }
 

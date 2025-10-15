@@ -11,7 +11,7 @@ public class Scared extends Base {
     public static final String ID = ModHelper.id(Scared.class);
 
     public Scared() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.block = this.baseBlock = 15;
         this.magicNumber = this.baseMagicNumber = 1;
     }
