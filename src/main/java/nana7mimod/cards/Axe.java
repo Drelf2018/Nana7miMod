@@ -12,14 +12,14 @@ public class Axe extends Base {
     public static final String ID = ModHelper.id(Axe.class);
 
     public Axe() {
-        super(ID, CardCost.C2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(cost - 1);
+            upgradeMagicNumber(1);
         }
     }
 
