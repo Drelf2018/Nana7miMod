@@ -28,6 +28,10 @@ public class ModHelper {
         return RESOURCES + "/image/characters/" + character + "/" + path;
     }
 
+    public static String audio(String path) {
+        return RESOURCES + "/audio/" + path;
+    }
+
     public static String L10N(String path) {
         String local = RESOURCES + "/localization/" + Settings.language.name();
         if (Gdx.files.internal(local).exists())
