@@ -22,6 +22,8 @@ public class HaterPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private boolean hasTriggeredThisTurn = false;
+
     public HaterPower(AbstractCreature owner, int amount) {
         this.name = powerStrings.NAME;
         this.ID = POWER_ID;
@@ -35,8 +37,11 @@ public class HaterPower extends AbstractPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        flashWithoutSound();
-        addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE));
+        if (!hasTriggeredThisTurn && info.type == DamageType.NORMAL) {
+            flash();
+            addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount, true), DamageType.THORNS, AttackEffect.FIRE));
+            hasTriggeredThisTurn = true;
+        }
     }
 
     @Override
@@ -46,6 +51,11 @@ public class HaterPower extends AbstractPower {
                 if (c.cardID.equals(Mark.ID))
                     addToBot(new DiscardToHandAction(c));
         return damageAmount;
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        hasTriggeredThisTurn = false;
     }
 
     @Override

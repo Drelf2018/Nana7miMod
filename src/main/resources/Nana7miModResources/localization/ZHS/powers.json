@@ -96,7 +96,7 @@
   "Nana7miMod:HaterPower": {
     "NAME": "小黑鲨",
     "DESCRIPTIONS": [
-      "每当你被 #y小黑鲨 #y攻击 时，对所有敌人造成 #b",
+      "每回合 #y首次 被 #y小黑鲨 #y攻击 时，对所有敌人造成 #b",
       " 点伤害。"
     ]
   },

@@ -10,14 +10,14 @@ public class Mark extends Base {
     public static final String ID = ModHelper.id(Mark.class);
 
     public Mark() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.magicNumber = this.baseMagicNumber = 5;
+        super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(5);
+            upgradeMagicNumber(2);
         }
     }
 
