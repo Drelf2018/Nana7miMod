@@ -15,7 +15,7 @@ public class CharacterHelper {
         }
 
         public Nana7mi(AbstractPlayer player) {
-            addCharacter(player);
+            addCharacter(player, "button.png", "portrait2.png");
         }
     }
 
@@ -33,10 +33,12 @@ public class CharacterHelper {
                 ModHelper.characters(charName, "card/cost_small.png"));
     }
 
-    public void addCharacter(AbstractPlayer player) {
+    public void addCharacter(AbstractPlayer player, String button, String portrait) {
         String charName = getClass().getSimpleName().toLowerCase();
-        BaseMod.addCharacter(player, //
-                ModHelper.characters(charName, "button.png"), //
-                ModHelper.characters(charName, "portrait.png"));
+        BaseMod.addCharacter(player, ModHelper.characters(charName, button), ModHelper.characters(charName, portrait));
+    }
+
+    public void addCharacter(AbstractPlayer player) {
+        this.addCharacter(player, "button.png", "portrait.png");
     }
 }
