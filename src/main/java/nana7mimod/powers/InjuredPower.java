@@ -56,7 +56,7 @@ public class InjuredPower extends AbstractPower {
 
     // 回合开始重置已攻击敌人列表
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         attackedCreatures.clear();
     }
 
