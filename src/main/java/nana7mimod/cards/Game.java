@@ -1,5 +1,6 @@
 package nana7mimod.cards;
 
+import java.util.Map;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -12,13 +13,18 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import nana7mimod.helpers.GameStrings;
+import basemod.BaseMod;
 import nana7mimod.helpers.ModHelper;
 
 public class Game extends Base {
+    public static class GameStrings {
+        public Map<String, String> PLAYED;
+        public Map<String, String> UNPLAYED;
+    }
+
     public static final String ID = ModHelper.id(Game.class);
 
-    public static final GameStrings GAMES = GameStrings.load();
+    public static final GameStrings GAMES = BaseMod.gson.fromJson(ModHelper.games(), GameStrings.class);
 
     public static final String[] PLAYED = GAMES.PLAYED.keySet().toArray(new String[0]);
 

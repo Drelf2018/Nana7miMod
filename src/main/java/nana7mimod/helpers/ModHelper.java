@@ -1,6 +1,6 @@
 package nana7mimod.helpers;
 
-import basemod.BaseMod;
+import java.nio.charset.StandardCharsets;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.core.Settings;
@@ -32,19 +32,8 @@ public class ModHelper {
         return RESOURCES + "/audio/" + path;
     }
 
-    public static String L10N(String path) {
-        String local = RESOURCES + "/localization/" + Settings.language.name();
-        if (Gdx.files.internal(local).exists())
-            return local + "/" + path;
-        return RESOURCES + "/localization/ZHS/" + path;
-    }
-
     public static String cards(String type, String id) {
-        String path = RESOURCES + "/image/cards/" + type;
-        String card = path + "/" + ModHelper.unwrap(id) + ".png";
-        if (Gdx.files.internal(card).exists())
-            return card;
-        return path + ".png";
+        return RESOURCES + "/image/cards/" + type + "/" + ModHelper.unwrap(id) + ".png";
     }
 
     public static String cards(CardType type, String id) {
@@ -55,8 +44,22 @@ public class ModHelper {
         return RESOURCES + "/image/relics/" + ModHelper.unwrap(id) + ".png";
     }
 
-    public static void loadStrings(Class<?> stringType) {
-        String local = ModHelper.L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
-        BaseMod.loadCustomStringsFile(stringType, local);
+    public static String L10N(String path) {
+        String local = RESOURCES + "/localization/" + Settings.language.name();
+        if (Gdx.files.internal(local).exists())
+            return local + "/" + path;
+        return RESOURCES + "/localization/ZHS/" + path;
+    }
+
+    public static String strings(Class<?> stringType) {
+        return ModHelper.L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
+    }
+
+    public static String games() {
+        return Gdx.files.internal(ModHelper.L10N("games.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    public static String keywords() {
+        return Gdx.files.internal(ModHelper.L10N("keywords.json")).readString(String.valueOf(StandardCharsets.UTF_8));
     }
 }

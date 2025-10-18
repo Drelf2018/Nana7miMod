@@ -32,6 +32,6 @@ public class Crack extends Base {
         addToBot(new VFXAction(p, new VerticalAuraEffect(Color.PURPLE, p.hb.cX, p.hb.cY), 0.33F));
         addToBot(new VFXAction(p, new VerticalAuraEffect(Color.CYAN, p.hb.cX, p.hb.cY), 0.0F));
         addToBot(new VFXAction(p, new BorderLongFlashEffect(Color.MAGENTA), 0.0F, true));
-        addToBot(new ApplyPowerAction(p, p, new CrackPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new CrackPower(p, magicNumber)));
     }
 }

@@ -8,10 +8,7 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -19,7 +16,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.StanceStrings;
-import java.nio.charset.StandardCharsets;
 import nana7mimod.cards.Base;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.helpers.ModHelper;
@@ -63,20 +59,17 @@ public class Nana7miMod
     // 向 basemod 注册关键词
     @Override
     public void receiveEditKeywords() {
-        FileHandle file = Gdx.files.internal(ModHelper.L10N("keywords.json"));
-        String json = file.readString(String.valueOf(StandardCharsets.UTF_8));
-        Keyword[] keywords = new Gson().fromJson(json, Keyword[].class);
-        if (keywords != null)
-            for (Keyword keyword : keywords)
-                BaseMod.addKeyword(ModHelper.NAME.toLowerCase(), keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+        Keyword[] keywords = BaseMod.gson.fromJson(ModHelper.keywords(), Keyword[].class);
+        for (Keyword keyword : keywords)
+            BaseMod.addKeyword(ModHelper.NAME.toLowerCase(), keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
     }
 
-    // 加载相应语言的本地化内容
+    // 向 basemod 加载相应语言的本地化内容
     public void receiveEditStrings() {
-        ModHelper.loadStrings(CardStrings.class); // 卡牌
-        ModHelper.loadStrings(RelicStrings.class); // 遗物
-        ModHelper.loadStrings(PowerStrings.class); // 能力
-        ModHelper.loadStrings(StanceStrings.class); // 姿态
-        ModHelper.loadStrings(CharacterStrings.class); // 人物
+        BaseMod.loadCustomStringsFile(CardStrings.class, ModHelper.strings(CardStrings.class));// 卡牌
+        BaseMod.loadCustomStringsFile(RelicStrings.class, ModHelper.strings(RelicStrings.class)); // 遗物
+        BaseMod.loadCustomStringsFile(PowerStrings.class, ModHelper.strings(PowerStrings.class)); // 能力
+        BaseMod.loadCustomStringsFile(StanceStrings.class, ModHelper.strings(StanceStrings.class)); // 姿态
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, ModHelper.strings(CharacterStrings.class));// 人物
     }
 }
