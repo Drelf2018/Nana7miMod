@@ -29,13 +29,6 @@ public abstract class Base extends CustomCard {
         super(id, name, img, -2, getDescription(id), CardType.STATUS, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
     }
 
-    public Base(String id, int isMultiDamage) {
-        super(id, strings(id).EXTENDED_DESCRIPTION[isMultiDamage], ModHelper.cards(CardType.ATTACK, id + isMultiDamage), 0, getDescription(id),
-                CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, isMultiDamage == 1 ? CardTarget.ALL_ENEMY : CardTarget.ENEMY);
-        this.rawDescription += strings(id).EXTENDED_DESCRIPTION[2 + isMultiDamage];
-        initializeDescription();
-    }
-
     public static CardStrings strings(String id) {
         return CardCrawlGame.languagePack.getCardStrings(id);
     }

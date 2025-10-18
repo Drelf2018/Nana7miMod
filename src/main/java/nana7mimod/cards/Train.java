@@ -20,11 +20,14 @@ public class Train extends Base {
         super(ID, CardCost.C0, CardType.ATTACK, CardTarget.NONE);
     }
 
-    public Train(boolean multi) {
-        super(ID, multi ? 1 : 0);
-        this.isMultiDamage = multi;
-        this.damage = multi ? 7 : 10;
-        this.baseDamage = this.damage;
+    public Train(CardTarget target) {
+        super(ID + target.ordinal(), CardCost.C0, CardType.ATTACK, target);
+        if (target == CardTarget.ENEMY) {
+            this.damage = this.baseDamage = 10;
+        } else if (target == CardTarget.ALL_ENEMY) {
+            this.isMultiDamage = true;
+            this.damage = this.baseDamage = 7;
+        }
     }
 
     public void upgrade() {

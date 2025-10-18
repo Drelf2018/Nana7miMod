@@ -10,10 +10,10 @@ public class Puzzle extends Base {
     public static final String ID = ModHelper.id(Puzzle.class);
 
     public Puzzle() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.isEthereal = true;
         this.returnToHand = true;
-        MultiCardPreview.add(this, new Train(false), new Train(true));
+        MultiCardPreview.add(this, new Train(CardTarget.ENEMY), new Train(CardTarget.ALL_ENEMY));
     }
 
     public void upgrade() {
@@ -25,6 +25,6 @@ public class Puzzle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DiscoveryAction(new Train(false), new Train(true)));
+        addToBot(new DiscoveryAction(new Train(CardTarget.ENEMY), new Train(CardTarget.ALL_ENEMY)));
     }
 }

@@ -360,13 +360,15 @@
   },
   "Nana7miMod:Train": {
     "NAME": "列车",
-    "DESCRIPTION": "nana7mimod:列车 。",
-    "EXTENDED_DESCRIPTION": [
-      "一个越狱犯",
-      "五只棕熊",
-      " NL 造成 !D! 点伤害。",
-      " NL 对所有敌人造成 !D! 点伤害。"
-    ]
+    "DESCRIPTION": "nana7mimod:列车 。"
+  },
+  "Nana7miMod:Train0": {
+    "NAME": "一个越狱犯",
+    "DESCRIPTION": "nana7mimod:列车 。 NL 造成 !D! 点伤害。"
+  },
+  "Nana7miMod:Train1": {
+    "NAME": "五只棕熊",
+    "DESCRIPTION": "nana7mimod:列车 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "Nana7miMod:Unicycle": {
     "NAME": "独轮车",
