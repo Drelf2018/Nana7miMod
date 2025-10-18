@@ -1,7 +1,6 @@
 package nana7mimod.cards;
 
 import java.util.Map;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -30,41 +29,38 @@ public class Game extends Base {
 
     public static final String[] UNPLAYED = GAMES.UNPLAYED.keySet().toArray(new String[0]);
 
-    private boolean played;
-
     public Game() {
         super(ID, CardCost.CN, CardType.STATUS, CardTarget.NONE);
         this.damage = this.baseDamage = 10;
     }
 
-    public Game(String name, String img, Boolean played) {
-        super(ID, name, ModHelper.cards("game", img));
+    public Game(String name, String img, CardTarget target) {
+        super(ID, name, ModHelper.cards("game", img), target);
         this.damage = this.baseDamage = 10;
-        this.played = played;
+        this.isMultiDamage = target == CardTarget.ALL_ENEMY;
     }
 
     public static Game Played() {
         String img = PLAYED[AbstractDungeon.cardRandomRng.random(PLAYED.length - 1)];
-        return new Game(GAMES.PLAYED.get(img), img, true);
+        return new Game(GAMES.PLAYED.get(img), img, CardTarget.ALL_ENEMY);
     }
 
     public static Game Unplayed() {
         String img = UNPLAYED[AbstractDungeon.cardRandomRng.random(UNPLAYED.length - 1)];
-        return new Game(GAMES.UNPLAYED.get(img), img, false);
+        return new Game(GAMES.UNPLAYED.get(img), img, CardTarget.SELF);
     }
 
     public static Game SlayTheSpire() {
-        return new Game("杀戮尖塔", "杀戮尖塔", true);
+        return new Game("杀戮尖塔", "杀戮尖塔", CardTarget.ALL_ENEMY);
     }
 
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (played) {
-            isMultiDamage = true;
+        if (isMultiDamage) {
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AttackEffect.NONE));
         } else
             addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }

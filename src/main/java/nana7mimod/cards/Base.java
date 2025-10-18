@@ -25,8 +25,8 @@ public abstract class Base extends CustomCard {
         super(id, getName(id), ModHelper.cards(type, id), cost.ordinal() - 2, getDescription(id), type, color, rarity, target);
     }
 
-    public Base(String id, String name, String img) {
-        super(id, name, img, -2, getDescription(id), CardType.STATUS, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
+    public Base(String id, String name, String img, CardTarget target) {
+        super(id, name, img, -2, getDescription(id), CardType.STATUS, CardColor.COLORLESS, CardRarity.SPECIAL, target);
     }
 
     public static CardStrings strings(String id) {

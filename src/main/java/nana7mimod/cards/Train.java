@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -22,12 +21,8 @@ public class Train extends Base {
 
     public Train(CardTarget target) {
         super(ID + target.ordinal(), CardCost.C0, CardType.ATTACK, target);
-        if (target == CardTarget.ENEMY) {
-            this.damage = this.baseDamage = 10;
-        } else if (target == CardTarget.ALL_ENEMY) {
-            this.isMultiDamage = true;
-            this.damage = this.baseDamage = 7;
-        }
+        this.isMultiDamage = target == CardTarget.ALL_ENEMY;
+        this.damage = this.baseDamage = this.isMultiDamage ? 7 : 10;
     }
 
     public void upgrade() {
@@ -41,7 +36,7 @@ public class Train extends Base {
         if (isMultiDamage) {
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AttackEffect.NONE));
         } else
             addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.SLASH_DIAGONAL));
     }

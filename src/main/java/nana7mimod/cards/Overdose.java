@@ -1,6 +1,6 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -33,7 +33,7 @@ public class Overdose extends Base {
     public void use(AbstractPlayer p, AbstractMonster n) {
         addToBot(new SFXAction("ATTACK_HEAVY"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AttackEffect.NONE));
         addToBot(new MakeTempCardInDrawPileAction(new Wound(), magicNumber, true, true));
     }
 }
