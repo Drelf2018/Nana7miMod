@@ -8,9 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class BetrayPower extends AbstractPower {
+public class BetrayPower extends Base {
     public static final String POWER_ID = ModHelper.id(BetrayPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -18,21 +17,12 @@ public class BetrayPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public BetrayPower(AbstractCreature owner, int amount, boolean delay) {
-        if (delay)
-            this.name = DESCRIPTIONS[2] + powerStrings.NAME;
-        else
-            this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        super(POWER_ID, delay ? DESCRIPTIONS[2] + powerStrings.NAME : powerStrings.NAME, owner, amount, PowerType.BUFF);
         this.isTurnBased = true;
-
         if (delay)
             this.description = DESCRIPTIONS[0] + 0 + DESCRIPTIONS[1];
         else
             updateDescription();
-        AbstractPowerPatch.loadRegion(this, "betray");
     }
 
     @Override

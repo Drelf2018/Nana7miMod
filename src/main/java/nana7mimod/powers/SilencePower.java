@@ -5,11 +5,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class SilencePower extends AbstractPower {
+public class SilencePower extends Base {
     public static final String POWER_ID = ModHelper.id(SilencePower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -17,15 +15,8 @@ public class SilencePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public SilencePower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.DEBUFF;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.DEBUFF);
         this.isTurnBased = true;
-
-        updateDescription();
-        AbstractPowerPatch.loadRegion(this, "silence");
     }
 
     @Override

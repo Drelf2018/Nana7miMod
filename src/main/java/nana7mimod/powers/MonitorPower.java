@@ -8,9 +8,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class MonitorPower extends AbstractPower {
+public class MonitorPower extends Base {
     public static final String POWER_ID = ModHelper.id(MonitorPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -18,14 +17,7 @@ public class MonitorPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public MonitorPower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = amount == -1 ? PowerType.BUFF : PowerType.DEBUFF;
-
-        updateDescription();
-        AbstractPowerPatch.loadRegion(this, "monitor");
+        super(POWER_ID, powerStrings.NAME, owner, amount, amount == -1 ? PowerType.BUFF : PowerType.DEBUFF);
     }
 
     @Override

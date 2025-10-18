@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
 
-public class DevilPower extends AbstractPower {
+public class DevilPower extends Base {
     public static final String POWER_ID = ModHelper.id(DevilPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -14,14 +14,7 @@ public class DevilPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public DevilPower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
-
-        loadRegion("darkembrace");
-        updateDescription();
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.BUFF, "darkembrace");
     }
 
     // 获取角色走火入魔程度

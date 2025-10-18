@@ -19,9 +19,8 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class ATFieldPower extends AbstractPower {
+public class ATFieldPower extends Base {
     public static final String POWER_ID = ModHelper.id(ATFieldPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -29,15 +28,8 @@ public class ATFieldPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public ATFieldPower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.BUFF);
         this.canGoNegative = true;
-
-        updateDescription();
-        AbstractPowerPatch.loadRegion(this, "atfield");
     }
 
     // 获取角色心之壁

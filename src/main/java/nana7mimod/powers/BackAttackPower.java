@@ -11,12 +11,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.SurroundedPower;
 import com.megacrit.cardcrawl.vfx.combat.FlickCoinEffect;
 import nana7mimod.helpers.ModHelper;
 
-public class BackAttackPower extends AbstractPower {
+public class BackAttackPower extends Base {
     public static final String POWER_ID = ModHelper.id(BackAttackPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -29,21 +28,11 @@ public class BackAttackPower extends AbstractPower {
     private boolean hasSurrounded;
 
     public BackAttackPower(AbstractPlayer owner, int amount, boolean flip) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.BUFF, flip ? "backAttack2" : "backAttack");
         this.drawX = owner.drawX;
         this.drawY = owner.drawY;
         this.flipHorizontal = owner.flipHorizontal;
         this.hasSurrounded = owner.hasPower(SurroundedPower.POWER_ID);
-
-        updateDescription();
-        if (flip)
-            loadRegion("backAttack2");
-        else
-            loadRegion("backAttack");
     }
 
     @Override
@@ -74,6 +63,6 @@ public class BackAttackPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

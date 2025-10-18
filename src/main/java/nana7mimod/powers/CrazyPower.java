@@ -7,11 +7,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class CrazyPower extends AbstractPower {
+public class CrazyPower extends Base {
     public static final String POWER_ID = ModHelper.id(CrazyPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -19,14 +17,7 @@ public class CrazyPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public CrazyPower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
-
-        updateDescription();
-        AbstractPowerPatch.loadRegion(this, "crazy");
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.BUFF);
     }
 
     @Override

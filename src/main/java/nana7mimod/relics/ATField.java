@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.powers.InjuredPower;
 import nana7mimod.powers.ATFieldPower;
+import nana7mimod.powers.InjuredPower;
 
 public class ATField extends CustomRelic {
     public static final String ID = ModHelper.id(ATField.class);

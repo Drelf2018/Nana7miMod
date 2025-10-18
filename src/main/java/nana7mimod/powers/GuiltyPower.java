@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.actions.LightningAction;
 import nana7mimod.helpers.ModHelper;
 
-public class GuiltyPower extends AbstractPower {
+public class GuiltyPower extends Base {
     public static final String POWER_ID = ModHelper.id(GuiltyPower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -20,16 +19,9 @@ public class GuiltyPower extends AbstractPower {
     private AbstractCreature source;
 
     public GuiltyPower(AbstractCreature owner, AbstractCreature source, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.DEBUFF, "storm");
         this.source = source;
-        this.amount = amount;
-        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
-
-        updateDescription();
-        loadRegion("storm");
     }
 
     // 天雷滚滚我好怕怕

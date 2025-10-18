@@ -4,10 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
 
-public class GetHeritagePower extends AbstractPower {
+public class GetHeritagePower extends Base {
     public static final String POWER_ID = ModHelper.id(GetHeritagePower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -15,15 +14,8 @@ public class GetHeritagePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public GetHeritagePower(AbstractCreature owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.BUFF, "thievery");
         this.isTurnBased = true;
-
-        updateDescription();
-        loadRegion("thievery");
     }
 
     @Override

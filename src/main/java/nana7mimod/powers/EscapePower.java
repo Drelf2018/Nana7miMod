@@ -5,11 +5,9 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.patches.AbstractPowerPatch;
 
-public class EscapePower extends AbstractPower {
+public class EscapePower extends Base {
     public static final String POWER_ID = ModHelper.id(EscapePower.class);
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -17,15 +15,8 @@ public class EscapePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public EscapePower(AbstractMonster owner, int amount) {
-        this.name = powerStrings.NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.DEBUFF;
+        super(POWER_ID, powerStrings.NAME, owner, amount, PowerType.DEBUFF);
         this.isTurnBased = true;
-
-        updateDescription();
-        AbstractPowerPatch.loadRegion(this, "escape");
     }
 
     @Override
@@ -40,6 +31,6 @@ public class EscapePower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }
