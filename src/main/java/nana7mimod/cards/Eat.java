@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import nana7mimod.helpers.CharacterHelper.Nana7mi;
+import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.helpers.ModHelper;
 
 public class Eat extends Base {
@@ -30,7 +30,7 @@ public class Eat extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.currentHealth <= damage) {
-            addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Nana7mi.COLOR.cpy()), 0.3F));
+            addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, CharacterHelper.NANA7MI_BLUE.cpy()), 0.3F));
             addToBot(new HealAction(p, p, m.currentHealth));
             addToBot(new InstantKillAction(m));
         } else {

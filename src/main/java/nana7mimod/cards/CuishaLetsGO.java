@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import nana7mimod.helpers.CharacterHelper.Nana7mi;
+import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.helpers.ModHelper;
 
 public class CuishaLetsGO extends Base {
@@ -39,7 +39,7 @@ public class CuishaLetsGO extends Base {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new IncreaseMiscAction(uuid, misc, magicNumber));
 		if (m != null)
-			addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Nana7mi.COLOR.cpy()), 0.3F));
+			addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, CharacterHelper.NANA7MI_BLUE.cpy()), 0.3F));
 		addToBot(new DamageAction(m, new DamageInfo(p, damage)));
 	}
 }

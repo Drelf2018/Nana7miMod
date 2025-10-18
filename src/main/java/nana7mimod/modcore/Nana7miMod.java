@@ -30,7 +30,7 @@ public class Nana7miMod
     // 向 basemod 注册颜色
     public Nana7miMod() {
         BaseMod.subscribe(this);
-        new CharacterHelper.Nana7mi(Nana7mi.PlayerColorEnum.NANA7MI_BLUE);
+        CharacterHelper.addColor(Nana7mi.class, Nana7mi.PlayerColorEnum.NANA7MI_BLUE, CharacterHelper.NANA7MI_BLUE);
     }
 
     public static void initialize() {
@@ -53,7 +53,7 @@ public class Nana7miMod
     // 向 basemod 注册人物
     @Override
     public void receiveEditCharacters() {
-        new CharacterHelper.Nana7mi(new Nana7mi(CardCrawlGame.playerName));
+        CharacterHelper.addCharacter(new Nana7mi(CardCrawlGame.playerName));
     }
 
     // 向 basemod 注册关键词

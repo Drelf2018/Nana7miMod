@@ -110,19 +110,19 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     // 卡牌轨迹颜色
     @Override
     public Color getCardTrailColor() {
-        return CharacterHelper.Nana7mi.COLOR;
+        return CharacterHelper.NANA7MI_BLUE;
     }
 
     // 卡牌选择界面选择该牌的颜色
     @Override
     public Color getCardRenderColor() {
-        return CharacterHelper.Nana7mi.COLOR;
+        return CharacterHelper.NANA7MI_BLUE;
     }
 
     // 打心脏的颜色
     @Override
     public Color getSlashAttackColor() {
-        return CharacterHelper.Nana7mi.COLOR;
+        return CharacterHelper.NANA7MI_BLUE;
     }
 
     // 创建人物实例
