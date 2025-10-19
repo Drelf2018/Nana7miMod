@@ -10,13 +10,13 @@ import nana7mimod.helpers.ModHelper;
 public class Kunai extends Base {
     public static final String ID = ModHelper.id(Kunai.class);
 
-    public static final int actualBaseDamage = 5;
+    public static final int ACTUAL_BASE_DAMAGE = 5;
 
-    public static final int upgradeBaseDamage = 2;
+    public static final int UPGRADE_BASE_DAMAGE = 2;
 
     public Kunai() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = actualBaseDamage;
+        this.damage = this.baseDamage = ACTUAL_BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = 5;
         this.returnToHand = true;
     }
@@ -24,13 +24,13 @@ public class Kunai extends Base {
     // 玩家回合结束重置伤害
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        baseDamage = actualBaseDamage + (upgraded ? upgradeBaseDamage : 0);
+        baseDamage = ACTUAL_BASE_DAMAGE + (upgraded ? UPGRADE_BASE_DAMAGE : 0);
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(upgradeBaseDamage);
+            upgradeDamage(UPGRADE_BASE_DAMAGE);
             upgradeMagicNumber(2);
         }
     }
