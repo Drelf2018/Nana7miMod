@@ -60,7 +60,7 @@ public class Game extends Base {
         if (isMultiDamage) {
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AttackEffect.NONE));
+            addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AttackEffect.NONE));
         } else
             addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }

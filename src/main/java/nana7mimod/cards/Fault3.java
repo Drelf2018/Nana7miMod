@@ -39,6 +39,6 @@ public class Fault3 extends Base {
             if (!m.isDeadOrEscaped())
                 addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         addToBot(new WaitAction(0.8F));
-        addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.NONE));
     }
 }
