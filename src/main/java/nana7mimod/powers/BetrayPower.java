@@ -16,13 +16,27 @@ public class BetrayPower extends Base {
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private int delayAmount;
+
     public BetrayPower(AbstractCreature owner, int amount, boolean delay) {
-        super(POWER_ID, delay ? DESCRIPTIONS[2] + powerStrings.NAME : powerStrings.NAME, owner, amount, PowerType.BUFF);
+        super(POWER_ID, powerStrings.NAME, owner, delay ? 0 : amount, PowerType.BUFF);
         this.isTurnBased = true;
-        if (delay)
-            this.description = DESCRIPTIONS[0] + 0 + DESCRIPTIONS[1];
-        else
-            updateDescription();
+        this.delayAmount = delay ? amount : 0;
+        updateDescription();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        if (stackAmount == 0) {
+            delayAmount = 4 + amount + delayAmount;
+            amount = 0;
+        } else if (delayAmount != 0) {
+            delayAmount += stackAmount;
+        } else {
+            amount += stackAmount;
+        }
+        flashWithoutSound();
+        updateDescription();
     }
 
     @Override
@@ -30,8 +44,9 @@ public class BetrayPower extends Base {
         AbstractPower p = owner.getPower(InfatuationPower.POWER_ID);
         if (p instanceof InfatuationPower) {
             if (p.amount == 1) {
-                name = powerStrings.NAME;
-                description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+                amount = delayAmount;
+                delayAmount = 0;
+                updateDescription();
             }
         } else {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
@@ -40,21 +55,22 @@ public class BetrayPower extends Base {
 
     @Override
     public float atDamageGive(float damage, DamageType type) {
-        if (type != DamageType.NORMAL || owner.getPower(InfatuationPower.POWER_ID) instanceof InfatuationPower)
-            return damage;
-        return damage + amount;
+        if (type == DamageType.NORMAL && amount > 0)
+            return damage + amount;
+        return damage;
     }
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        flashWithoutSound();
+        if (amount > 0)
+            flashWithoutSound();
     }
 
     @Override
     public void updateDescription() {
-        if (owner.getPower(InfatuationPower.POWER_ID) instanceof InfatuationPower) {
+        if (amount == 0) {
             name = DESCRIPTIONS[2] + powerStrings.NAME;
-            description = DESCRIPTIONS[0] + 0 + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[2] + " " + DESCRIPTIONS[0] + delayAmount + DESCRIPTIONS[1];
         } else {
             name = powerStrings.NAME;
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
