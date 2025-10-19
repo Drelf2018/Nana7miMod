@@ -32,6 +32,7 @@ public class Fault3 extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster n) {
+        playSound(ID);
         addToBot(new LoseHPAction(p, p, magicNumber));
         addToBot(new ExhaustAllAction(p.hand));
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)

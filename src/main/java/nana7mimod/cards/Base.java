@@ -1,14 +1,23 @@
 package nana7mimod.cards;
 
 import basemod.AutoAdd;
+import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
+import java.util.Map;
+import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import nana7mimod.characters.Nana7mi;
 import nana7mimod.helpers.ModHelper;
 
 @AutoAdd.Ignore
 public abstract class Base extends CustomCard {
+    public static final Map<String, String> DIALOGUES =
+            BaseMod.gson.fromJson(ModHelper.dialogues(), new TypeToken<Map<String, String>>() {}.getType());
+
     public enum CardCost {
         CN, CX, C0, C1, C2, C3, C4, C5, C6;
     }
@@ -56,5 +65,11 @@ public abstract class Base extends CustomCard {
     public void changeCardImage(String img) {
         textureImg = ModHelper.cards(type, img);
         loadCardImage(textureImg);
+    }
+
+    public void playSound(String id) {
+        CardCrawlGame.sound.play(id);
+        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 5.0F, DIALOGUES.get(id), true));
     }
 }

@@ -28,6 +28,7 @@ public class Fault extends Base {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		playSound(ID);
 		addToBot(new LoseHPAction(p, p, magicNumber));
 		addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.SLASH_DIAGONAL));
 		addToBot(new MakeTempCardInHandAction(new Fault2()));

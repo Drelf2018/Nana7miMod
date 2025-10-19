@@ -23,6 +23,7 @@ public class BuyYou extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         if (upgraded)
             addToBot(new GainEnergyAction(3));
         else

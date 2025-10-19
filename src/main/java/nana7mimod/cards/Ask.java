@@ -59,6 +59,7 @@ public class Ask extends Base implements CustomSavable<Boolean> {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new ChooseOneAction(generateCardChoices(3, 1)));
         if (upgraded)
             addToBot(new ChooseOneAction(generateCardChoices(3, 2)));

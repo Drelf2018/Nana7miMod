@@ -26,6 +26,7 @@ public class Nurse extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
         addToBot(new HealAction(p, p, magicNumber));
     }

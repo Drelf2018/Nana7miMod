@@ -22,6 +22,7 @@ public class ShapeOfUnn extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new ApplyPowerAction(p, p, new UnnPower(p, magicNumber)));
     }
 }

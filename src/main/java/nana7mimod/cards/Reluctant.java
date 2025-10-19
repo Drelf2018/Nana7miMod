@@ -24,6 +24,7 @@ public class Reluctant extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new ApplyPowerAction(m, p, new InfatuationPower(m, magicNumber)));
         addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, 4, true)));
     }

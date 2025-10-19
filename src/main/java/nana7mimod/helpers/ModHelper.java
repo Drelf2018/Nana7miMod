@@ -59,11 +59,19 @@ public class ModHelper {
         return L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
     }
 
+    public static String file(String path) {
+        return Gdx.files.internal(L10N(path)).readString(String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    public static String dialogues() {
+        return file("dialogues.json");
+    }
+
     public static String games() {
-        return Gdx.files.internal(L10N("games.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+        return file("games.json");
     }
 
     public static String keywords() {
-        return Gdx.files.internal(L10N("keywords.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+        return file("keywords.json");
     }
 }

@@ -24,6 +24,7 @@ public class Axe extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         int discardCount = 0;
         for (AbstractCard c : p.hand.group)
             if (c.type == CardType.ATTACK) {

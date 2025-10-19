@@ -37,6 +37,7 @@ public class CuishaLetsGO extends Base {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		playSound(ID);
 		addToBot(new IncreaseMiscAction(uuid, misc, magicNumber));
 		if (m != null)
 			addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, CharacterHelper.NANA7MI_BLUE.cpy()), 0.3F));

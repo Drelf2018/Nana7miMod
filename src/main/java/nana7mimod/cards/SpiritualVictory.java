@@ -27,6 +27,7 @@ public class SpiritualVictory extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.SLASH_DIAGONAL));
         addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
     }

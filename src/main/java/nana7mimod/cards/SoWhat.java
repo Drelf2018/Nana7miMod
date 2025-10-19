@@ -27,6 +27,7 @@ public class SoWhat extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         returnToHand = AbstractDungeon.cardRandomRng.random(99) < magicNumber;
         exhaust = !returnToHand;
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));

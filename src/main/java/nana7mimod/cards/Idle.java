@@ -44,6 +44,7 @@ public class Idle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             if (!mo.isDeadOrEscaped()) {
                 p.loseGold(magicNumber);

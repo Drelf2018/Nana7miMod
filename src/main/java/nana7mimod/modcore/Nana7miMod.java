@@ -3,6 +3,7 @@ package nana7mimod.modcore;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
+import basemod.interfaces.AddAudioSubscriber;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -23,8 +24,8 @@ import nana7mimod.relics.ATField;
 import nana7mimod.characters.Nana7mi;
 
 @SpireInitializer
-public class Nana7miMod
-        implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber {
+public class Nana7miMod implements AddAudioSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber,
+        EditKeywordsSubscriber {
 
     // 订阅事件
     // 向 basemod 注册颜色
@@ -35,6 +36,13 @@ public class Nana7miMod
 
     public static void initialize() {
         new Nana7miMod();
+    }
+
+    // 向 basemod 注册音频
+    @Override
+    public void receiveAddAudio() {
+        for (String id : Base.DIALOGUES.keySet())
+            BaseMod.addAudio(id, ModHelper.audio(id));
     }
 
     // 向 basemod 注册卡牌

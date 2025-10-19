@@ -25,6 +25,7 @@ public class Puzzle extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new DiscoveryAction(new Train(CardTarget.ENEMY), new Train(CardTarget.ALL_ENEMY)));
     }
 }

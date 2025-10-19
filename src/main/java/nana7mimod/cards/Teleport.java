@@ -27,6 +27,7 @@ public class Teleport extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         boolean flip = 2 * m.hb.cX >= Settings.WIDTH;
         float targetY = m.hb.y - Settings.HEIGHT / 80;
         float targetX = flip ? m.hb.x + m.hb.width + p.hb.width / 4 : m.hb.x - p.hb.width / 4;

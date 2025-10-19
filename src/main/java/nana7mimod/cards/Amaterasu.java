@@ -25,6 +25,7 @@ public class Amaterasu extends Base {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		playSound(ID);
 		addToBot(new LoseHPAction(p, p, magicNumber, AttackEffectPatch.BLACK_FIRE));
 		addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffectPatch.BLACK_FIRE));
 	}

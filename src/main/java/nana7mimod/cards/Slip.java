@@ -23,6 +23,7 @@ public class Slip extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        playSound(ID);
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
     }
 }
