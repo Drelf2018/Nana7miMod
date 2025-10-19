@@ -25,6 +25,6 @@ public class Reluctant extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new InfatuationPower(m, magicNumber)));
-        addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, 5, true)));
+        addToBot(new ApplyPowerAction(m, p, new BetrayPower(m, 4, true)));
     }
 }
