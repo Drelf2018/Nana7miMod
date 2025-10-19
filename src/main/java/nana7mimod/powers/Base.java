@@ -45,11 +45,17 @@ public class Base extends AbstractPower {
 
     public Base(String id, String name, AbstractCreature owner, int amount, PowerType type) {
         init(id, name, owner, amount, type);
-        AbstractPowerPatch.loadRegion(this, convertUpperCase(ModHelper.unwrap(id).replace("Power", "")).substring(1));
+        loadRegion(id);
     }
 
     public Base(String id, String name, AbstractCreature owner, int amount, PowerType type, String region) {
         init(id, name, owner, amount, type);
-        loadRegion(region);
+        super.loadRegion(region);
+    }
+
+    public void loadRegion(String id) {
+        String fileName = convertUpperCase(ModHelper.unwrap(id).replace("Power", "")).substring(1);
+        region48 = AbstractPowerPatch.powerAtlas.findRegion("48/" + fileName);
+        region128 = AbstractPowerPatch.powerAtlas.findRegion("128/" + fileName);
     }
 }

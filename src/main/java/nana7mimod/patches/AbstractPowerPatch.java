@@ -15,9 +15,4 @@ public class AbstractPowerPatch {
     public static void Insert() {
         powerAtlas = new TextureAtlas(Gdx.files.internal(ModHelper.RESOURCES + "/image/powers/powers.atlas"));
     }
-
-    public static void loadRegion(AbstractPower p, String fileName) {
-        p.region48 = powerAtlas.findRegion("48/" + fileName);
-        p.region128 = powerAtlas.findRegion("128/" + fileName);
-    }
 }
