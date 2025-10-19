@@ -28,20 +28,24 @@ public class ModHelper {
         return RESOURCES + "/image/characters/" + character + "/" + path;
     }
 
-    public static String audio(String path) {
-        return RESOURCES + "/audio/" + path;
+    public static String music(String name) {
+        return RESOURCES + "/music/" + name + ".mp3";
+    }
+
+    public static String audio(String id) {
+        return RESOURCES + "/audio/" + unwrap(id) + ".mp3";
     }
 
     public static String cards(String type, String id) {
-        return RESOURCES + "/image/cards/" + type + "/" + ModHelper.unwrap(id) + ".png";
+        return RESOURCES + "/image/cards/" + type + "/" + unwrap(id) + ".png";
     }
 
     public static String cards(CardType type, String id) {
-        return ModHelper.cards(type.name().toLowerCase(), id);
+        return cards(type.name().toLowerCase(), id);
     }
 
     public static String relics(String id) {
-        return RESOURCES + "/image/relics/" + ModHelper.unwrap(id) + ".png";
+        return RESOURCES + "/image/relics/" + unwrap(id) + ".png";
     }
 
     public static String L10N(String path) {
@@ -52,14 +56,14 @@ public class ModHelper {
     }
 
     public static String strings(Class<?> stringType) {
-        return ModHelper.L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
+        return L10N(stringType.getSimpleName().toLowerCase().replace("strings", "s.json"));
     }
 
     public static String games() {
-        return Gdx.files.internal(ModHelper.L10N("games.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+        return Gdx.files.internal(L10N("games.json")).readString(String.valueOf(StandardCharsets.UTF_8));
     }
 
     public static String keywords() {
-        return Gdx.files.internal(ModHelper.L10N("keywords.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+        return Gdx.files.internal(L10N("keywords.json")).readString(String.valueOf(StandardCharsets.UTF_8));
     }
 }

@@ -10,8 +10,8 @@ import nana7mimod.helpers.ModHelper;
 
 @SpirePatch(clz = TempMusic.class, method = "getSong")
 public class TempMusicPatch {
-    public static Music Haruhikage = MainMusic.newMusic(ModHelper.audio("haruhikage.mp3"));
-    public static Music Sea = MainMusic.newMusic(ModHelper.audio("sea.mp3"));
+    public static Music Haruhikage = MainMusic.newMusic(ModHelper.music("Haruhikage"));
+    public static Music Sea = MainMusic.newMusic(ModHelper.music("Sea"));
 
     @SpireInsertPatch(rloc = 0)
     public static SpireReturn<Music> Insert(TempMusic __instance, String key) {

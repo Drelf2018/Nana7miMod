@@ -28,6 +28,6 @@ public class CharacterHelper {
     }
 
     public static void addCharacter(AbstractPlayer player) {
-        CharacterHelper.addCharacter(player, "button.png", "portrait.png");
+        addCharacter(player, "button.png", "portrait.png");
     }
 }
