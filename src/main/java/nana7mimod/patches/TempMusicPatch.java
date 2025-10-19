@@ -10,14 +10,18 @@ import nana7mimod.helpers.ModHelper;
 
 @SpirePatch(clz = TempMusic.class, method = "getSong")
 public class TempMusicPatch {
-    public static Music SEA = MainMusic.newMusic(ModHelper.audio("sea.mp3"));
+    public static Music Haruhikage = MainMusic.newMusic(ModHelper.audio("haruhikage.mp3"));
+    public static Music Sea = MainMusic.newMusic(ModHelper.audio("sea.mp3"));
 
     @SpireInsertPatch(rloc = 0)
     public static SpireReturn<Music> Insert(TempMusic __instance, String key) {
         switch (key) {
+            case "HARUHIKAGE":
+                return SpireReturn.Return(Haruhikage);
             case "SEA":
-                return SpireReturn.Return(SEA);
+                return SpireReturn.Return(Sea);
+            default:
+                return SpireReturn.Continue();
         }
-        return SpireReturn.Continue();
     }
 }

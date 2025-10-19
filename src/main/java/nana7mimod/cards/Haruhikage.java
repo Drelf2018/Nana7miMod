@@ -2,6 +2,7 @@ package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -30,6 +31,7 @@ public class Haruhikage extends Base {
             if (mo.currentHealth > maxHP)
                 maxHP = mo.currentHealth;
         if (m.currentHealth < maxHP) {
+            CardCrawlGame.music.playTempBGM("HARUHIKAGE");
             addToBot(new ApplyPowerAction(m, p, new EscapePower(m, magicNumber)));
         } else {
             String extended = strings(ID).EXTENDED_DESCRIPTION[0];
