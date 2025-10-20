@@ -160,7 +160,7 @@
     "DESCRIPTION": "你和所有敌人回复 !M! 点生命。 NL 消耗 。"
   },
   "Nana7miMod:Heritage": {
-    "NAME": "美美吃遗产咯",
+    "NAME": "美美吃遗产了",
     "DESCRIPTION": "接下来四回合内，每当一名敌人死亡，获得 !M! 金币。"
   },
   "Nana7miMod:Hometown": {
@@ -330,7 +330,7 @@
     "UPGRADE_DESCRIPTION": "选择一张牌 nana7mimod:移除 。 NL 失去 [#FF6563]最大[] 生命值 [#FF6563]29%[] 的生命。 NL 消耗 。"
   },
   "Nana7miMod:SoWhat": {
-    "NAME": "那咋啦",
+    "NAME": "那咋了",
     "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。"
   },
@@ -355,7 +355,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:反踩 。"
   },
   "Nana7miMod:Teleport": {
-    "NAME": "Q到捏吗嘴里",
+    "NAME": "我Q到捏吗嘴里",
     "DESCRIPTION": "nana7mimod:传送 到敌人的后面。 NL 获得 !M! 层 nana7mimod:我在呢 。"
   },
   "Nana7miMod:Train": {
