@@ -14,7 +14,7 @@ public class Hate extends Base {
     public static final String ID = ModHelper.id(Hate.class);
 
     public Hate(int upgrades) {
-        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 1;
         this.timesUpgraded = upgrades;
@@ -37,7 +37,7 @@ public class Hate extends Base {
 
     public void upgrade() {
         upgradeTimesUpgraded();
-        upgradeDamage(timesUpgraded);
+        upgradeDamage(1 + timesUpgraded);
         upgradeMagicNumber(1);
     }
 
