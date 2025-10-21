@@ -9,8 +9,10 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -24,8 +26,8 @@ import nana7mimod.relics.ATField;
 import nana7mimod.characters.Nana7mi;
 
 @SpireInitializer
-public class Nana7miMod implements AddAudioSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber,
-        EditKeywordsSubscriber {
+public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber,
+        EditRelicsSubscriber, EditKeywordsSubscriber {
 
     // 订阅事件
     // 向 basemod 注册颜色
@@ -36,6 +38,10 @@ public class Nana7miMod implements AddAudioSubscriber, EditCardsSubscriber, Edit
 
     public static void initialize() {
         new Nana7miMod();
+    }
+
+    public void receivePostInitialize() {
+        BaseMod.registerModBadge(ImageMaster.loadImage(ModHelper.RESOURCES + "/image/nana7mi.png"), ModHelper.NAME, "脆鲨12138", "TODO", null);
     }
 
     // 向 basemod 注册音频
