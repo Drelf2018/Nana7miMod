@@ -10,14 +10,14 @@ import nana7mimod.helpers.ModHelper;
 public class Kunai extends Base {
     public static final String ID = ModHelper.id(Kunai.class);
 
-    public static final int ACTUAL_BASE_DAMAGE = 5;
+    public static final int ACTUAL_BASE_DAMAGE = 4;
 
     public static final int UPGRADE_BASE_DAMAGE = 2;
 
     public Kunai() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ACTUAL_BASE_DAMAGE;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.returnToHand = true;
     }
 

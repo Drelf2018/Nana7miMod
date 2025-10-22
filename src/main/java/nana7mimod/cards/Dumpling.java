@@ -14,14 +14,13 @@ public class Dumpling extends Base {
 
     public Dumpling() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 4;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.damage = this.baseDamage = 7;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

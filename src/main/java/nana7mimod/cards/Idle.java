@@ -13,7 +13,7 @@ public class Idle extends Base {
 
     public Idle() {
         super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.magicNumber = this.baseMagicNumber = 10;
+        this.magicNumber = this.baseMagicNumber = 15;
         this.exhaust = true;
     }
 

@@ -13,8 +13,8 @@ public class Nurse extends Base {
 
     public Nurse() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 6;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.damage = this.baseDamage = 4;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void upgrade() {

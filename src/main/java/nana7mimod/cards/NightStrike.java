@@ -21,8 +21,7 @@ public class NightStrike extends Base {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeMagicNumber(1);
+            upgradeDamage(4);
         }
     }
 
