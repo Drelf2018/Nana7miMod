@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -123,6 +124,23 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     @Override
     public Color getSlashAttackColor() {
         return CharacterHelper.NANA7MI_BLUE;
+    }
+
+    // 碎心图片边框
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("images/scenes/blueBg.jpg");
+    }
+
+    // 碎心图片
+    @Override
+    public ArrayList<CutscenePanel> getCutscenePanels() {
+        // 第二个参数表示出现图片时播放的音效
+        ArrayList<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new CutscenePanel(image("victory1.png"), "EVENT_VAMP_BITE"));
+        panels.add(new CutscenePanel(image("victory2.png")));
+        panels.add(new CutscenePanel(image("victory3.png")));
+        return panels;
     }
 
     // 创建人物实例
