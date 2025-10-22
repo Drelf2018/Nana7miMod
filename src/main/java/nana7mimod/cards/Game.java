@@ -41,12 +41,14 @@ public class Game extends Base {
     }
 
     public static Game Played() {
-        String img = PLAYED[AbstractDungeon.cardRandomRng.random(PLAYED.length - 1)];
+        int index = AbstractDungeon.cardRandomRng.random(PLAYED.length - 1);
+        String img = PLAYED[index];
         return new Game(GAMES.PLAYED.get(img), img, CardTarget.ALL_ENEMY);
     }
 
     public static Game Unplayed() {
-        String img = UNPLAYED[AbstractDungeon.cardRandomRng.random(UNPLAYED.length - 1)];
+        int index = AbstractDungeon.cardRandomRng.random(UNPLAYED.length - 1);
+        String img = UNPLAYED[index];
         return new Game(GAMES.UNPLAYED.get(img), img, CardTarget.SELF);
     }
 
@@ -60,7 +62,7 @@ public class Game extends Base {
         if (isMultiDamage) {
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageType.NORMAL, AttackEffect.NONE));
+            addToBot(new DamageAllEnemiesAction(p, damage, DamageType.NORMAL, AttackEffect.NONE));
         } else
             addToBot(new DamageAction(p, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }
