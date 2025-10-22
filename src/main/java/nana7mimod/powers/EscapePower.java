@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import nana7mimod.helpers.ModHelper;
 
 public class EscapePower extends Base {
@@ -26,7 +27,10 @@ public class EscapePower extends Base {
 
     @Override
     public void onRemove() {
-        addToTop(new EscapeAction((AbstractMonster) owner));
+        AbstractMonster m = (AbstractMonster) owner;
+        if (m.id.equals(Darkling.ID))
+            m.id = "Escaped" + m.id;
+        addToTop(new EscapeAction(m));
     }
 
     @Override
