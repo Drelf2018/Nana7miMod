@@ -25,12 +25,12 @@ public class KyojinStance extends AbstractStance {
         void Kaijo();
     }
 
-    public static Texture scale(FileTextureData data, int scale) {
+    public static Texture scale(FileTextureData data, float scale) {
         Pixmap originalPixmap = new Pixmap(data.getFileHandle());
         int w = originalPixmap.getWidth(), h = originalPixmap.getHeight();
 
-        Pixmap scaledPixmap = new Pixmap(scale * w, scale * h, originalPixmap.getFormat());
-        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, scale * w, scale * h);
+        Pixmap scaledPixmap = new Pixmap((int) (scale * w), (int) (scale * h), originalPixmap.getFormat());
+        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, (int) (scale * w), (int) (scale * h));
 
         return new Texture(scaledPixmap);
     }
@@ -53,7 +53,7 @@ public class KyojinStance extends AbstractStance {
     @Override
     public float atDamageGive(float damage, DamageType type) {
         if (type == DamageType.NORMAL)
-            return damage * 3.0F;
+            return damage * 2.0F;
         return damage;
     }
 

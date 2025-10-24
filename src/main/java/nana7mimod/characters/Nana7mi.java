@@ -74,7 +74,7 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     }
 
     public void Kyojinka() {
-        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 2);
+        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 1.5F);
         AbstractDungeon.actionManager.addToTop(new ClothingAction(clothes));
         AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
     }
