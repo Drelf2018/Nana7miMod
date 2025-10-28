@@ -74,7 +74,7 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     }
 
     public void Kyojinka() {
-        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 1.5F);
+        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 1.75F);
         AbstractDungeon.actionManager.addToTop(new ClothingAction(clothes));
         AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
     }
@@ -138,8 +138,8 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
         // 第二个参数表示出现图片时播放的音效
         ArrayList<CutscenePanel> panels = new ArrayList<>();
         panels.add(new CutscenePanel(image("victory1.png"), "EVENT_VAMP_BITE"));
-        panels.add(new CutscenePanel(image("victory2.png")));
-        panels.add(new CutscenePanel(image("victory3.png")));
+        panels.add(new CutscenePanel(image("victory2.png"), "EVENT_FALLING"));
+        panels.add(new CutscenePanel(image("victory3.png"), "HEAL_1"));
         return panels;
     }
 
