@@ -15,8 +15,8 @@ public class CuishaLetsGO extends Base {
 	public static final String ID = ModHelper.id(CuishaLetsGO.class);
 
 	public CuishaLetsGO() {
-		super(ID, CardCost.C2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-		this.misc = 4;
+		super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+		this.misc = 6;
 		this.baseDamage = this.misc;
 		this.magicNumber = this.baseMagicNumber = 4;
 		this.exhaust = true;

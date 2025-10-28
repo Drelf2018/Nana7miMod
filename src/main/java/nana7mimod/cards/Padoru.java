@@ -10,7 +10,7 @@ public class Padoru extends Base {
     public static final String ID = ModHelper.id(Padoru.class);
 
     public Padoru() {
-        super(ID, CardCost.C2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
