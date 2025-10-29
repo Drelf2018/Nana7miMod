@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,6 +31,6 @@ public class Axe extends Base {
                 ++discardCount;
             }
         if (discardCount != 0)
-            addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, discardCount * magicNumber)));
+            ATFieldPower.addAmount(p, discardCount * magicNumber);
     }
 }

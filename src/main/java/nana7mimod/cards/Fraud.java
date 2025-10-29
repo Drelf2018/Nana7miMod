@@ -1,6 +1,5 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nana7mimod.helpers.ModHelper;
@@ -22,6 +21,6 @@ public class Fraud extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, magicNumber)));
+        ATFieldPower.addAmount(p, magicNumber);
     }
 }

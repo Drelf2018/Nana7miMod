@@ -23,7 +23,7 @@ public class Sulking extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, magicNumber)));
+        ATFieldPower.addAmount(p, magicNumber);
         addToBot(new ApplyPowerAction(p, p, new SulkingPower(p, 1)));
     }
 }

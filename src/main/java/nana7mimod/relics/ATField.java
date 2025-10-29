@@ -42,8 +42,8 @@ public class ATField extends CustomRelic {
     public void atBattleStart() {
         flash();
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new RelicAboveCreatureAction(p, this));
-        addToBot(new ApplyPowerAction(p, p, new ATFieldPower(p, counter)));
-        addToBot(new ApplyPowerAction(p, p, new InjuredPower(p, 10)));
+        addToTop(new ApplyPowerAction(p, p, new InjuredPower(p, 10)));
+        addToTop(new ApplyPowerAction(p, p, new ATFieldPower(p, counter)));
+        addToTop(new RelicAboveCreatureAction(p, this));
     }
 }
