@@ -13,20 +13,20 @@ public class Frail extends Base {
 
     public Frail() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
             addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -magicNumber)));
-        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, 2, false)));
+        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
     }
 }
