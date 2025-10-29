@@ -12,6 +12,7 @@ public class Armor extends Base {
     public Armor() {
         super(ID, CardCost.C1, CardType.SKILL, CardTarget.SELF);
         this.block = this.baseBlock = 4;
+        this.exhaust = true;
     }
 
     public void setX(int amount) {

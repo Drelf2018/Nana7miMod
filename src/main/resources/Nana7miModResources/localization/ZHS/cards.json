@@ -17,9 +17,9 @@
   },
   "Nana7miMod:Armor": {
     "NAME": "叠甲过",
-    "DESCRIPTION": "获得 !B! 点 格挡 X 次。",
+    "DESCRIPTION": "获得 !B! 点 格挡 X 次。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "获得 !B! 点 格挡 !M! 次。"
+      "获得 !B! 点 格挡 !M! 次。 NL 消耗 。"
     ]
   },
   "Nana7miMod:Ask": {
