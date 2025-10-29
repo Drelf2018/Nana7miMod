@@ -90,7 +90,7 @@
     "NAME": "愧疚",
     "DESCRIPTIONS": [
       "在其回合开始时，减少 #b",
-      " 点生命，然后将层数减少 #b30 。"
+      " 点生命，然后将层数减少 #b10 。"
     ]
   },
   "Nana7miMod:HaterPower": {

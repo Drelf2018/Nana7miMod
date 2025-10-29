@@ -29,7 +29,7 @@ public class GuiltyPower extends Base {
     @Override
     public void atStartOfTurn() {
         flashWithoutSound();
-        addToTop(new ReducePowerAction(owner, owner, this, 30));
+        addToTop(new ReducePowerAction(owner, owner, this, 10));
         addToTop(new LightningAction(owner, new DamageInfo(source, amount, DamageType.HP_LOSS)));
     }
 
