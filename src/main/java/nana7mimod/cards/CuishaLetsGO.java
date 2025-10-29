@@ -18,7 +18,7 @@ public class CuishaLetsGO extends Base {
 		super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 		this.misc = 6;
 		this.baseDamage = this.misc;
-		this.magicNumber = this.baseMagicNumber = 4;
+		this.magicNumber = this.baseMagicNumber = 3;
 		this.exhaust = true;
 	}
 
