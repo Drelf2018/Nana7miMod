@@ -15,8 +15,8 @@ public class Rinnegan extends Base {
     public static final String ID = ModHelper.id(Rinnegan.class);
 
     public Rinnegan() {
-        super(ID, CardCost.C3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 15;
+        super(ID, CardCost.C2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        this.damage = this.baseDamage = 10;
         this.magicNumber = this.baseMagicNumber = 3;
     }
 
