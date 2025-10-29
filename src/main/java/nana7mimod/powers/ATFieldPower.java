@@ -95,10 +95,10 @@ public class ATFieldPower extends Base {
         addAmount(diffAmount, false);
     }
 
-    // 回合开始重置层数
-    @Override
-    public void atStartOfTurnPostDraw() {
-        addAmount(Math.max(amount, 1) - amount);
+    // 你的回合结束时重置层数
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer)
+            addAmount(Math.max(amount, 1) - amount);
     }
 
     // 生气

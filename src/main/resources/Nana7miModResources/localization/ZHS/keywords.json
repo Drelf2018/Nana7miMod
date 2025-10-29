@@ -22,13 +22,13 @@
       "破碎",
       "心之壁破碎"
     ],
-    "DESCRIPTION": "#y心之壁 层数变为 #b负数 。 NL NL #y破碎 #b2 ，给予敌方 #b1 层 #y虚弱 。 NL NL #y破碎 #b4 ，敌方失去 #b2 点 #y力量 。 NL NL #y破碎 #b6 ，你获得 #b1 层 #y无实体 。 NL NL #y破碎 #b奇数 ，回复 #b1 点 #y生命 。"
+    "DESCRIPTION": "#y心之壁 层数变为 #b负数 。 NL NL #y破碎 #b2 ，给予敌方 #b1 层 #y虚弱 。 NL NL #y破碎 #b4 ，敌方失去 #b2 点 #y力量 。 NL NL #y破碎 #b6 ，获得 #b1 层 #y无实体 。 NL NL #y破碎 #b奇数 ，回复 #b1 点 #y生命 。"
   },
   {
     "NAMES": [
       "心之壁"
     ],
-    "DESCRIPTION": "你的回合开始时，使 #y心之壁 层数不低于 #b1 。 NL #y心之壁 层数会 #b提升 或 #r降低 你的 #y攻击 伤害。"
+    "DESCRIPTION": "你的回合结束时，使 #y心之壁 层数不低于 #b1 。 NL #y心之壁 层数会 #b提升 或 #r降低 你的 #y攻击 伤害。"
   },
   {
     "NAMES": [
