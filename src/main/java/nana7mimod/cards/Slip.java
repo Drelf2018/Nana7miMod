@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.ATFieldPower;
 
 public class Slip extends Base {
     public static final String ID = ModHelper.id(Slip.class);
@@ -25,5 +26,6 @@ public class Slip extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         playSound(ID);
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
+        ATFieldPower.addAmount(p, magicNumber);
     }
 }

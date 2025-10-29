@@ -321,8 +321,8 @@
   },
   "Nana7miMod:Slip": {
     "NAME": "哎呀滑了",
-    "DESCRIPTION": "获得 !M! 点 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 点 敏捷 。"
+    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL nana7mimod:心之壁 层数增加 !M! 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 点 敏捷 。 NL nana7mimod:心之壁 层数增加 !M! 。"
   },
   "Nana7miMod:Smoke": {
     "NAME": "薯条着火了",
