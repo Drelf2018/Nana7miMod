@@ -7,7 +7,7 @@
     "二访烟"
   ],
   "description": "虚拟主播七海Nana7mi的模组。\n\n感谢所有为本模组的制作提供了帮助的个人和团体，以下排名不分先后。\n\n总设计师：脆鲨12138\n\n数值策划：脆鲨12138、Horiz0n、二访烟\n\n游戏测试：二访烟、散散、励志活过今天、绮良kirara\n\n台词配音：七海Nana7mi\n\n主视觉图：ink籽墨\n\n角色立绘：雪泽月、KaFkaZzz\n\n卡面插画：七海Nana7mi、薯仔爱好者、破破梨、drblack、Fairy酱yuu、原神义务推广员、茸洱_、向兔大魔王、七海浪浪子、七海Nana7mi单推人、cosm万子、-有沒有半島鐵盒-、_土豆地雷_、YukikazeRex、寻迹没有影子w\n\n杀戮尖塔mod制作教程\nhttps://github.com/GlitchedReme/SlayTheSpireModTutorials\n\n杀戮尖塔中文维基\nhttps://sts.huijiwiki.com/wiki/首页\n\n本模组部分内容引自萌娘百科“七海(虚拟UP主)”页面，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆》协议。",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "sts_version": "12-18-2022",
   "mts_version": "3.23.3",
   "dependencies": [
