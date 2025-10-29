@@ -32,6 +32,7 @@ public class Haruhikage extends Base {
                 maxHP = mo.currentHealth;
         if (m.currentHealth < maxHP) {
             playSound(ID);
+            CardCrawlGame.music.fadeOutTempBGM();
             CardCrawlGame.music.playTempBGM("HARUHIKAGE");
             addToBot(new ApplyPowerAction(m, p, new EscapePower(m, magicNumber)));
         } else {
