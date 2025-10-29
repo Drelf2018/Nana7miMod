@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -96,14 +97,19 @@ public class KyojinStance extends AbstractStance {
         AbstractDungeon.effectsQueue.add(new StanceChangeParticleGenerator(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, "Wrath"));
     }
 
+    public void heal(int amount) {
+        currentHealth += amount;
+    }
+
     public void onRemove() {
         if (maxHealth == 0)
             return;
-        AbstractDungeon.player.currentHealth = 0;
-        AbstractDungeon.player.maxHealth = maxHealth;
-        AbstractDungeon.player.heal(currentHealth, true);
-        if (AbstractDungeon.player instanceof KyojinHandler) {
-            ((KyojinHandler) AbstractDungeon.player).Kaijo();
+        AbstractPlayer p = AbstractDungeon.player;
+        p.currentHealth = 0;
+        p.maxHealth = maxHealth;
+        p.heal(currentHealth, true);
+        if (p instanceof KyojinHandler) {
+            ((KyojinHandler) p).Kaijo();
         }
         maxHealth = 0;
     }

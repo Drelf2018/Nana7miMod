@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.stances.KyojinStance;
 
 public class HometownPower extends Base {
     public static final String POWER_ID = ModHelper.id(HometownPower.class);
@@ -21,7 +22,9 @@ public class HometownPower extends Base {
     @Override
     public void onVictory() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.currentHealth > 0) {
+        if (p.stance instanceof KyojinStance) {
+            ((KyojinStance) p.stance).heal(amount);
+        } else if (p.currentHealth > 0) {
             p.heal(amount);
         }
     }
