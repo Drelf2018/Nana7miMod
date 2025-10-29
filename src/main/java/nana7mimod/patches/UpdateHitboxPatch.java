@@ -14,6 +14,6 @@ public class UpdateHitboxPatch {
         if (__instance.c.chosenClass == Nana7mi.PlayerColorEnum.NANA7MI)
             CardCrawlGame.music.playTempBgmInstantly("SEA");
         else
-            CardCrawlGame.music.fadeOutTempBGM();
+            CardCrawlGame.music.silenceTempBgmInstantly();
     }
 }
