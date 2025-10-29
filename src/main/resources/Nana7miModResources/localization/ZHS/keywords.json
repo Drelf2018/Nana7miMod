@@ -22,7 +22,7 @@
       "破碎",
       "心之壁破碎"
     ],
-    "DESCRIPTION": "#y心之壁 层数变为 #b负数 。 NL NL #y破碎 #b2 ，给予敌方 #b1 层 #y虚弱 。 NL NL #y破碎 #b4 ，敌方失去 #b2 点 #y力量 。 NL NL #y破碎 #b6 ，你获得 #b1 层 #y无实体 。 NL NL #y破碎 #b奇数 ，回复对应 #y生命 。"
+    "DESCRIPTION": "#y心之壁 层数变为 #b负数 。 NL NL #y破碎 #b2 ，给予敌方 #b1 层 #y虚弱 。 NL NL #y破碎 #b4 ，敌方失去 #b2 点 #y力量 。 NL NL #y破碎 #b6 ，你获得 #b1 层 #y无实体 。 NL NL #y破碎 #b奇数 ，回复 #b1 点 #y生命 。"
   },
   {
     "NAMES": [

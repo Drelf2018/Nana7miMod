@@ -130,7 +130,7 @@ public class ATFieldPower extends Base {
                 break;
             default:
                 if (amount < 0 && (amount & 1) == 1)
-                    addToBot(new HealAction(owner, owner, -amount));
+                    addToBot(new HealAction(owner, owner, 1));
                 break;
         }
     }
