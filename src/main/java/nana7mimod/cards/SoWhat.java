@@ -20,7 +20,6 @@ public class SoWhat extends Base {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(-2);
             upgradeMagicNumber(25);
             upgradeDescription();
         }
