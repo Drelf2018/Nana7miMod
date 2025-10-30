@@ -10,7 +10,7 @@ public class Fraud extends Base {
 
     public Fraud() {
         super(ID, CardCost.C1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     public void upgrade() {
