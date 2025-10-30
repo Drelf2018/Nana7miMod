@@ -69,8 +69,8 @@
   },
   "Nana7miMod:Disclaimer": {
     "NAME": "免责声明",
-    "DESCRIPTION": "获得 [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *叠甲过 加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "将一张 *叠甲过 加入你的手牌。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将一张 *叠甲过 加入你的手牌。 NL 获得 [E] [E] 。 NL 消耗 。"
   },
   "Nana7miMod:DropCoins": {
     "NAME": "爆金币",
