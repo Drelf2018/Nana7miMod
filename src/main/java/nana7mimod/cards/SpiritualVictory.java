@@ -15,14 +15,13 @@ public class SpiritualVictory extends Base {
     public SpiritualVictory() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 4;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(3);
-            upgradeMagicNumber(1);
         }
     }
 
