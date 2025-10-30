@@ -348,7 +348,7 @@
   },
   "Nana7miMod:Summon": {
     "NAME": "召唤术式",
-    "DESCRIPTION": "抽 2 张牌。 NL 额外抽取你 nana7mimod:心之壁 层数张牌，最多 !M! 张。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 额外抽取你 nana7mimod:心之壁 层数张牌，最多 3 张。"
   },
   "Nana7miMod:TalkToTheHand": {
     "NAME": "以手拒之",

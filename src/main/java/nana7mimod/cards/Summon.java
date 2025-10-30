@@ -11,7 +11,7 @@ public class Summon extends Base {
 
     public Summon() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void upgrade() {
@@ -24,6 +24,6 @@ public class Summon extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ATFieldPower power = ATFieldPower.from(p);
         int extraDraws = power != null && power.amount > 0 ? power.amount : 0;
-        addToBot(new DrawCardAction(p, 2 + Math.min(extraDraws, magicNumber)));
+        addToBot(new DrawCardAction(p, magicNumber + Math.min(extraDraws, 3)));
     }
 }
