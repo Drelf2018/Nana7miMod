@@ -344,7 +344,7 @@
   },
   "Nana7miMod:Sulking": {
     "NAME": "生闷气",
-    "DESCRIPTION": "nana7mimod:心之壁 层数增加 !M! 。 NL 在你的回合结束时，失去 1 点 力量 。"
+    "DESCRIPTION": "在你的回合开始时，失去 1 点 力量 然后使 nana7mimod:心之壁 层数增加 3 。"
   },
   "Nana7miMod:Summon": {
     "NAME": "召唤术式",

@@ -19,15 +19,14 @@ public class SulkingPower extends Base {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            flashWithoutSound();
-            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, -amount)));
-        }
+    public void atStartOfTurn() {
+        flash();
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, -amount)));
+        ATFieldPower.addAmount(owner, 3 * amount);
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + 3 * amount + DESCRIPTIONS[2];
     }
 }

@@ -9,7 +9,7 @@ public class Furious extends Base {
     public static final String ID = ModHelper.id(Furious.class);
 
     public Furious() {
-        super(ID, CardCost.C1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 4;
         this.isInnate = true;
     }
