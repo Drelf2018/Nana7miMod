@@ -11,6 +11,7 @@ public class Disappointed extends Base {
     public Disappointed() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
     }
 
     public void upgrade() {
@@ -22,10 +23,6 @@ public class Disappointed extends Base {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ATFieldPower.setAmount(p, amount -> {
-            if (amount <= 0)
-                return amount;
-            return amount * magicNumber;
-        });
+        ATFieldPower.setAmount(p, amount -> amount * magicNumber);
     }
 }
