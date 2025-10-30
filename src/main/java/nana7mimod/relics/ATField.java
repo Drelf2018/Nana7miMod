@@ -1,13 +1,20 @@
 package nana7mimod.relics;
 
 import basemod.abstracts.CustomRelic;
+import java.io.IOException;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.ui.FtueTip;
+import com.megacrit.cardcrawl.ui.FtueTip.TipType;
+import nana7mimod.cards.Base;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.modcore.Nana7miMod;
 import nana7mimod.powers.ATFieldPower;
 import nana7mimod.powers.InjuredPower;
 
@@ -40,6 +47,17 @@ public class ATField extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        if (!Nana7miMod.TutorialClosed) {
+            AbstractDungeon.ftue = new FtueTip(name, Base.DIALOGUES.get(ID), 360.0F * Settings.scale, 760.0F * Settings.scale, TipType.RELIC);
+            Nana7miMod.TutorialClosed = true;
+            try {
+                SpireConfig config = new SpireConfig("Nana7miMod", "Common");
+                config.setBool("tutorialClosed", true);
+                config.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         flash();
         AbstractPlayer p = AbstractDungeon.player;
         addToTop(new ApplyPowerAction(p, p, new InjuredPower(p, 10)));

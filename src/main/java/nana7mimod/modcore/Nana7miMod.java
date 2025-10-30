@@ -10,6 +10,9 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import java.io.IOException;
+import java.util.Properties;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -29,6 +32,8 @@ import nana7mimod.characters.Nana7mi;
 public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber,
         EditRelicsSubscriber, EditKeywordsSubscriber {
 
+    public static boolean TutorialClosed;
+
     // 订阅事件
     // 向 basemod 注册颜色
     public Nana7miMod() {
@@ -41,6 +46,14 @@ public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber,
     }
 
     public void receivePostInitialize() {
+        try {
+            Properties defaults = new Properties();
+            defaults.setProperty("tutorialClosed", "false");
+            SpireConfig config = new SpireConfig("Nana7miMod", "Common", defaults);
+            TutorialClosed = config.getBool("tutorialClosed");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         BaseMod.registerModBadge(ImageMaster.loadImage(ModHelper.RESOURCES + "/image/nana7mi.png"), ModHelper.NAME, "脆鲨12138", "TODO", null);
     }
 
