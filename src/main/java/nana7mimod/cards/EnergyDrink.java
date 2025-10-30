@@ -1,18 +1,17 @@
 package nana7mimod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.powers.ATFieldPower;
 
-public class BuyYou extends Base {
-    public static final String ID = ModHelper.id(BuyYou.class);
+public class EnergyDrink extends Base {
+    public static final String ID = ModHelper.id(EnergyDrink.class);
 
-    public BuyYou() {
+    public EnergyDrink() {
         super(ID, CardCost.C0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void upgrade() {
@@ -28,6 +27,6 @@ public class BuyYou extends Base {
             addToBot(new GainEnergyAction(3));
         else
             addToBot(new GainEnergyAction(2));
-        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
+        ATFieldPower.addAmount(p, -magicNumber);
     }
 }

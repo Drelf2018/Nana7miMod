@@ -34,11 +34,6 @@
     "NAME": "我回来了",
     "DESCRIPTION": "不能被打出 。 NL 抽到这张牌时移除你身上的 nana7mimod:休眠 效果。"
   },
-  "Nana7miMod:BuyYou": {
-    "NAME": "请你喝",
-    "DESCRIPTION": "nana7mimod:七海喝过的能量饮料 。 NL 获得 [E] [E] 。 NL 获得 !M! 层 脆弱 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:七海喝过的能量饮料 。 NL 获得 [E] [E] [E] 。 NL 获得 !M! 层 脆弱 。"
-  },
   "Nana7miMod:ConfessionBouquet": {
     "NAME": "告白花束",
     "DESCRIPTION": "在你的回合结束时，给予所有未 nana7mimod:入脑 的敌人 !M! 层 nana7mimod:入脑 。"
@@ -95,6 +90,11 @@
   "Nana7miMod:Enemy": {
     "NAME": "是敌人",
     "DESCRIPTION": "nana7mimod:答案 。 NL 造成 !D! 点伤害。"
+  },
+  "Nana7miMod:EnergyDrink": {
+    "NAME": "能量饮料",
+    "DESCRIPTION": "nana7mimod:喝过的 。 NL 获得 [E] [E] 。 NL nana7mimod:心之壁 层数减少 !M! 。",
+    "UPGRADE_DESCRIPTION": "nana7mimod:喝过的 。 NL 获得 [E] [E] [E] 。 NL nana7mimod:心之壁 层数减少 !M! 。"
   },
   "Nana7miMod:EyeForEye": {
     "NAME": "以牙还牙",
