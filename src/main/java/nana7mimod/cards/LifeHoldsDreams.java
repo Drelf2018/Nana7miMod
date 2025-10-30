@@ -12,7 +12,7 @@ public class LifeHoldsDreams extends Base {
 
     public LifeHoldsDreams() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 7;
         this.cardsToPreview = new Back();
         this.exhaust = true;
     }
