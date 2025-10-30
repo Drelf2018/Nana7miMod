@@ -65,7 +65,7 @@
   "Nana7miMod:Disappointed": {
     "NAME": "失望",
     "DESCRIPTION": "nana7mimod:心之壁 层数翻倍。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:心之壁 层数变为三倍。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "nana7mimod:心之壁 层数翻三倍。 NL 消耗 。"
   },
   "Nana7miMod:Disclaimer": {
     "NAME": "免责声明",
