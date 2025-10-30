@@ -1,9 +1,11 @@
 package nana7mimod.cards;
 
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.ATFieldPower;
 
@@ -13,12 +15,13 @@ public class Axe extends Base {
     public Axe() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
+        MultiCardPreview.add(this, new Fist(), new Foot());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(cost - 1);
         }
     }
 
@@ -32,5 +35,7 @@ public class Axe extends Base {
             }
         if (discardCount != 0)
             ATFieldPower.addAmount(p, discardCount * magicNumber);
+        addToBot(new MakeTempCardInHandAction(new Fist()));
+        addToBot(new MakeTempCardInHandAction(new Foot()));
     }
 }
