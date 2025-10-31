@@ -13,7 +13,7 @@ public class Amaterasu extends Base {
 
 	public Amaterasu() {
 		super(ID, CardCost.C2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-		this.damage = this.baseDamage = 25;
+		this.damage = this.baseDamage = 26;
 		this.magicNumber = this.baseMagicNumber = 4;
 	}
 
