@@ -18,9 +18,8 @@ public class KillingDesire extends Base {
 
     public void upgrade() {
         if (!upgraded) {
-            this.exhaust = false;
             upgradeName();
-            upgradeDescription();
+            upgradeMagicNumber(1);
         }
     }
 
