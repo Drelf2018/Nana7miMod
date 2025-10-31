@@ -10,7 +10,7 @@ public class ConfessionBouquet extends Base {
     public static final String ID = ModHelper.id(ConfessionBouquet.class);
 
     public ConfessionBouquet() {
-        super(ID, CardCost.C1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardCost.C2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
