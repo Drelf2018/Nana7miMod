@@ -32,7 +32,7 @@ public class CuishaLetsGO extends Base {
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 
