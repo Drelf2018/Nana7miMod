@@ -22,9 +22,9 @@ public class MonitorPower extends Base {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-            if (m.getIntentBaseDmg() >= 0) {
-                AbstractPower power = m.getPower(POWER_ID);
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
+            if (mo.getIntentBaseDmg() >= 0) {
+                AbstractPower power = mo.getPower(POWER_ID);
                 if (power instanceof MonitorPower) {
                     power.flashWithoutSound();
                     addToBot(new DrawCardAction(power.amount));
