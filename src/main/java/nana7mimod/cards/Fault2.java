@@ -16,9 +16,8 @@ public class Fault2 extends Base {
     public Fault2() {
         super(ID, CardCost.C2, CardType.ATTACK, CardTarget.ALL_ENEMY);
         this.damage = this.baseDamage = 20;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
-        this.isMultiDamage = true;
         this.cardsToPreview = new Fault3();
     }
 
@@ -31,10 +30,11 @@ public class Fault2 extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         playSound(ID);
-        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new DamageAction(mo, new DamageInfo(p, damage), AttackEffect.SLASH_HORIZONTAL));
-            addToBot(new LoseHPAction(p, p, magicNumber));
-        }
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
+            if (!mo.isDeadOrEscaped()) {
+                addToBot(new DamageAction(mo, new DamageInfo(p, damage), AttackEffect.SLASH_HORIZONTAL));
+                addToBot(new LoseHPAction(p, p, magicNumber));
+            }
         addToBot(new MakeTempCardInHandAction(new Fault3()));
     }
 }

@@ -105,15 +105,15 @@
   },
   "Nana7miMod:Fault": {
     "NAME": "都有问题",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL nana7mimod:坐标之力 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 将一张 NL *都有问题都有问题 NL 加入你的手牌。"
   },
   "Nana7miMod:Fault2": {
-    "NAME": "都有问题！",
-    "DESCRIPTION": "对每个敌人造成 !D! 点伤害并失去 !M! 点生命。 NL nana7mimod:发动地鸣 。 NL 消耗 。"
+    "NAME": "都有问题都有问题",
+    "DESCRIPTION": "对每个敌人造成 !D! 点伤害并失去 !M! 点生命。 NL 将一张 *都有问题！ NL 加入你的手牌。 NL 消耗 。"
   },
   "Nana7miMod:Fault3": {
-    "NAME": "都有问题！！！",
-    "DESCRIPTION": "虚无 。 NL 失去 !M! 点生命。 NL 消耗 所有手牌。 NL 造成 !D! 点群伤。 NL 消耗 。"
+    "NAME": "都有问题！",
+    "DESCRIPTION": "虚无 。 NL 失去 !M! 点生命。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Nana7miMod:Fist": {
     "NAME": "拳",

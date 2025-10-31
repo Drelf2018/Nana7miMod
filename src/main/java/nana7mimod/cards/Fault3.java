@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import nana7mimod.helpers.ModHelper;
-import nana7mimod.actions.ExhaustAllAction;
 
 public class Fault3 extends Base {
     public static final String ID = ModHelper.id(Fault3.class);
@@ -31,13 +30,12 @@ public class Fault3 extends Base {
         }
     }
 
-    public void use(AbstractPlayer p, AbstractMonster n) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         playSound(ID);
         addToBot(new LoseHPAction(p, p, magicNumber));
-        addToBot(new ExhaustAllAction(p.hand));
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-            if (!m.isDeadOrEscaped())
-                addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
+        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
+            if (!mo.isDeadOrEscaped())
+                addToBot(new VFXAction(new WeightyImpactEffect(mo.hb.cX, mo.hb.cY)));
         addToBot(new WaitAction(0.8F));
         addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.NONE));
     }

@@ -14,7 +14,7 @@ public class Fault extends Base {
 	public static final String ID = ModHelper.id(Fault.class);
 
 	public Fault() {
-		super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+		super(ID, CardCost.C1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
 		this.damage = this.baseDamage = 10;
 		this.magicNumber = this.baseMagicNumber = 1;
 		MultiCardPreview.add(this, new Fault2(), new Fault3());
