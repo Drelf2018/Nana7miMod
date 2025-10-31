@@ -82,7 +82,7 @@
   },
   "Nana7miMod:Eat": {
     "NAME": "我要吃人啦",
-    "DESCRIPTION": "如果敌人的生命值小于等于 !D! 点，则 nana7mimod:吸取 其剩余生命值。 NL 消耗 。",
+    "DESCRIPTION": "如果敌人的生命值小于等于 !M! 点，则 nana7mimod:吸取 其剩余生命值。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "敌人的生命值太高了。"
     ]

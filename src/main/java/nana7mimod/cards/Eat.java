@@ -16,20 +16,20 @@ public class Eat extends Base {
     public static final String ID = ModHelper.id(Eat.class);
 
     public Eat() {
-        super(ID, CardCost.C1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 8;
+        super(ID, CardCost.C1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = 7;
         this.exhaust = true;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeMagicNumber(3);
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentHealth <= damage) {
+        if (m.currentHealth <= magicNumber) {
             playSound(ID);
             addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, CharacterHelper.NANA7MI_BLUE.cpy()), 0.3F));
             addToBot(new HealAction(p, p, m.currentHealth));
