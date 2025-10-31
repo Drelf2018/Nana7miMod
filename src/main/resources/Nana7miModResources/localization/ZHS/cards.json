@@ -188,7 +188,7 @@
   },
   "Nana7miMod:IdolForm": {
     "NAME": "偶像形态",
-    "DESCRIPTION": "消耗 所有攻击牌。 NL 不再需要 nana7mimod:心之壁 。 NL 获得 nana7mimod:坚定 和 nana7mimod:怜悯 。"
+    "DESCRIPTION": "消耗 所有攻击牌。 NL nana7mimod:心之壁 层数 nana7mimod:归零 。 NL 获得等量 nana7mimod:闪耀 。 NL 获得 nana7mimod:坚定 。 NL 获得 nana7mimod:怜悯 。"
   },
   "Nana7miMod:ImpotentRage": {
     "NAME": "无能狂怒",

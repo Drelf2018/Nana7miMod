@@ -12,6 +12,7 @@ import nana7mimod.helpers.ModHelper;
 import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
 import nana7mimod.powers.InjuredPower;
 import nana7mimod.powers.PityingPower;
+import nana7mimod.powers.ShinePower;
 import nana7mimod.powers.ATFieldPower;
 import nana7mimod.powers.FirmPower;
 
@@ -34,14 +35,17 @@ public class IdolForm extends Base {
         addToBot(new ExhaustAllAction(p.hand, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.drawPile, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.discardPile, CardType.ATTACK));
-        addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
-        addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
-        if (!(p.getPower(FirmPower.POWER_ID) instanceof FirmPower)) {
+        ATFieldPower.addAmount(p, amount -> {
+            addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
+            addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
             addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
             if (p instanceof ClothingHandler)
                 ((ClothingHandler) p).PutOnClothes();
+            if (amount > 0)
+                addToBot(new ApplyPowerAction(p, p, new ShinePower(p, amount)));
             addToBot(new ApplyPowerAction(p, p, new FirmPower(p)));
             addToBot(new ApplyPowerAction(p, p, new PityingPower(p)));
-        }
+            return 0;
+        });
     }
 }

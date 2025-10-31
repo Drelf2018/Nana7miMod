@@ -170,6 +170,13 @@
       "受到 #y攻击 时，未被 #y格挡 的伤害将给予攻击者 #y愧疚 。"
     ]
   },
+  "Nana7miMod:ShinePower": {
+    "NAME": "闪耀",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，对一个随机敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
   "Nana7miMod:SilencePower": {
     "NAME": "禁言",
     "DESCRIPTIONS": [
