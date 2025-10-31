@@ -21,13 +21,14 @@ public class Vision extends Base {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(1);
+            upgradeMagicNumber(1);
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.SLASH_DIAGONAL));
-        addToBot(new ScryAction(magicNumber));
+        addToBot(new ScryAction(1));
         addToBot(new DrawCardAction(magicNumber));
     }
 }
