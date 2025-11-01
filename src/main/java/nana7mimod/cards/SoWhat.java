@@ -15,6 +15,13 @@ public class SoWhat extends Base {
         super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 50;
+        this.baseBlock = 0; // 用格挡值存储已打出次数
+    }
+
+    // 玩家回合结束重置已打出次数
+    @Override
+    public void triggerOnEndOfPlayerTurn() {
+        baseBlock = 0;
     }
 
     public void upgrade() {
@@ -27,8 +34,9 @@ public class SoWhat extends Base {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         playSound(ID);
-        returnToHand = AbstractDungeon.cardRandomRng.random(99) < magicNumber;
+        returnToHand = AbstractDungeon.cardRandomRng.random(99) >= Math.min(100, (upgraded ? 2 : 40) + baseBlock * 13);
         exhaust = !returnToHand;
+        baseBlock += 1;
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }
 }
