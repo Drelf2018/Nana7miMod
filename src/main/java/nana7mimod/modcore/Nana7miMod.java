@@ -34,6 +34,8 @@ public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber,
 
     public static boolean TutorialClosed;
 
+    public static boolean AskPlayed;
+
     // 订阅事件
     // 向 basemod 注册颜色
     public Nana7miMod() {
@@ -49,8 +51,10 @@ public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber,
         try {
             Properties defaults = new Properties();
             defaults.setProperty("tutorialClosed", "false");
+            defaults.setProperty("askPlayed", "false");
             SpireConfig config = new SpireConfig("Nana7miMod", "Common", defaults);
             TutorialClosed = config.getBool("tutorialClosed");
+            AskPlayed = config.getBool("askPlayed");
         } catch (IOException e) {
             e.printStackTrace();
         }

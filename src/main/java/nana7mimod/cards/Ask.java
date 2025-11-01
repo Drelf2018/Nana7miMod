@@ -1,20 +1,20 @@
 package nana7mimod.cards;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.QuestionCard;
-import basemod.abstracts.CustomSavable;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.modcore.Nana7miMod;
 
-public class Ask extends Base implements CustomSavable<Boolean> {
+public class Ask extends Base {
     public static final String ID = ModHelper.id(Ask.class);
-
-    public static Boolean isFirstTimePlayAsk = true;
 
     public Ask() {
         super(ID, CardCost.C1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
@@ -22,31 +22,41 @@ public class Ask extends Base implements CustomSavable<Boolean> {
         this.cardsToPreview = new Game();
     }
 
-    // 保存
-    @Override
-    public Boolean onSave() {
-        return isFirstTimePlayAsk;
-    }
-
-    // 读取
-    @Override
-    public void onLoad(Boolean save) {
-        if (save != null)
-            isFirstTimePlayAsk = save;
-    }
-
     private ArrayList<AbstractCard> generateCardChoices(int total, int incorrect) {
         ArrayList<AbstractCard> derp = new ArrayList<AbstractCard>();
         if (AbstractDungeon.player.hasRelic(QuestionCard.ID))
             ++total;
-        for (int i = 0; i < incorrect; ++i)
-            derp.add(Game.Unplayed());
-        if (isFirstTimePlayAsk != null && isFirstTimePlayAsk) {
-            derp.add(Game.SlayTheSpire());
-            isFirstTimePlayAsk = false;
+        // 确定非重复错误卡号
+        ArrayList<Integer> indexes = new ArrayList<Integer>();
+        while (indexes.size() < incorrect) {
+            int index = AbstractDungeon.cardRandomRng.random(Game.UNPLAYED.length - 1);
+            if (!indexes.contains(index)) {
+                indexes.add(index);
+                derp.add(Game.Unplayed(index));
+            }
         }
-        while (derp.size() < total)
-            derp.add(Game.Played());
+        // 添加彩蛋卡
+        if (!Nana7miMod.AskPlayed) {
+            Nana7miMod.AskPlayed = true;
+            derp.add(Game.SlayTheSpire());
+            try {
+                SpireConfig config = new SpireConfig("Nana7miMod", "Common");
+                config.setBool("askPlayed", true);
+                config.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        // 确定非重复正确卡号
+        indexes.clear();
+        while (derp.size() < total) {
+            int index = AbstractDungeon.cardRandomRng.random(Game.PLAYED.length - 1);
+            if (!indexes.contains(index)) {
+                indexes.add(index);
+                derp.add(Game.Played(index));
+            }
+        }
+        // 洗牌
         Collections.shuffle(derp);
         return derp;
     }

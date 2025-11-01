@@ -40,20 +40,16 @@ public class Game extends Base {
         this.isMultiDamage = target == CardTarget.ALL_ENEMY;
     }
 
-    public static Game Played() {
-        int index = AbstractDungeon.cardRandomRng.random(PLAYED.length - 1);
-        String img = PLAYED[index];
-        return new Game(GAMES.PLAYED.get(img), img, CardTarget.ALL_ENEMY);
+    public static Game Played(int index) {
+        return new Game(GAMES.PLAYED.get(PLAYED[index]), PLAYED[index], CardTarget.ALL_ENEMY);
     }
 
-    public static Game Unplayed() {
-        int index = AbstractDungeon.cardRandomRng.random(UNPLAYED.length - 1);
-        String img = UNPLAYED[index];
-        return new Game(GAMES.UNPLAYED.get(img), img, CardTarget.SELF);
+    public static Game Unplayed(int index) {
+        return new Game(GAMES.UNPLAYED.get(UNPLAYED[index]), UNPLAYED[index], CardTarget.SELF);
     }
 
     public static Game SlayTheSpire() {
-        return new Game("杀戮尖塔", "杀戮尖塔", CardTarget.ALL_ENEMY);
+        return new Game(GAMES.PLAYED.get("SlayTheSpire"), "SlayTheSpire", CardTarget.ALL_ENEMY);
     }
 
     @Override
