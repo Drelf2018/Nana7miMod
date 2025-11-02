@@ -13,7 +13,7 @@ public class SoWhat extends Base {
 
     public SoWhat() {
         super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 6;
+        this.damage = this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 50;
         this.baseBlock = 0; // 用格挡值存储已打出次数
     }
