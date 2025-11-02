@@ -211,8 +211,8 @@
   },
   "Nana7miMod:Kiss": {
     "NAME": "亲亲脆鲨",
-    "DESCRIPTION": " 固有 。 NL 回复所有生命。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 保留 。 NL 回复所有生命。",
+    "DESCRIPTION": " 固有 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 保留 。",
     "EXTENDED_DESCRIPTION": [
       "沉浸在万花筒的黑暗之中吧！",
       "幻术的世界有什么不好……"
@@ -279,7 +279,7 @@
   },
   "Nana7miMod:Reality": {
     "NAME": "认清现实",
-    "DESCRIPTION": "移除你身上的所有负面效果。"
+    "DESCRIPTION": "移除你身上的所有负面效果。 NL 抽 !M! 张牌。"
   },
   "Nana7miMod:Reluctant": {
     "NAME": "勉为其难",
