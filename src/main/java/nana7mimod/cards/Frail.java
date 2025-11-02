@@ -12,7 +12,7 @@ public class Frail extends Base {
     public static final String ID = ModHelper.id(Frail.class);
 
     public Frail() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, CardCost.C0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
