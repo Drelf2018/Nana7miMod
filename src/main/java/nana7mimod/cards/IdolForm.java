@@ -22,6 +22,7 @@ public class IdolForm extends Base {
     public IdolForm() {
         super(ID, CardCost.C5, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(BaseModCardTags.FORM);
+        this.keywords.add("nana7mimod:愧疚");
     }
 
     public void upgrade() {
@@ -35,17 +36,24 @@ public class IdolForm extends Base {
         addToBot(new ExhaustAllAction(p.hand, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.drawPile, CardType.ATTACK));
         addToBot(new ExhaustAllAction(p.discardPile, CardType.ATTACK));
-        ATFieldPower.addAmount(p, amount -> {
-            addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
-            addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
+        // 保存当前心之壁层数
+        ATFieldPower power = ATFieldPower.from(p);
+        int amount = power == null ? 0 : power.amount;
+        // 移除心之壁能力
+        addToBot(new RemoveSpecificPowerAction(p, p, InjuredPower.POWER_ID));
+        addToBot(new RemoveSpecificPowerAction(p, p, ATFieldPower.POWER_ID));
+        // 根据原先是否有心之壁判断是否要播放变装动画
+        if (power != null) {
             addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
             if (p instanceof ClothingHandler)
                 ((ClothingHandler) p).PutOnClothes();
-            if (amount > 0)
-                addToBot(new ApplyPowerAction(p, p, new ShinePower(p, amount)));
+        }
+        // 获得等量闪耀
+        if (amount > 0)
+            addToBot(new ApplyPowerAction(p, p, new ShinePower(p, amount)));
+        if (p.getPower(FirmPower.POWER_ID) == null)
             addToBot(new ApplyPowerAction(p, p, new FirmPower(p)));
+        if (p.getPower(PityingPower.POWER_ID) == null)
             addToBot(new ApplyPowerAction(p, p, new PityingPower(p)));
-            return 0;
-        });
     }
 }
