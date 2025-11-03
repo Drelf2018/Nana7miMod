@@ -2,9 +2,6 @@ package nana7mimod.stances;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,22 +17,6 @@ import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
 import nana7mimod.helpers.ModHelper;
 
 public class KyojinStance extends AbstractStance {
-    public interface KyojinHandler {
-        void Kyojinka();
-
-        void Kaijo();
-    }
-
-    public static Texture scale(FileTextureData data, float scale) {
-        Pixmap originalPixmap = new Pixmap(data.getFileHandle());
-        int w = originalPixmap.getWidth(), h = originalPixmap.getHeight();
-
-        Pixmap scaledPixmap = new Pixmap((int) (scale * w), (int) (scale * h), originalPixmap.getFormat());
-        scaledPixmap.drawPixmap(originalPixmap, 0, 0, w, h, 0, 0, (int) (scale * w), (int) (scale * h));
-
-        return new Texture(scaledPixmap);
-    }
-
     public static final String STANCE_ID = ModHelper.id("Kyojin");
     private static final StanceStrings stanceString = CardCrawlGame.languagePack.getStanceString(STANCE_ID);
     private static long sfxId = -1L;
@@ -108,9 +89,6 @@ public class KyojinStance extends AbstractStance {
         p.currentHealth = 0;
         p.maxHealth = maxHealth;
         p.heal(currentHealth, true);
-        if (p instanceof KyojinHandler) {
-            ((KyojinHandler) p).Kaijo();
-        }
         maxHealth = 0;
     }
 

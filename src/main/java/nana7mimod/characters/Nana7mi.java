@@ -2,9 +2,7 @@ package nana7mimod.characters;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.glutils.FileTextureData;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -19,13 +17,10 @@ import nana7mimod.cards.Defend;
 import nana7mimod.cards.Strike;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.patches.OnEnterRoomPatch.ClothingHandler;
-import nana7mimod.powers.FirmPower;
 import nana7mimod.cards.NightStrike;
 import nana7mimod.relics.ATField;
-import nana7mimod.stances.KyojinStance;
-import nana7mimod.stances.KyojinStance.KyojinHandler;
 
-public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
+public class Nana7mi extends Base implements ClothingHandler {
     public Nana7mi(String name) {
         super(name, Nana7mi.PlayerColorEnum.NANA7MI);
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
@@ -60,30 +55,6 @@ public class Nana7mi extends Base implements ClothingHandler, KyojinHandler {
     public void TakeOffClothes() {
         img = ImageMaster.loadImage(image(getCharacterImage()));
         corpseImg = ImageMaster.loadImage(image("corpse.png"));
-    }
-
-    public class WaitAction extends AbstractGameAction {
-        public WaitAction(float setDur) {
-            this.duration = setDur;
-            this.actionType = ActionType.WAIT;
-        }
-
-        public void update() {
-            tickDuration();
-        }
-    }
-
-    public void Kyojinka() {
-        Texture clothes = KyojinStance.scale((FileTextureData) img.getTextureData(), 1.75F);
-        AbstractDungeon.actionManager.addToTop(new ClothingAction(clothes));
-        AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
-    }
-
-    public void Kaijo() {
-        if (getPower(FirmPower.POWER_ID) instanceof FirmPower)
-            img = ImageMaster.loadImage(image("images/59.png"));
-        else
-            img = ImageMaster.loadImage(image("images/0.png"));
     }
 
     @Override
