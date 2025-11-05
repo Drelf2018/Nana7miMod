@@ -22,6 +22,7 @@ public class KyojinStance extends AbstractStance {
     private static long sfxId = -1L;
 
     private int maxHealth;
+    private int healHealth;
     private int currentHealth;
     private int kyojinHealth;
 
@@ -79,16 +80,16 @@ public class KyojinStance extends AbstractStance {
     }
 
     public void heal(int amount) {
-        currentHealth += amount;
+        healHealth += amount;
     }
 
     public void onRemove() {
         if (maxHealth == 0)
             return;
         AbstractPlayer p = AbstractDungeon.player;
-        p.currentHealth = 0;
         p.maxHealth = maxHealth;
-        p.heal(currentHealth, true);
+        p.currentHealth = Math.min(currentHealth, maxHealth);
+        p.heal(healHealth, true);
         maxHealth = 0;
     }
 
