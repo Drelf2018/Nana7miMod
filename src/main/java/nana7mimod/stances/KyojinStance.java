@@ -21,10 +21,10 @@ public class KyojinStance extends AbstractStance {
     private static final StanceStrings stanceString = CardCrawlGame.languagePack.getStanceString(STANCE_ID);
     private static long sfxId = -1L;
 
-    private int maxHealth;
-    private int healHealth;
-    private int currentHealth;
+    public int maxHealth;
+    public int healHealth;
     private int kyojinHealth;
+    private int currentHealth;
 
     public KyojinStance(int kyojinHealth) {
         this.ID = STANCE_ID;
@@ -79,18 +79,15 @@ public class KyojinStance extends AbstractStance {
         AbstractDungeon.effectsQueue.add(new StanceChangeParticleGenerator(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, "Wrath"));
     }
 
-    public void heal(int amount) {
-        healHealth += amount;
-    }
-
     public void onRemove() {
         if (maxHealth == 0)
             return;
         AbstractPlayer p = AbstractDungeon.player;
         p.maxHealth = maxHealth;
         p.currentHealth = Math.min(currentHealth, maxHealth);
-        p.heal(healHealth, true);
+        p.healthBarUpdatedEvent();
         maxHealth = 0;
+        p.heal(healHealth, true);
     }
 
     @Override

@@ -16,12 +16,11 @@ public class KyojinPatch {
     public static class DamagePatch {
         @SpireInsertPatch(loc = 1851)
         public static SpireReturn<Void> Insert(AbstractPlayer __instance, DamageInfo info) {
-            if (!__instance.hasRelic("Mark of the Bloom") && __instance.stance.ID == KyojinStance.STANCE_ID) {
+            if (__instance.stance.ID == KyojinStance.STANCE_ID) {
                 AbstractDungeon.actionManager.addToTop(new ChangeStanceAction("Neutral"));
                 return SpireReturn.Return();
-            } else {
-                return SpireReturn.Continue();
             }
+            return SpireReturn.Continue();
         }
     }
 
@@ -36,6 +35,21 @@ public class KyojinPatch {
             __instance.hb.render(sb);
             __instance.healthHb.render(sb);
             return SpireReturn.Return();
+        }
+    }
+
+    @SpirePatch(clz = AbstractPlayer.class, method = "heal")
+    public static class HealPatch {
+        @SpireInsertPatch(rloc = 0)
+        public static SpireReturn<Void> Insert(AbstractPlayer __instance, int healAmount) {
+            if (__instance.stance.ID == KyojinStance.STANCE_ID && AbstractDungeon.getCurrRoom().isBattleEnding()) {
+                KyojinStance stance = (KyojinStance) __instance.stance;
+                if (stance.maxHealth != 0) {
+                    stance.healHealth += healAmount;
+                    return SpireReturn.Return();
+                }
+            }
+            return SpireReturn.Continue();
         }
     }
 }
