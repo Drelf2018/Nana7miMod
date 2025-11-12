@@ -224,7 +224,11 @@
   },
   "Nana7miMod:Kunai": {
     "NAME": "苦无",
-    "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。"
+    "DESCRIPTION": "nana7mimod:无限 。 NL 造成 !D! 点伤害。 NL 在本回合中每被打出一次，伤害增加 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （已打出 [#87CEEE]",
+      "[] 次。）"
+    ]
   },
   "Nana7miMod:Kyojinka": {
     "NAME": "巨人化",
@@ -275,7 +279,11 @@
   "Nana7miMod:Puzzle": {
     "NAME": "电车难题",
     "DESCRIPTION": "虚无 。 NL nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。",
-    "UPGRADE_DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。"
+    "UPGRADE_DESCRIPTION": "nana7mimod:发现 nana7mimod:无限 nana7mimod:列车 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （已打出 [#87CEEE]",
+      "[] 次。）"
+    ]
   },
   "Nana7miMod:Reality": {
     "NAME": "认清现实",
@@ -339,7 +347,11 @@
   "Nana7miMod:SoWhat": {
     "NAME": "那咋了",
     "DESCRIPTION": "造成 !D! 点伤害。 NL [#87CEEE]50%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL [#7FFF00]75%[] 概率 nana7mimod:无限 。 NL 否则 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （已打出 [#87CEEE]",
+      "[] 次。）"
+    ]
   },
   "Nana7miMod:SpiritualVictory": {
     "NAME": "精神胜利",

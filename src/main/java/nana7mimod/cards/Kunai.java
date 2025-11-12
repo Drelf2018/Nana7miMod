@@ -14,6 +14,10 @@ public class Kunai extends Base {
 
     public static final int UPGRADE_BASE_DAMAGE = 2;
 
+    public static final String DESCRIPTION = strings(ID).DESCRIPTION;
+
+    public static final String[] EXTENDED = strings(ID).EXTENDED_DESCRIPTION;
+
     public Kunai() {
         super(ID, CardCost.C1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ACTUAL_BASE_DAMAGE;
@@ -27,6 +31,13 @@ public class Kunai extends Base {
         baseDamage = ACTUAL_BASE_DAMAGE + (upgraded ? UPGRADE_BASE_DAMAGE : 0);
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        rawDescription = DESCRIPTION + EXTENDED[0] + timesCardPlayedThisTurn() + EXTENDED[1];
+        initializeDescription();
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
@@ -38,5 +49,8 @@ public class Kunai extends Base {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.SLASH_DIAGONAL));
         baseDamage += magicNumber;
+        returnToHand = timesCardPlayedThisTurn() < 10;
+        if (!returnToHand)
+            applyPowers();
     }
 }

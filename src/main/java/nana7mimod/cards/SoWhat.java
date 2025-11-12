@@ -11,17 +11,16 @@ import nana7mimod.helpers.ModHelper;
 public class SoWhat extends Base {
     public static final String ID = ModHelper.id(SoWhat.class);
 
+    public static final String DESCRIPTION = strings(ID).DESCRIPTION;
+
+    public static final String UPGRADE = strings(ID).UPGRADE_DESCRIPTION;
+
+    public static final String[] EXTENDED = strings(ID).EXTENDED_DESCRIPTION;
+
     public SoWhat() {
         super(ID, CardCost.C0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 50;
-        this.baseBlock = 0; // 用格挡值存储已打出次数
-    }
-
-    // 玩家回合结束重置已打出次数
-    @Override
-    public void triggerOnEndOfPlayerTurn() {
-        baseBlock = 0;
     }
 
     public void upgrade() {
@@ -32,11 +31,20 @@ public class SoWhat extends Base {
         }
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        rawDescription = upgraded ? UPGRADE : DESCRIPTION + EXTENDED[0] + timesCardPlayedThisTurn() + EXTENDED[1];
+        initializeDescription();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         playSound(ID);
-        returnToHand = AbstractDungeon.cardRandomRng.random(99) >= Math.min(100, (upgraded ? 2 : 40) + baseBlock * 13);
+        int played = timesCardPlayedThisTurn();
+        returnToHand = AbstractDungeon.cardRandomRng.random(99) >= Math.min(100, (upgraded ? 2 : 40) + (played - 1) * 13) && played < 10;
         exhaust = !returnToHand;
-        baseBlock += 1;
+        if (!returnToHand)
+            applyPowers();
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_LIGHT));
     }
 }

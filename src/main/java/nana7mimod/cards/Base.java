@@ -5,6 +5,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import java.util.Map;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -60,6 +61,15 @@ public abstract class Base extends CustomCard {
         upgraded = true;
         name = getName(cardID) + "+" + timesUpgraded;
         initializeTitle();
+    }
+
+    public int timesCardPlayedThisTurn() {
+        int i = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn)
+            if (c.uuid.equals(this.uuid))
+                i++;
+        System.out.println(i);
+        return i;
     }
 
     public void changeCardImage(String img) {
