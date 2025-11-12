@@ -1,5 +1,6 @@
 package nana7mimod.actions;
 
+import java.util.UUID;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -30,6 +31,30 @@ public class SmokeAction extends AbstractGameAction {
         return retVal;
     }
 
+    public static AbstractCard getActualCard(UUID uuid) {
+        for (AbstractCard c : AbstractDungeon.player.hand.group)
+            if (c.uuid.equals(uuid)) {
+                AbstractDungeon.player.hand.removeCard(c);
+                return c;
+            }
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group)
+            if (c.uuid.equals(uuid)) {
+                AbstractDungeon.player.drawPile.removeCard(c);
+                return c;
+            }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+            if (c.uuid.equals(uuid)) {
+                AbstractDungeon.player.discardPile.removeCard(c);
+                return c;
+            }
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group)
+            if (c.uuid.equals(uuid)) {
+                AbstractDungeon.player.exhaustPile.removeCard(c);
+                return c;
+            }
+        return null;
+    }
+
     public void update() {
         if (duration == startDuration) {
             CardGroup cardGroup = SmokeAction.getActualPurgeableCards(AbstractDungeon.player.masterDeck);
@@ -39,10 +64,14 @@ public class SmokeAction extends AbstractGameAction {
         }
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard card : AbstractDungeon.gridSelectScreen.selectedCards) {
-                PurgeCardEffect e = new PurgeCardEffect(card);
-                duration += e.duration;
-                startDuration += e.duration;
-                AbstractDungeon.topLevelEffects.add(e);
+                AbstractCard c = getActualCard(card.uuid);
+                if (c != null) {
+                    c.setAngle(0);
+                    PurgeCardEffect e = new PurgeCardEffect(c, c.current_x, c.current_y);
+                    duration += e.duration;
+                    startDuration += e.duration;
+                    AbstractDungeon.topLevelEffects.add(e);
+                }
                 AbstractDungeon.player.masterDeck.removeCard(card);
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
