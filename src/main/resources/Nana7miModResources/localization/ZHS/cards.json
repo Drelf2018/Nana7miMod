@@ -262,7 +262,7 @@
   },
   "Nana7miMod:NightStrike": {
     "NAME": "没念到的也晚安",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 nana7mimod:失落 。"
+    "DESCRIPTION": "给予 !M! 层 nana7mimod:失落 。 NL 造成 !D! 点伤害。"
   },
   "Nana7miMod:Nurse": {
     "NAME": "打给你了",
