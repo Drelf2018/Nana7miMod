@@ -39,7 +39,7 @@ public class BlackATField extends CustomRelic {
     public void updateDescription(AbstractPlayer.PlayerClass c) {
         description = setDescription(c);
         tips.clear();
-        tips.add(new PowerTip(this.name, this.description));
+        tips.add(new PowerTip(name, description));
         initializeTips();
     }
 
