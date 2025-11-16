@@ -6,5 +6,13 @@
       "在每场战斗开始时获得 #b",
       " 层会 #ynana7mimod:受伤 、 #ynana7mimod:生气 、 #ynana7mimod:宽恕 和 #ynana7mimod:破碎 的 #ynana7mimod:心之壁 。"
     ]
+  },
+  "Nana7miMod:BlackATField": {
+    "NAME": "黑化心之壁",
+    "FLAVOR": "我已经领悟了，没必要心甘情愿地接受命运，神明根本不存在，所以，我来成为神明！",
+    "DESCRIPTIONS": [
+      "替换 #r七海心之壁 。在每场战斗开始时获得 #b",
+      " 层 #ynana7mimod:更容易受伤 的 #ynana7mimod:心之壁 。"
+    ]
   }
 }

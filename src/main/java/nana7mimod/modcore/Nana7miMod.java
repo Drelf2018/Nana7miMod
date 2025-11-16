@@ -26,6 +26,7 @@ import nana7mimod.cards.Base;
 import nana7mimod.helpers.CharacterHelper;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.relics.ATField;
+import nana7mimod.relics.BlackATField;
 import nana7mimod.characters.Nana7mi;
 
 @SpireInitializer
@@ -79,6 +80,7 @@ public class Nana7miMod implements PostInitializeSubscriber, AddAudioSubscriber,
     public void receiveEditRelics() {
         // RelicType 表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
         BaseMod.addRelic(new ATField(), RelicType.SHARED);
+        BaseMod.addRelic(new BlackATField(), RelicType.SHARED);
     }
 
     // 向 basemod 注册人物

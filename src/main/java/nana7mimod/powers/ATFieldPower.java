@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.relics.BlackATField;
 
 public class ATFieldPower extends Base {
     public static final String POWER_ID = ModHelper.id(ATFieldPower.class);
@@ -104,18 +105,21 @@ public class ATFieldPower extends Base {
     // 生气
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.ATTACK && card.costForTurn != 0 && amount > 0)
+        if (card.type == CardType.ATTACK && card.costForTurn != 0 && amount > 0 && !AbstractDungeon.player.hasRelic(BlackATField.ID))
             addAmount(-1);
     }
 
     // 宽恕
     @Override
     public void onGainedBlock(float blockAmount) {
-        addAmount(-1);
+        if (!AbstractDungeon.player.hasRelic(BlackATField.ID))
+            addAmount(-1);
     }
 
     // 破碎
     private void onFieldBroken() {
+        if (AbstractDungeon.player.hasRelic(BlackATField.ID))
+            return;
         switch (amount) {
             case -2:
                 for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
