@@ -68,7 +68,6 @@ public abstract class Base extends CustomCard {
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn)
             if (c.uuid.equals(this.uuid))
                 i++;
-        System.out.println(i);
         return i;
     }
 
