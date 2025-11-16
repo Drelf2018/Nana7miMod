@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import nana7mimod.helpers.ModHelper;
+import nana7mimod.modcore.Nana7miMod;
+import nana7mimod.relics.Apple;
 import nana7mimod.characters.Nana7mi.PlayerColorEnum;
 
 public class NeowEventPatch {
@@ -30,6 +32,16 @@ public class NeowEventPatch {
             if (AbstractDungeon.player.chosenClass.equals(PlayerColorEnum.NANA7MI))
                 sb.draw(Nana7miFans, 0.7F * Settings.WIDTH, 0.1F * Settings.HEIGHT, 0.2F * Settings.WIDTH,
                         0.2F * Settings.WIDTH * Nana7miFans.getHeight() / Nana7miFans.getWidth());
+        }
+    }
+
+    @SpirePatch(clz = NeowEvent.class, method = "buttonEffect")
+    public static class ButtonEffectPatch {
+        @SpireInsertPatch(rloc = 0)
+        public static void Insert(NeowEvent __instance, int buttonPressed) {
+            if (Nana7miMod.StoryMode && !AbstractDungeon.player.hasRelic(Apple.ID)) {
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2, new Apple());
+            }
         }
     }
 }
