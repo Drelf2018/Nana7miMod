@@ -3,6 +3,7 @@ package nana7mimod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.powers.DormantPower;
 import nana7mimod.powers.LostPower;
@@ -11,7 +12,7 @@ public class LifeHoldsDreams extends Base {
     public static final String ID = ModHelper.id(LifeHoldsDreams.class);
 
     public LifeHoldsDreams() {
-        super(ID, CardCost.C1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, CardCost.C2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 7;
         this.cardsToPreview = new Back();
         this.exhaust = true;
@@ -19,13 +20,15 @@ public class LifeHoldsDreams extends Base {
 
     public void upgrade() {
         if (!upgraded) {
+            selfRetain = true;
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeDescription();
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new LostPower(m, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 5)));
         addToBot(new ApplyPowerAction(p, p, new DormantPower(p, 2)));
     }
 }
