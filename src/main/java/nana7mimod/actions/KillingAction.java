@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import nana7mimod.powers.ATFieldPower;
 import nana7mimod.relics.ATField;
+import nana7mimod.relics.BlackATField;
 
 public class KillingAction extends AbstractGameAction {
     private DamageInfo info;
@@ -28,6 +29,8 @@ public class KillingAction extends AbstractGameAction {
             if ((((AbstractMonster) this.target).isDying || this.target.currentHealth <= 0) && !this.target.halfDead
                     && !this.target.hasPower("Minion")) {
                 AbstractRelic r = AbstractDungeon.player.getRelic(ATField.ID);
+                if (r == null)
+                    r = AbstractDungeon.player.getRelic(BlackATField.ID);
                 if (r != null) {
                     r.counter += amount;
                     r.updateDescription(null);
