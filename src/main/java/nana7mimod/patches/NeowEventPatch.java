@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import nana7mimod.helpers.ModHelper;
 import nana7mimod.modcore.Nana7miMod;
@@ -40,7 +41,8 @@ public class NeowEventPatch {
         @SpireInsertPatch(rloc = 0)
         public static void Insert(NeowEvent __instance, int buttonPressed) {
             if (Nana7miMod.StoryMode && !AbstractDungeon.player.hasRelic(Apple.ID)) {
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2, new Apple());
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2,
+                        RelicLibrary.getRelic(Apple.ID).makeCopy());
             }
         }
     }
