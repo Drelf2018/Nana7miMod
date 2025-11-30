@@ -56,7 +56,7 @@
   },
   "Nana7miMod:Depression": {
     "NAME": "我有玉玉证",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 nana7mimod:缓冲 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 !M! 次。 NL 阻止下一次你受到的生命值损伤。 NL 消耗 。"
   },
   "Nana7miMod:Devil": {
     "NAME": "走火入魔",

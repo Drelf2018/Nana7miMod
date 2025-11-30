@@ -12,20 +12,21 @@ public class Depression extends Base {
 
     public Depression() {
         super(ID, CardCost.C3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.block = this.baseBlock = 15;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.block = this.baseBlock = 5;
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeMagicNumber(1);
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
-        addToBot(new ApplyPowerAction(p, p, new BufferPower(p, magicNumber)));
+        for (int i = 0; i < magicNumber; ++i)
+            addToBot(new GainBlockAction(p, p, block));
+        addToBot(new ApplyPowerAction(p, p, new BufferPower(p, 1)));
     }
 }
