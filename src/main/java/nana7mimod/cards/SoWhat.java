@@ -34,7 +34,7 @@ public class SoWhat extends Base {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        rawDescription = upgraded ? UPGRADE : DESCRIPTION + EXTENDED[0] + timesCardPlayedThisTurn() + EXTENDED[1];
+        rawDescription = (upgraded ? UPGRADE : DESCRIPTION) + EXTENDED[0] + timesCardPlayedThisTurn() + EXTENDED[1];
         initializeDescription();
     }
 
